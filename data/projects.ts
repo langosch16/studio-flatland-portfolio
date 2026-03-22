@@ -9,13 +9,14 @@ export type Project = {
   text: string;
   cover: string;
   images: string[];
+  clients?: string[];
 };
 
 
 export const projects = [
   {
     "slug": "athletics1",
-    "title": "Athletics 1",
+    "title": "Athletics Eyewear",
     "url": "",
     "categories": ["graphics", "video"],
     "year": "",
@@ -23,11 +24,13 @@ export const projects = [
     "excerpt": "",
     "text": "",
     "cover": "/projekte/athletics1/01-cover.gif",
-    "images": ["/projekte/athletics1/01-cover.gif"]
+    "images": ["/projekte/athletics1/01-cover.gif"],
+"clients": ["Athletics Eyewear"],
+
   },
   {
     "slug": "athletics2",
-    "title": "Athletics 2",
+    "title": "Athletics Eyewear",
     "url": "",
     "categories": ["graphics", "video"],
     "year": "",
@@ -35,24 +38,29 @@ export const projects = [
     "excerpt": "",
     "text": "",
     "cover": "/projekte/athletics2/01-cover.gif",
-    "images": ["/projekte/athletics2/01-cover.gif"]
+    "images": ["/projekte/athletics2/01-cover.gif"],
+"clients": ["Athletics Eyewear"],
+
   },
   {
     "slug": "gruenderbonus-asw",
-    "title": "Gründerbonus ASW",
+    "title": "Gründerbonus Folder für ASW",
     "url": "",
     "categories": ["print", "graphics"],
     "year": "",
     "services": [],
-    "excerpt": "",
+    "excerpt": "Gründerbonus Folder für ASW, verschieden Entwürfe",
     "text": "",
     "cover": "/projekte/gruenderbonus-asw/01-cover.png",
     "images": [
       "/projekte/gruenderbonus-asw/01-cover.png",
       "/projekte/gruenderbonus-asw/02.png",
       "/projekte/gruenderbonus-asw/03.png"
-    ]
+    ],
+"clients": ["Akademie der Steuerberater und Wirtschaftsprüfer"],
+
   },
+
   {
     "slug": "weihnachtskarte-wireg",
     "title": "Weihnachtskarte Wireg",
@@ -60,22 +68,25 @@ export const projects = [
     "categories": ["print", "graphics"],
     "year": "",
     "services": [],
-    "excerpt": "",
+    "excerpt": "Weihnachtskarte Wireg zum selberbasteln",
     "text": "",
     "cover": "/projekte/weihnachtskarte-wireg/01-cover.png",
     "images": [
       "/projekte/weihnachtskarte-wireg/01-cover.png",
       "/projekte/weihnachtskarte-wireg/02.png"
-    ]
+    ],
+"clients": ["Wireg"],
   },
+
+
   {
-    "slug": "siliasstueberl",
-    "title": "Silias Stüberl",
+    "slug": "silivasstueberl",
+    "title": "Silvias Stüberl",
     "url": "",
     "categories": ["print", "graphics"],
     "year": "",
     "services": [],
-    "excerpt": "",
+    "excerpt": "Silvias Stüberl, LOGO für ein kleine Restaurant mit guter Küche",
     "text": "",
     "cover": "/projekte/siliasstueberl/01-cover.png",
     "images": [
@@ -85,8 +96,10 @@ export const projects = [
       "/projekte/siliasstueberl/04.png",
       "/projekte/siliasstueberl/05.png",
       "/projekte/siliasstueberl/06.png"
-    ]
+    ],
+"clients": ["Silvias Stueberl"],
   },
+
   {
     "slug": "wiregzuckerl",
     "title": "Wireg Zuckerl",
@@ -94,14 +107,16 @@ export const projects = [
     "categories": ["print", "graphics"],
     "year": "",
     "services": [],
-    "excerpt": "",
+    "excerpt": "Marketing Geschenke Zuckerl Gestaltung",
     "text": "",
     "cover": "/projekte/wiregzuckerl/01-cover.jpg",
     "images": [
       "/projekte/wiregzuckerl/01-cover.jpg",
       "/projekte/wiregzuckerl/02.jpg",
       "/projekte/wiregzuckerl/03.jpg"
-    ]
+    ],
+"clients": ["Wireg"]
+
   },
   {
     "slug": "eod-plakat",
@@ -110,7 +125,7 @@ export const projects = [
     "categories": ["print", "graphics"],
     "year": "",
     "services": [],
-    "excerpt": "",
+    "excerpt": "Plakat Gestaltung für EOD Munitionsbergung",
     "text": "",
     "cover": "/projekte/eod-plakat/01-cover.jpg",
     "images": [
@@ -120,22 +135,27 @@ export const projects = [
       "/projekte/eod-plakat/04.png",
       "/projekte/eod-plakat/05.jpg",
       "/projekte/eod-plakat/06.jpg"
-    ]
+    ],
+"clients": ["EOD Munitionsbergung"]
+
   },
   {
     "slug": "social-media-muttertag",
-    "title": "Social Media Muttertag",
+    "title": "Muttertag POST",
     "url": "",
     "categories": ["graphics"],
     "year": "",
     "services": [],
-    "excerpt": "",
+    "excerpt": "Social Media Apfolterer, Post zum Muttertag",
     "text": "",
     "cover": "/projekte/social-media-muttertag/01-cover.jpg",
     "images": [
       "/projekte/social-media-muttertag/01-cover.jpg"
-    ]
+    ],
+"clients": ["Die Schönheitschirurgin Apfolterer"]
   },
+
+
   {
     "slug": "socialmedia-apfolterer",
     "title": "Social Media Apfolterer",
@@ -143,14 +163,15 @@ export const projects = [
     "categories": ["graphics"],
     "year": "",
     "services": [],
-    "excerpt": "",
-    "text": "",
+    "excerpt": "Social Media Apfolterer gestaltung",
+    "text": "Social Media Apfolterer",
     "cover": "/projekte/socialmedia-apfolterer/01-cover.jpg",
     "images": [
       "/projekte/socialmedia-apfolterer/01-cover.jpg",
       "/projekte/socialmedia-apfolterer/02.jpg",
       "/projekte/socialmedia-apfolterer/03.jpg"
-    ]
+    ],
+"clients": ["Die Schönheitschirurgin Apfolterer"]
   },
   {
     "slug": "vienna-vikings",
@@ -159,7 +180,7 @@ export const projects = [
     "categories": ["print", "graphics"],
     "year": "",
     "services": [],
-    "excerpt": "",
+    "excerpt": "Entwurf für social Media Posts",
     "text": "",
     "cover": "/projekte/vienna-vikings/01-cover.png",
     "images": [
@@ -168,16 +189,17 @@ export const projects = [
       "/projekte/vienna-vikings/03.png",
       "/projekte/vienna-vikings/04.png",
       "/projekte/vienna-vikings/05.png"
-    ]
+    ],
+"clients": ["Vienna Vikings"]
   },
   {
     "slug": "folder-arbeitstagung",
-    "title": "Folder Arbeitstagung",
+    "title": "Folder Arbeitstagung ASW",
     "url": "",
     "categories": ["print", "graphics"],
     "year": "",
     "services": [],
-    "excerpt": "",
+    "excerpt": "Folder für Akademie der Steuerberater und Wirtschaftsprüfer Arbeitstagung",
     "text": "",
     "cover": "/projekte/folder-arbeitstagung/01-cover.png",
     "images": [
@@ -186,7 +208,8 @@ export const projects = [
       "/projekte/folder-arbeitstagung/03.png",
       "/projekte/folder-arbeitstagung/04.png",
       "/projekte/folder-arbeitstagung/05.png"
-    ]
+    ],
+"clients": ["Akademie der Steuerberater und Wirtschaftsprüfer"],
   },
   {
     "slug": "eventkompass-k4k",
@@ -195,7 +218,7 @@ export const projects = [
     "categories": ["print", "graphics"],
     "year": "",
     "services": [],
-    "excerpt": "",
+    "excerpt": "Kinderveranstaltungen im Land Niederösterreich Folder",
     "text": "",
     "cover": "/projekte/eventkompass-k4k/01-cover.png",
     "images": [
@@ -203,23 +226,27 @@ export const projects = [
       "/projekte/eventkompass-k4k/02.jpg",
       "/projekte/eventkompass-k4k/03.png",
       "/projekte/eventkompass-k4k/04.png"
-    ]
+    ],
+"clients": ["Land Niederösterreich"]
+
   },
   {
     "slug": "rollup-ksw-3",
-    "title": "Rollup KSW 3",
+    "title": "Rollup KSW",
     "url": "",
     "categories": ["print", "graphics"],
     "year": "",
     "services": [],
-    "excerpt": "",
+    "excerpt": "Roll Ups für eine Veranstalltung des KSW Kammer der Steuerberater und Wirtschaftsprüfer",
     "text": "",
     "cover": "/projekte/rollup-ksw-3/01-cover.png",
     "images": [
       "/projekte/rollup-ksw-3/01-cover.png",
       "/projekte/rollup-ksw-3/02.png",
       "/projekte/rollup-ksw-3/03.png"
-    ]
+    ],
+"clients": ["KSW Kammer der Steuerberater und Wirtschaftsprüfer"]
+
   },
   {
     "slug": "rollup-ksw-2",
@@ -228,7 +255,7 @@ export const projects = [
     "categories": ["print", "graphics"],
     "year": "",
     "services": [],
-    "excerpt": "",
+    "excerpt": "Roll Ups für eine Veranstalltung des KSW Kammer der Steuerberater und Wirtschaftsprüfer",
     "text": "",
     "cover": "/projekte/rollup-ksw-2/01-cover.png",
     "images": [
@@ -236,7 +263,9 @@ export const projects = [
       "/projekte/rollup-ksw-2/02.png",
       "/projekte/rollup-ksw-2/03.png",
       "/projekte/rollup-ksw-2/04.png"
-    ]
+    ],
+"clients": ["KSW Kammer der Steuerberater und Wirtschaftsprüfer"]
+
   },
   {
     "slug": "wasserfall",
@@ -245,12 +274,14 @@ export const projects = [
     "categories": ["video", "animation"],
     "year": "",
     "services": [],
-    "excerpt": "",
+    "excerpt": "Konzept und Idee für eigen Marketing  ",
     "text": "",
     "cover": "/projekte/wasserfall/01-cover.gif",
     "images": [
       "/projekte/wasserfall/01-cover.gif"
-    ]
+    ],
+"clients": ["büro flaland"]
+
   },
   {
     "slug": "logo-flatland",
@@ -259,7 +290,7 @@ export const projects = [
     "categories": ["graphics", "logo"],
     "year": "",
     "services": [],
-    "excerpt": "",
+    "excerpt": "spielereien für ein LOG Entwurf",
     "text": "",
     "cover": "/projekte/logo-flatland/01-cover.png",
     "images": [
@@ -276,7 +307,8 @@ export const projects = [
       "/projekte/logo-flatland/11.png",
       "/projekte/logo-flatland/12.png",
       "/projekte/logo-flatland/13.png"
-    ]
+    ],
+"clients": ["büro flaland"]
   },
   {
     "slug": "volleyballanimation",
@@ -285,12 +317,13 @@ export const projects = [
     "categories": ["video", "animation"],
     "year": "",
     "services": [],
-    "excerpt": "",
+    "excerpt": "Inserts für Voleyballspiele mit Tabellen, Zeitlupen, Punktestand, usw...",
     "text": "",
     "cover": "/projekte/volleyballanimation/01-cover.gif",
     "images": [
       "/projekte/volleyballanimation/01-cover.gif"
-    ]
+    ],
+"clients": ["Österreichischer Volleyball Verband"]
   },
   {
     "slug": "logo-skillsprout",
@@ -302,8 +335,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "Logo skillsprout\nCategory\ngraphics\n,\nlogo\nAbout This Project\nLogo für SkillSprout ein Unternehmen für online sportlurse füe Kinder un diese fit und stärker zu bekommen.\nwunsch war das wachsen und das kindliche soll im logo herüberkommen",
-    "text": "Logo skillsprout\nCategory\ngraphics\n,\nlogo\nAbout This Project\nLogo für SkillSprout ein Unternehmen für online sportlurse füe Kinder un diese fit und stärker zu bekommen.\nwunsch war das wachsen und das kindliche soll im logo herüberkommen",
+    "excerpt": "Logo für SkillSprout ein Unternehmen für online Sportkurse für Kinder. Der Wunsch war das Wachsen und das Kindliche soll im Logo herüberkommen.",
     "cover": "/projekte/logo-skillsprout/01-cover.png",
     "images": [
       
@@ -320,7 +352,8 @@ export const projects = [
       "/projekte/logo-skillsprout/12.png",
       "/projekte/logo-skillsprout/13.png"
 
-    ]
+    ],
+"clients": ["Skillsprout"]
   },
   {
     "slug": "folder-kammer-fuer-steuerberater-und-wirtschaftspruefer",
@@ -331,8 +364,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "folder kammer für steuerberater und wirtschaftsprüfer\nTags\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nCategory\ngraphics\nAbout This Project\nfolder für den KSW ( Kammer für Steuerberater und Wirtschaftsprüfer )\naufgabenstellung: jugendlich, frischeres de…",
-    "text": "folder kammer für steuerberater und wirtschaftsprüfer\nTags\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nCategory\ngraphics\nAbout This Project\nfolder für den KSW ( Kammer für Steuerberater und Wirtschaftsprüfer )\naufgabenstellung: jugendlich, frischeres design;\nfolder soll der zielgruppe maturanten den beruf des steuerberaters und wirtschaftsprüfers näher bringen.",
+    "excerpt": "Folder für den KSW (Kammer für Steuerberater und Wirtschaftsprüfer). Jugendliches, frischeres Design — der Folder soll Maturanten den Beruf des Steuerberaters und Wirtschaftsprüfers näherbringen.",
     "cover": "/projekte/folder-kammer-fuer-steuerberater-und-wirtschaftspruefer/01-cover.png",
     "images": [
       
@@ -343,7 +375,9 @@ export const projects = [
       "/projekte/folder-kammer-fuer-steuerberater-und-wirtschaftspruefer/06.png",
       "/projekte/folder-kammer-fuer-steuerberater-und-wirtschaftspruefer/07.png"
 
-    ]
+    ],
+"clients": ["KSW Kammer der Steuerberater und Wirtschaftsprüfer"]
+
   },
   {
     "slug": "vg-getreideverarbeitung-folder",
@@ -355,8 +389,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "vg getreideverarbeitung FOLDER\nTags\nvg Getreideverarbeitung\nCategory\ngraphics\n,\nmagazine\nAbout This Project\nentwurf für folder für vg versuchsanstalt für getreideverarbeitung.\n6 seiten infomaterial",
-    "text": "vg getreideverarbeitung FOLDER\nTags\nvg Getreideverarbeitung\nCategory\ngraphics\n,\nmagazine\nAbout This Project\nentwurf für folder für vg versuchsanstalt für getreideverarbeitung.\n6 seiten infomaterial",
+    "excerpt": "Folder für die VG Versuchsanstalt für Getreideverarbeitung. 6-seitiges Infomaterial.",
     "cover": "/projekte/vg-getreideverarbeitung-folder/01-cover.jpg",
     "images": [
       
@@ -366,7 +399,8 @@ export const projects = [
       "/projekte/vg-getreideverarbeitung-folder/05.jpg",
       "/projekte/vg-getreideverarbeitung-folder/06.jpg"
 
-    ]
+    ],
+"clients": ["VG Getreideverarbeitung"]
   },
   {
     "slug": "athelthics-eyewear-ski-googles",
@@ -377,12 +411,11 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "athelthics eyewear ski googles\nTags\nathletics eyewear\nbrandsetter\nCategory\nvideo\nAbout This Project\nstory format videos for instagramm\natheltics eyewear googles promotion\nor watch on youtube:\nshort commercial 1\nathletics eyewear ski googles commercial 2",
-    "text": "athelthics eyewear ski googles\nTags\nathletics eyewear\nbrandsetter\nCategory\nvideo\nAbout This Project\nstory format videos for instagramm\natheltics eyewear googles promotion\nor watch on youtube:\nshort commercial 1\nathletics eyewear ski googles commercial 2",
-    "cover": "/projekte/athelthics-eyewear-ski-googles/01-cover.gif",
+    "excerpt": "Story-Format Videos für Instagram — Athletics Eyewear Ski Goggles Promotion.",
     "images": [
       "/projekte/athelthics-eyewear-ski-googles/01-cover.gif"
-    ]
+    ],
+"clients": ["Athletics Eyewear"]
   },
   {
     "slug": "infografik",
@@ -393,7 +426,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "infografik\nTags\nKultur 4 Kids\nLand Niederösterreich\nCategory\ngraphics\nAbout This Project\ninfografik für k4k niederösterreich",
+    "excerpt": "infografiken für Kultur 4 Kids Land Niederösterreich",
     "text": "infografik\nTags\nKultur 4 Kids\nLand Niederösterreich\nCategory\ngraphics\nAbout This Project\ninfografik für k4k niederösterreich",
     "cover": "/projekte/infografik/01-cover.png",
     "images": [
@@ -405,7 +438,9 @@ export const projects = [
       "/projekte/infografik/06.png",
       "/projekte/infografik/07.png"
 
-    ]
+    ],
+"clients": ["Land Niederösterreich"]
+
   },
   {
     "slug": "zahntechnik-guenther",
@@ -417,7 +452,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "zahntechnik günther\nTags\nzahntechnik günther\nCategory\ngraphics\n,\nlogo\nAbout This Project\nlogo für zahntechnik",
+    "excerpt": "zahntechnik günther Logo Entwürfe",
     "text": "zahntechnik günther\nTags\nzahntechnik günther\nCategory\ngraphics\n,\nlogo\nAbout This Project\nlogo für zahntechnik",
     "cover": "/projekte/zahntechnik-guenther/01-cover.png",
     "images": [
@@ -431,7 +466,9 @@ export const projects = [
       "/projekte/zahntechnik-guenther/08.png",
       "/projekte/zahntechnik-guenther/09.png"
 
-    ]
+    ],
+"clients": ["Zahntechnik Günther"]
+
   },
   {
     "slug": "digital-campus-a1",
@@ -444,7 +481,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "digital campus A1\nTags\nA1\nCategory\nbooks\n,\ngraphics\n,\nmagazine\nAbout This Project\nmagazin für das digital campus A1",
+    "excerpt": "digital campus A1 Heft",
     "text": "digital campus A1\nTags\nA1\nCategory\nbooks\n,\ngraphics\n,\nmagazine\nAbout This Project\nmagazin für das digital campus A1",
     "cover": "/projekte/digital-campus-a1/01-cover.png",
     "images": [
@@ -455,7 +492,9 @@ export const projects = [
       "/projekte/digital-campus-a1/06.png",
       "/projekte/digital-campus-a1/07.png"
 
-    ]
+    ],
+"clients": ["A1"]
+
   },
   {
     "slug": "kultur-4-kids",
@@ -467,7 +506,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "kultur 4 kids\nTags\nKultur 4 Kids\nLand Niederösterreich\nCategory\ngraphics\n,\nvideo\nAbout This Project\nMesseaufbau für kultur4 kids niederösterreich\nplakatwände\nbroschüre\nbeachflag\ngewinnbox gewinnkarten\nvideo",
+    "excerpt": "Messestand mit Wänden und Video für kultur 4 kids  Land Niederösterreich",
     "text": "kultur 4 kids\nTags\nKultur 4 Kids\nLand Niederösterreich\nCategory\ngraphics\n,\nvideo\nAbout This Project\nMesseaufbau für kultur4 kids niederösterreich\nplakatwände\nbroschüre\nbeachflag\ngewinnbox gewinnkarten\nvideo",
     "cover": "/projekte/kultur-4-kids/01-cover.jpg",
     "images": [
@@ -479,7 +518,9 @@ export const projects = [
       "/projekte/kultur-4-kids/10.png",
       "/projekte/kultur-4-kids/11.png"
 
-    ]
+    ],
+"clients": ["Land Niederösterreich"]
+
   },
   {
     "slug": "update",
@@ -491,7 +532,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "update\nTags\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nCategory\nbooks\n,\nmagazine\nAbout This Project\nup:date\nMitgliederzeitschrift der Kammer\nder Steuerberater:innen und Wirtschaftsprüfer:innen",
+    "excerpt": "Mietglieder zeitschrift für update KSW Kammer der Steuerberater und Wirtschaftsprüfern",
     "text": "update\nTags\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nCategory\nbooks\n,\nmagazine\nAbout This Project\nup:date\nMitgliederzeitschrift der Kammer\nder Steuerberater:innen und Wirtschaftsprüfer:innen",
     "cover": "/projekte/update/01-cover.png",
     "images": [
@@ -505,7 +546,9 @@ export const projects = [
       "/projekte/update/08.jpg",
       "/projekte/update/09.jpg"
 
-    ]
+    ],
+"clients": ["KSW Kammer der Steuerberater und Wirtschaftsprüfer"]
+
   },
   {
     "slug": "knaekke-brot",
@@ -517,8 +560,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "büro flatland | knäkke brot\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT…",
-    "text": "büro flatland | knäkke brot\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nKultur 4 Kids\nKunsthausZug\nLand Niederösterreich\nMesseWien\nmumok\nnewsVerlag\nonzoone\nSammlungFalkenberg\nsammlungFriedrichshof\nschlebrügge.editor\nvermessungLoschnigg\nvg Getreideverarbeitung\nwireg\nzahntechnik günther\nÖsterreichischer Volleyball Verband\nall\nprint\nanimation\ngraphics\ncontact\nall\nprint\nanimation\ngraphics\ncontact\nbüro flatland | knäkke brot\n759\nwp-singular,portfolio_page-template-default,single,single-portfolio_page,postid-759,wp-theme-bridge,wp-child-theme-bridge-child,bridge-core-3.3.3,qode-optimizer-1.2.2,ajax_fade,page_not_loaded,,side_area_uncovered_from_content,qode-child-theme-ver-1.0.0,qode-theme-ver-17.2,qode-theme-bridge,disabled_footer_top,disabled_footer_bottom,qode_header_in_grid,wpb-js-composer js-comp-ver-8.2,vc_responsive\nknäkke brot\nTags\nknäkkeBROT\nCategory\ngraphics\n,\nlogo\nAbout This Project\nentwurf für ein knäkke Brot\nCookie-Zustimmung verwalten\nUm dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Daten wie das Surfverhalten oder eindeutige IDs auf dieser Website verarbeiten. Wenn du deine Zustimmung nicht erteilst oder zurückziehst, können bestimmte Merkmale und Funktionen beeinträchtigt werden.\nFunktional\nFunktional\nImmer aktiv\nDie technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.\nVorlieben\nVorlieben\nDie technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.\nStatistiken\nStatistiken\nDie technische Speicherung oder der Zugriff, der ausschließlich zu statistischen Zwecken erfolgt.\nDie technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.\nMarketing\nMarketing\nDie technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.\nOptionen verwalten\nDienste verwalten\nVerwalten von {vendor_count}-Lieferanten\nLes",
+    "excerpt": "knäkke brot entwurf Logo und verpackung",
     "cover": "/projekte/knaekke-brot/01-cover.png",
     "images": [
       "/projekte/knaekke-brot/01-cover.png",
@@ -528,7 +570,8 @@ export const projects = [
       "/projekte/knaekke-brot/06.png",
       "/projekte/knaekke-brot/07.jpg",
       "/projekte/knaekke-brot/08.png"
-    ]
+    ],
+"clients": ["Knäkke-Brot"]
   },
   {
     "slug": "grafik-inserts-animationen",
@@ -539,13 +582,15 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "grafik inserts animationen\nTags\nÖsterreichischer Volleyball Verband\nCategory\nvideo\nAbout This Project\nanimieren der grafik inserats für live volleyball übertragung auf laola und ORF\nGestaltung der Grafiken von Brandsetter ( ausgenommen wipes die sind von Büro…",
+    "excerpt": "grafik inserts animationen Österreichischer Volleyball Verband ",
     "text": "grafik inserts animationen\nTags\nÖsterreichischer Volleyball Verband\nCategory\nvideo\nAbout This Project\nanimieren der grafik inserats für live volleyball übertragung auf laola und ORF\nGestaltung der Grafiken von Brandsetter ( ausgenommen wipes die sind von Büro flatland)",
     "cover": "/projekte/grafik-inserts-animationen/01-cover.gif",
     "images": [
       "/projekte/grafik-inserts-animationen/01-cover.gif",
       "youtube:o0vIPQT4IH8"
-    ]
+    ],
+"clients": ["Österreichischer Volleyball Verband"]
+
   },
   {
     "slug": "auto-eod",
@@ -556,7 +601,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "auto EOD\nTags\nEOD munitionsbergung\nCategory\ngraphics\nAbout This Project\nAuto Gestaltung für EOD Munitionsbergung",
+    "excerpt": "Fuhrpark EOD Munitionsbergung ",
     "text": "auto EOD\nTags\nEOD munitionsbergung\nCategory\ngraphics\nAbout This Project\nAuto Gestaltung für EOD Munitionsbergung",
     "cover": "/projekte/auto-eod/01-cover.jpg",
     "images": [
@@ -565,7 +610,9 @@ export const projects = [
       "/projekte/auto-eod/03.jpg",
       "/projekte/auto-eod/04.jpg"
 
-    ]
+    ],
+"clients": ["EOD Munitionsbergung"]
+
   },
   {
     "slug": "wave-logo",
@@ -577,7 +624,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "wave logo\nTags\ndouble surf pool\nCategory\ngraphics\n,\nlogo\nAbout This Project\nLogo für eine statische SURF welle\nNAMESMÖGLICHKEITEN\nDROP IN\n2 WAVES\nBARREL SURF",
+    "excerpt": "wave logo, double surf pool, Logo für eine statische SURF Welle",
     "text": "wave logo\nTags\ndouble surf pool\nCategory\ngraphics\n,\nlogo\nAbout This Project\nLogo für eine statische SURF welle\nNAMESMÖGLICHKEITEN\nDROP IN\n2 WAVES\nBARREL SURF",
     "cover": "/projekte/wave-logo/01-cover.png",
     "images": [
@@ -593,7 +640,9 @@ export const projects = [
       "/projekte/wave-logo/11.png",
       "/projekte/wave-logo/12.png"
 
-    ]
+    ],
+"clients": ["Double Surf Pool"]
+
   },
   {
     "slug": "kneipp-bewegt-magazin-entwurf",
@@ -606,7 +655,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "kneipp bewegt Magazin Entwurf\nTags\nkneipp Magazin\nCategory\nbooks\n,\ngraphics\n,\nmagazine\nAbout This Project\nTeilnahme Pitch Entwurf für das bewegt Magazin des Kneipp Verlags",
+    "excerpt": "Teilnahme Pitch Entwurf für das bewegt Magazin des Kneipp Verlags",
     "text": "kneipp bewegt Magazin Entwurf\nTags\nkneipp Magazin\nCategory\nbooks\n,\ngraphics\n,\nmagazine\nAbout This Project\nTeilnahme Pitch Entwurf für das bewegt Magazin des Kneipp Verlags",
     "cover": "/projekte/kneipp-bewegt-magazin-entwurf/01-cover.jpg",
     "images": [
@@ -626,7 +675,9 @@ export const projects = [
       "/projekte/kneipp-bewegt-magazin-entwurf/15.jpg",
       "/projekte/kneipp-bewegt-magazin-entwurf/16.jpg"
 
-    ]
+    ],
+"clients": ["Kneipp Magazin"]
+
   },
   {
     "slug": "social-media",
@@ -638,7 +689,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "social media Die schöhnheitschirurgin\nTags\ndie schöhnheitschirurgin\nCategory\ngraphics\n,\nsocial media\nAbout This Project\neinige Post für die Schönheistchirurgin\nInstagram",
+    "excerpt": "social media Die schöhnheitschirurgin Apfolterer Post für die Schönheistchirurgin Instagram",
     "text": "social media Die schöhnheitschirurgin\nTags\ndie schöhnheitschirurgin\nCategory\ngraphics\n,\nsocial media\nAbout This Project\neinige Post für die Schönheistchirurgin\nInstagram",
     "cover": "/projekte/social-media/01-cover.jpg",
     "images": [
@@ -655,7 +706,9 @@ export const projects = [
       "/projekte/social-media/11.jpg",
       "/projekte/social-media/12.jpg"
 
-    ]
+    ],
+"clients": ["Die Schönheitschirurgin Apfolterer"]
+
   },
   {
     "slug": "logo-die-schoenheitschirurgin",
@@ -667,8 +720,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "LOGO die Schönheitschirurgin\nTags\ndie schöhnheitschirurgin\nCategory\ngraphics\n,\nlogo\nAbout This Project",
-    "text": "LOGO die Schönheitschirurgin\nTags\ndie schöhnheitschirurgin\nCategory\ngraphics\n,\nlogo\nAbout This Project",
+    "excerpt": "LOGO die Schönheitschirurgin Apfolterer",
     "cover": "/projekte/logo-die-schoenheitschirurgin/01-cover.png",
     "images": [
       
@@ -678,7 +730,9 @@ export const projects = [
       "/projekte/logo-die-schoenheitschirurgin/05.png",
       "/projekte/logo-die-schoenheitschirurgin/06.png"
 
-    ]
+    ],
+"clients": ["Die Schönheitschirurgin Apfolterer"]
+
   },
   {
     "slug": "preisfolder-beauty",
@@ -690,7 +744,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "preisfolder BEAUTY\nTags\ndie schöhnheitschirurgin\nCategory\nbooks\n,\ngraphics\nAbout This Project\nPreisliste für DIE SCHÖNHEITSCHIRURGIN\n2 VARIANTEN",
+    "excerpt": "preisfolder BEAUTY DIE SCHÖNHEITSCHIRURGIN VARIANTEN",
     "text": "preisfolder BEAUTY\nTags\ndie schöhnheitschirurgin\nCategory\nbooks\n,\ngraphics\nAbout This Project\nPreisliste für DIE SCHÖNHEITSCHIRURGIN\n2 VARIANTEN",
     "cover": "/projekte/preisfolder-beauty/01-cover.png",
     "images": [
@@ -704,7 +758,9 @@ export const projects = [
       "/projekte/preisfolder-beauty/08.png",
       "/projekte/preisfolder-beauty/09.png"
 
-    ]
+    ],
+"clients": ["Die Schönheitschirurgin Apfolterer"]
+
   },
   {
     "slug": "animierter-apfel",
@@ -716,12 +772,14 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "animierter Apfel\nTags\ndie schöhnheitschirurgin\nCategory\nsocial media\n,\nvideo\nAbout This Project\nvideo für Instagram\nfür eine botox behandlung",
+    "excerpt": "animierter Apfel die schöhnheitschirurgin video für Instagram für eine botox behandlung",
     "text": "animierter Apfel\nTags\ndie schöhnheitschirurgin\nCategory\nsocial media\n,\nvideo\nAbout This Project\nvideo für Instagram\nfür eine botox behandlung",
     "cover": "/projekte/animierter-apfel/01-cover.gif",
     "images": [
       "/projekte/animierter-apfel/01-cover.gif"
-    ]
+    ],
+"clients": ["Die Schönheitschirurgin Apfolterer"]
+
   },
   {
     "slug": "t-shirts",
@@ -733,7 +791,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "T-SHIRTs\nTags\nbrandsetter\nCategory\nart\n,\ngraphics\nAbout This Project\nENTWURF T-shirts für KLOSTERneuBURG",
+    "excerpt": "T-SHIRTs ENTWURF T-shirts für KLOSTERneuBURG",
     "text": "T-SHIRTs\nTags\nbrandsetter\nCategory\nart\n,\ngraphics\nAbout This Project\nENTWURF T-shirts für KLOSTERneuBURG",
     "cover": "/projekte/t-shirts/01-cover.png",
     "images": [
@@ -746,7 +804,9 @@ export const projects = [
       "/projekte/t-shirts/07.png",
       "/projekte/t-shirts/08.png"
 
-    ]
+    ],
+"clients": ["Brandsetter"]
+
   },
   {
     "slug": "auslage-beauty",
@@ -757,7 +817,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "AUSLAGE BEAUTY\nTags\ndie schöhnheitschirurgin\nCategory\ngraphics\nAbout This Project\nauslagen gestaltung für eine schöhnheitschirurgin\nes war geplant ein paar blätter auf die innenseite ein paar auf die außenseite zu kleben um dadurch noch einen räumlichen Effekt…",
+    "excerpt": "Auslagengestaltung für eine Schönheitschirurgin. Blätter auf Innen- und Außenseite für einen räumlichen Effekt. Schrift in Spiegelfolie und Matt-Weiß. In der Auslage war ein Fernseher eingeplant.",
     "text": "AUSLAGE BEAUTY\nTags\ndie schöhnheitschirurgin\nCategory\ngraphics\nAbout This Project\nauslagen gestaltung für eine schöhnheitschirurgin\nes war geplant ein paar blätter auf die innenseite ein paar auf die außenseite zu kleben um dadurch noch einen räumlichen Effekt zu erzielen\nschrift teilweise in spiegelfolie und in matt weiß\nin der auslage war ein fernseher eingeplant : die mit dem magenta rechteck markierte stelle",
     "cover": "/projekte/auslage-beauty/01-cover.jpg",
     "images": [
@@ -775,7 +835,9 @@ export const projects = [
       "/projekte/auslage-beauty/12.jpg",
       "/projekte/auslage-beauty/13.png"
 
-    ]
+    ],
+"clients": ["Die Schönheitschirurgin Apfolterer"]
+
   },
   {
     "slug": "label-klosterneuburg",
@@ -787,7 +849,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "label klosterneuburg\nTags\nbrandsetter\nCategory\ngraphics\n,\nlogo\nAbout This Project\nlabel Entwurf für KLOSTERNEUBURG\nfür die T-SHIRTS\nund die T-shirts für KLOSTERNEUBURG",
+    "excerpt": "Label-Entwurf für Klosterneuburg T-Shirts.",
     "text": "label klosterneuburg\nTags\nbrandsetter\nCategory\ngraphics\n,\nlogo\nAbout This Project\nlabel Entwurf für KLOSTERNEUBURG\nfür die T-SHIRTS\nund die T-shirts für KLOSTERNEUBURG",
     "cover": "/projekte/label-klosterneuburg/01-cover.png",
     "images": [
@@ -798,7 +860,9 @@ export const projects = [
       "/projekte/label-klosterneuburg/05.png",
       "/projekte/label-klosterneuburg/06.png"
 
-    ]
+    ],
+"clients": ["Brandsetter"]
+
   },
   {
     "slug": "instagram-schoehnheitschirurgie-post",
@@ -809,12 +873,14 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "instagram schöhnheitschirurgie post\nTags\ndie schöhnheitschirurgin\nCategory\nvideo\nAbout This Project\nshort für Instagram",
+    "excerpt": "instagram schöhnheitschirurgie post short für Instagram",
     "text": "instagram schöhnheitschirurgie post\nTags\ndie schöhnheitschirurgin\nCategory\nvideo\nAbout This Project\nshort für Instagram",
     "cover": "/projekte/instagram-schoehnheitschirurgie-post/01-cover.gif",
     "images": [
       "/projekte/instagram-schoehnheitschirurgie-post/01-cover.gif"
-    ]
+    ],
+"clients": ["Die Schönheitschirurgin Apfolterer"]
+
   },
   {
     "slug": "el-gourmet",
@@ -826,7 +892,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "el gourmet\nTags\ndi grillo\nCategory\ngraphics\n,\nlogo\nAbout This Project\nLogo für Spanische Wurstspezialitäten",
+    "excerpt": "el gourmet di grillo Logo für Spanische Wurstspezialitäten",
     "text": "el gourmet\nTags\ndi grillo\nCategory\ngraphics\n,\nlogo\nAbout This Project\nLogo für Spanische Wurstspezialitäten",
     "cover": "/projekte/el-gourmet/01-cover.png",
     "images": [
@@ -842,7 +908,9 @@ export const projects = [
       "/projekte/el-gourmet/10.png",
       "/projekte/el-gourmet/11.png"
 
-    ]
+    ],
+"clients": ["Di Grillo"]
+
   },
   {
     "slug": "dr-david-doerfler",
@@ -856,17 +924,16 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "dr david dörfler\nTags\ndr david dörfler\nCategory\ngraphics\n,\nlogo\n,\nvideo\n,\nweb\nAbout This Project\nDr. David Dörfler | Lungenfacharzt",
+    "excerpt": " Dr. David Dörfler | Lungenfacharzt, Homepage und Drucksorten",
     "text": "dr david dörfler\nTags\ndr david dörfler\nCategory\ngraphics\n,\nlogo\n,\nvideo\n,\nweb\nAbout This Project\nDr. David Dörfler | Lungenfacharzt",
     "cover": "/projekte/dr-david-doerfler/01-cover.png",
     "images": [
-      
-      "/projekte/dr-david-doerfler/01-cover.png",
       "/projekte/dr-david-doerfler/03.png",
       "/projekte/dr-david-doerfler/04.jpg",
       "/projekte/dr-david-doerfler/DrDD_FINAL2.mp4"
+    ],
+"clients": ["Dr. David Dörfler"]
 
-    ]
   },
   {
     "slug": "social-media-sabine-apfolterer",
@@ -879,7 +946,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "dr. sabine apfolterer\nTags\ndie schöhnheitschirurgin\nCategory\ngraphics\n,\nsocial media\n,\nvideo\nAbout This Project\nbetreuung und content gestaltung für sabine apfolterer DIE SCHÖNHEITSCHIRURGIN\ngif Animationen für Instagram posts",
+    "excerpt": "dr. sabine apfolterer DIE SCHÖNHEITSCHIRURGIN Animationen für Instagram posts",
     "text": "dr. sabine apfolterer\nTags\ndie schöhnheitschirurgin\nCategory\ngraphics\n,\nsocial media\n,\nvideo\nAbout This Project\nbetreuung und content gestaltung für sabine apfolterer DIE SCHÖNHEITSCHIRURGIN\ngif Animationen für Instagram posts",
     "cover": "/projekte/social-media-sabine-apfolterer/01-cover.gif",
     "images": [
@@ -893,7 +960,9 @@ export const projects = [
       "/projekte/social-media-sabine-apfolterer/09.gif",
       "/projekte/social-media-sabine-apfolterer/10.gif",
       "/projekte/social-media-sabine-apfolterer/11.gif"
-    ]
+    ],
+"clients": ["Die Schönheitschirurgin Apfolterer"]
+
   },
   {
     "slug": "kiraly-logo",
@@ -905,7 +974,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "Kiraly LOGO\nTags\ndi grillo\nCategory\ngraphics\n,\nlogo\nAbout This Project\nEntwürfe für Verpackung diverser Wurstsorten aus Ungarn",
+    "excerpt": "Kiraly LOGO, di grillo, Entwürfe für Verpackung diverser Wurstsorten aus Ungarn",
     "text": "Kiraly LOGO\nTags\ndi grillo\nCategory\ngraphics\n,\nlogo\nAbout This Project\nEntwürfe für Verpackung diverser Wurstsorten aus Ungarn",
     "cover": "/projekte/kiraly-logo/01-cover.png",
     "images": [
@@ -917,7 +986,9 @@ export const projects = [
       "/projekte/kiraly-logo/06.png",
       "/projekte/kiraly-logo/07.png"
 
-    ]
+    ],
+"clients": ["Di Grillo"]
+
   },
   {
     "slug": "double-surf-pool",
@@ -930,7 +1001,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "double surf pool\nTags\ndouble surf pool\nCategory\ngraphics\n,\nlogo\n,\nvideo\nAbout This Project\ninsta stop motion video\nund logo entwürfe\nund eine event Einladungskarte\nfür eine stand alone surf welle",
+    "excerpt": " ouble surf pool  stop motion video und logo entwürfe und eine event Einladungskarte für eine stand alone surf welle",
     "text": "double surf pool\nTags\ndouble surf pool\nCategory\ngraphics\n,\nlogo\n,\nvideo\nAbout This Project\ninsta stop motion video\nund logo entwürfe\nund eine event Einladungskarte\nfür eine stand alone surf welle",
     "cover": "/projekte/double-surf-pool/01-cover.gif",
     "images": [
@@ -946,7 +1017,9 @@ export const projects = [
       "/projekte/double-surf-pool/11.png",
       "/projekte/double-surf-pool/12.jpg"
 
-    ]
+    ],
+"clients": ["Double Surf Pool"]
+
   },
   {
     "slug": "hello-familiii",
@@ -959,7 +1032,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "hello familiii\nTags\nfamiliii\nCategory\nbooks\n,\ngraphics\n,\nmagazine\nAbout This Project\nKindermagazin mit Eltern und Kinderheft\nerscheint 1 mal im Monat",
+    "excerpt": " familiii Kindermagazin mit Eltern und Kinderheft erscheint 1 mal im Monat",
     "text": "hello familiii\nTags\nfamiliii\nCategory\nbooks\n,\ngraphics\n,\nmagazine\nAbout This Project\nKindermagazin mit Eltern und Kinderheft\nerscheint 1 mal im Monat",
     "cover": "/projekte/hello-familiii/01-cover.jpg",
     "images": [
@@ -990,7 +1063,9 @@ export const projects = [
       "/projekte/hello-familiii/25.jpg",
       "/projekte/hello-familiii/26.jpg"
 
-    ]
+    ],
+"clients": ["Familiii"]
+
   },
   {
     "slug": "dr-said-albinni",
@@ -1002,7 +1077,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "dr. said albinni\nTags\ndr said Albini\nCategory\ngraphics\n,\nlogo\nAbout This Project\nLogo Entwurf für\nOA Dr. Said Albinni",
+    "excerpt": " Logo Entwurf für OA Dr. Said Albinni",
     "text": "dr. said albinni\nTags\ndr said Albini\nCategory\ngraphics\n,\nlogo\nAbout This Project\nLogo Entwurf für\nOA Dr. Said Albinni",
     "cover": "/projekte/dr-said-albinni/01-cover.png",
     "images": [
@@ -1013,7 +1088,9 @@ export const projects = [
       "/projekte/dr-said-albinni/12.png",
       "/projekte/dr-said-albinni/13.png"
 
-    ]
+    ],
+"clients": ["Dr. Said Albinni"]
+
   },
   {
     "slug": "painting-into-picture-animation",
@@ -1024,12 +1101,14 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "painting into picture animation\nTags\nbrandsetter\nCategory\nvideo\nAbout This Project\ntest for painting into picture animation inst.. pimping up an old picture for instagram purpose",
+    "excerpt": "painting into picture animation, test for painting into picture animation instagramm. pimping up an old picture for instagram purpose",
     "text": "painting into picture animation\nTags\nbrandsetter\nCategory\nvideo\nAbout This Project\ntest for painting into picture animation inst.. pimping up an old picture for instagram purpose",
     "cover": "/projekte/painting-into-picture-animation/01-cover.gif",
     "images": [
       "/projekte/painting-into-picture-animation/01-cover.gif"
-    ]
+    ],
+"clients": ["Brandsetter"]
+
   },
   {
     "slug": "eod-munitionsbergung",
@@ -1041,7 +1120,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "EOD MUNITIONSBERGUNG\nTags\nEOD munitionsbergung\nCategory\ngraphics\n,\nweb\nAbout This Project\nEOD MUNITIONSBERGUNG\nlogo entwürfe\nplakte\nhomepage\nheferl 😉",
+    "excerpt": "EOD MUNITIONSBERGUNG logo entwürfe plakte homepage heferl 😉",
     "text": "EOD MUNITIONSBERGUNG\nTags\nEOD munitionsbergung\nCategory\ngraphics\n,\nweb\nAbout This Project\nEOD MUNITIONSBERGUNG\nlogo entwürfe\nplakte\nhomepage\nheferl 😉",
     "cover": "/projekte/eod-munitionsbergung/01-cover.png",
     "images": [
@@ -1069,7 +1148,9 @@ export const projects = [
       "/projekte/eod-munitionsbergung/22.jpg",
       "/projekte/eod-munitionsbergung/23.jpg"
 
-    ]
+    ],
+"clients": ["EOD Munitionsbergung"]
+
   },
   {
     "slug": "muttertagskarte",
@@ -1081,14 +1162,15 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "büro flatland | MuttertagsKarte\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkke…",
-    "text": "büro flatland | MuttertagsKarte\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nKultur 4 Kids\nKunsthausZug\nLand Niederösterreich\nMesseWien\nmumok\nnewsVerlag\nonzoone\nSammlungFalkenberg\nsammlungFriedrichshof\nschlebrügge.editor\nvermessungLoschnigg\nvg Getreideverarbeitung\nwireg\nzahntechnik günther\nÖsterreichischer Volleyball Verband\nall\nprint\nanimation\ngraphics\ncontact\nall\nprint\nanimation\ngraphics\ncontact\nbüro flatland | MuttertagsKarte\n319\nwp-singular,portfolio_page-template-default,single,single-portfolio_page,postid-319,wp-theme-bridge,wp-child-theme-bridge-child,bridge-core-3.3.3,qode-optimizer-1.2.2,ajax_fade,page_not_loaded,,side_area_uncovered_from_content,qode-child-theme-ver-1.0.0,qode-theme-ver-17.2,qode-theme-bridge,disabled_footer_top,disabled_footer_bottom,qode_header_in_grid,wpb-js-composer js-comp-ver-8.2,vc_responsive\nMuttertagsKarte\nTags\nnewsVerlag\nCategory\ngraphics\n,\nmagazine\nAbout This Project\nCookie-Zustimmung verwalten\nUm dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Daten wie das Surfverhalten oder eindeutige IDs auf dieser Website verarbeiten. Wenn du deine Zustimmung nicht erteilst oder zurückziehst, können bestimmte Merkmale und Funktionen beeinträchtigt werden.\nFunktional\nFunktional\nImmer aktiv\nDie technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.\nVorlieben\nVorlieben\nDie technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.\nStatistiken\nStatistiken\nDie technische Speicherung oder der Zugriff, der ausschließlich zu statistischen Zwecken erfolgt.\nDie technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.\nMarketing\nMarketing\nDie technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.\nOptionen verwalten\nDienste verwalten\nVerwalten von {vendor_count}-Lieferanten\nLese mehr über ",
+    "excerpt": "MuttertagsKarte für den News Verlag als Beilage",
     "cover": "/projekte/muttertagskarte/01-cover.jpg",
     "images": [
       "/projekte/muttertagskarte/01-cover.jpg",
       "/projekte/muttertagskarte/03.jpg",
       "/projekte/muttertagskarte/04.jpg"
-    ]
+    ],
+"clients": ["NEWS Verlag"]
+
   },
   {
     "slug": "hans-weigand-panorama",
@@ -1099,8 +1181,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "büro flatland | Hans Weigand Panorama\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin…",
-    "text": "büro flatland | Hans Weigand Panorama\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nKultur 4 Kids\nKunsthausZug\nLand Niederösterreich\nMesseWien\nmumok\nnewsVerlag\nonzoone\nSammlungFalkenberg\nsammlungFriedrichshof\nschlebrügge.editor\nvermessungLoschnigg\nvg Getreideverarbeitung\nwireg\nzahntechnik günther\nÖsterreichischer Volleyball Verband\nall\nprint\nanimation\ngraphics\ncontact\nall\nprint\nanimation\ngraphics\ncontact\nbüro flatland | Hans Weigand Panorama\n292\nwp-singular,portfolio_page-template-default,single,single-portfolio_page,postid-292,wp-theme-bridge,wp-child-theme-bridge-child,bridge-core-3.3.3,qode-optimizer-1.2.2,ajax_fade,page_not_loaded,,side_area_uncovered_from_content,qode-child-theme-ver-1.0.0,qode-theme-ver-17.2,qode-theme-bridge,disabled_footer_top,disabled_footer_bottom,qode_header_in_grid,wpb-js-composer js-comp-ver-8.2,vc_responsive\nHans Weigand Panorama\nTags\nKunsthausZug\nCategory\nbooks\nAbout This Project\nCookie-Zustimmung verwalten\nUm dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Daten wie das Surfverhalten oder eindeutige IDs auf dieser Website verarbeiten. Wenn du deine Zustimmung nicht erteilst oder zurückziehst, können bestimmte Merkmale und Funktionen beeinträchtigt werden.\nFunktional\nFunktional\nImmer aktiv\nDie technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.\nVorlieben\nVorlieben\nDie technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.\nStatistiken\nStatistiken\nDie technische Speicherung oder der Zugriff, der ausschließlich zu statistischen Zwecken erfolgt.\nDie technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.\nMarketing\nMarketing\nDie technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.\nOptionen verwalten\nDienste verwalten\nVerwalten von {vendor_count}-Lieferanten\nLese mehr",
+    "excerpt": "Hans Weigand Panorama Buch mit Ausklappbildern",
     "cover": "/projekte/hans-weigand-panorama/01-cover.jpg",
     "images": [
       "/projekte/hans-weigand-panorama/01-cover.jpg",
@@ -1115,7 +1196,9 @@ export const projects = [
       "/projekte/hans-weigand-panorama/11.jpg",
       "/projekte/hans-weigand-panorama/12.jpg",
       "/projekte/hans-weigand-panorama/13.jpg"
-    ]
+    ],
+"clients": ["Hans Weigand"]
+
   },
   {
     "slug": "mccarthy",
@@ -1126,8 +1209,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "büro flatland | McCarthy\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKS…",
-    "text": "büro flatland | McCarthy\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nKultur 4 Kids\nKunsthausZug\nLand Niederösterreich\nMesseWien\nmumok\nnewsVerlag\nonzoone\nSammlungFalkenberg\nsammlungFriedrichshof\nschlebrügge.editor\nvermessungLoschnigg\nvg Getreideverarbeitung\nwireg\nzahntechnik günther\nÖsterreichischer Volleyball Verband\nall\nprint\nanimation\ngraphics\ncontact\nall\nprint\nanimation\ngraphics\ncontact\nbüro flatland | McCarthy\n265\nwp-singular,portfolio_page-template-default,single,single-portfolio_page,postid-265,wp-theme-bridge,wp-child-theme-bridge-child,bridge-core-3.3.3,qode-optimizer-1.2.2,ajax_fade,page_not_loaded,,side_area_uncovered_from_content,qode-child-theme-ver-1.0.0,qode-theme-ver-17.2,qode-theme-bridge,disabled_footer_top,disabled_footer_bottom,qode_header_in_grid,wpb-js-composer js-comp-ver-8.2,vc_responsive\nMcCarthy\nTags\nsammlungFriedrichshof\nCategory\nbooks\nAbout This Project\nCookie-Zustimmung verwalten\nUm dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Daten wie das Surfverhalten oder eindeutige IDs auf dieser Website verarbeiten. Wenn du deine Zustimmung nicht erteilst oder zurückziehst, können bestimmte Merkmale und Funktionen beeinträchtigt werden.\nFunktional\nFunktional\nImmer aktiv\nDie technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.\nVorlieben\nVorlieben\nDie technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.\nStatistiken\nStatistiken\nDie technische Speicherung oder der Zugriff, der ausschließlich zu statistischen Zwecken erfolgt.\nDie technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.\nMarketing\nMarketing\nDie technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.\nOptionen verwalten\nDienste verwalten\nVerwalten von {vendor_count}-Lieferanten\nLese mehr über diese Zwecke\nAkzeptieren",
+    "excerpt": "McCarthy Buch",
     "cover": "/projekte/mccarthy/01-cover.png",
     "images": [
       "/projekte/mccarthy/01-cover.png",
@@ -1136,7 +1218,9 @@ export const projects = [
       "/projekte/mccarthy/04.jpg",
       "/projekte/mccarthy/05.jpg",
       "/projekte/mccarthy/07.jpg"
-    ]
+    ],
+"clients": ["Sammlung Friedrichshof"]
+
   },
   {
     "slug": "hans-weigand",
@@ -1147,7 +1231,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "Hans Weigand\nTags\nhans Weigand\nCategory\nbooks\nAbout This Project\nHans Weigand\nNeue Galerie Graz\nKunstraum Innsbruck\nVerlag der Buchhandlung Walther König",
+    "excerpt": "Hans Weigand Neue Galerie Graz Kunstraum Innsbruck Verlag der Buchhandlung Walther König",
     "text": "Hans Weigand\nTags\nhans Weigand\nCategory\nbooks\nAbout This Project\nHans Weigand\nNeue Galerie Graz\nKunstraum Innsbruck\nVerlag der Buchhandlung Walther König",
     "cover": "/projekte/hans-weigand/01-cover.jpg",
     "images": [
@@ -1160,7 +1244,9 @@ export const projects = [
       "/projekte/hans-weigand/07.jpg",
       "/projekte/hans-weigand/08.jpg"
 
-    ]
+    ],
+"clients": ["Hans Weigand"]
+
   },
   {
     "slug": "heritrage",
@@ -1171,7 +1257,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "heritrage\nTags\nschlebrügge.editor\nCategory\nbooks\nAbout This Project\nheritrage\nlearning matters\nschlebrügge editor\ngraphic design albert mayr",
+    "excerpt": "heritrage schlebrügge.editor learning matters Buch",
     "text": "heritrage\nTags\nschlebrügge.editor\nCategory\nbooks\nAbout This Project\nheritrage\nlearning matters\nschlebrügge editor\ngraphic design albert mayr",
     "cover": "/projekte/heritrage/01-cover.jpg",
     "images": [
@@ -1184,7 +1270,9 @@ export const projects = [
       "/projekte/heritrage/07.jpg",
       "/projekte/heritrage/08.jpg"
 
-    ]
+    ],
+"clients": ["schlebrügge.editor"]
+
   },
   {
     "slug": "magazin-lust-aufs-leben",
@@ -1197,7 +1285,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "magazin Lust aufs Leben\nTags\nnewsVerlag\nCategory\nbooks\n,\ngraphics\n,\nmagazine\nAbout This Project\nneugestaltung des magazin Lust aufs Leben",
+    "excerpt": "magazin Lust aufs Leben für den NEWS Verlag",
     "text": "magazin Lust aufs Leben\nTags\nnewsVerlag\nCategory\nbooks\n,\ngraphics\n,\nmagazine\nAbout This Project\nneugestaltung des magazin Lust aufs Leben",
     "cover": "/projekte/magazin-lust-aufs-leben/01-cover.jpg",
     "images": [
@@ -1211,7 +1299,9 @@ export const projects = [
       "/projekte/magazin-lust-aufs-leben/08.jpg",
       "/projekte/magazin-lust-aufs-leben/09.jpg"
 
-    ]
+    ],
+"clients": ["NEWS Verlag"]
+
   },
   {
     "slug": "diverse-logo-entwuerfe",
@@ -1223,7 +1313,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "diverse logo entwürfe\nCategory\ngraphics\n,\nlogo\nAbout This Project\nlogo entwürfe für diverse firmen und personen",
+    "excerpt": "diverse logo entwürfe für diverse firmen und personen",
     "text": "diverse logo entwürfe\nCategory\ngraphics\n,\nlogo\nAbout This Project\nlogo entwürfe für diverse firmen und personen",
     "cover": "/projekte/diverse-logo-entwuerfe/01-cover.jpg",
     "images": [
@@ -1275,7 +1365,9 @@ export const projects = [
       "/projekte/diverse-logo-entwuerfe/57.png",
       "/projekte/diverse-logo-entwuerfe/58.png"
 
-    ]
+    ],
+"clients": ["Nbüro flatland"]
+
   },
   {
     "slug": "salon-kunst-wien",
@@ -1287,15 +1379,16 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "büro flatland | salon kunst wien\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkk…",
-    "text": "büro flatland | salon kunst wien\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nKultur 4 Kids\nKunsthausZug\nLand Niederösterreich\nMesseWien\nmumok\nnewsVerlag\nonzoone\nSammlungFalkenberg\nsammlungFriedrichshof\nschlebrügge.editor\nvermessungLoschnigg\nvg Getreideverarbeitung\nwireg\nzahntechnik günther\nÖsterreichischer Volleyball Verband\nall\nprint\nanimation\ngraphics\ncontact\nall\nprint\nanimation\ngraphics\ncontact\nbüro flatland | salon kunst wien\n94\nwp-singular,portfolio_page-template-default,single,single-portfolio_page,postid-94,wp-theme-bridge,wp-child-theme-bridge-child,bridge-core-3.3.3,qode-optimizer-1.2.2,ajax_fade,page_not_loaded,,side_area_uncovered_from_content,qode-child-theme-ver-1.0.0,qode-theme-ver-17.2,qode-theme-bridge,disabled_footer_top,disabled_footer_bottom,qode_header_in_grid,wpb-js-composer js-comp-ver-8.2,vc_responsive\nsalon kunst wien\nCategory\ngraphics\n,\nlogo\nAbout This Project\nCookie-Zustimmung verwalten\nUm dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Daten wie das Surfverhalten oder eindeutige IDs auf dieser Website verarbeiten. Wenn du deine Zustimmung nicht erteilst oder zurückziehst, können bestimmte Merkmale und Funktionen beeinträchtigt werden.\nFunktional\nFunktional\nImmer aktiv\nDie technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.\nVorlieben\nVorlieben\nDie technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.\nStatistiken\nStatistiken\nDie technische Speicherung oder der Zugriff, der ausschließlich zu statistischen Zwecken erfolgt.\nDie technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.\nMarketing\nMarketing\nDie technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.\nOptionen verwalten\nDienste verwalten\nVerwalten von {vendor_count}-Lieferanten\nLese mehr über diese Zwecke\nAkzept",
+    "excerpt": "salon kunst wien",
     "cover": "/projekte/salon-kunst-wien/01-cover.jpg",
     "images": [
       "/projekte/salon-kunst-wien/01-cover.jpg",
       "/projekte/salon-kunst-wien/03.png",
       "/projekte/salon-kunst-wien/04.jpg",
       "/projekte/salon-kunst-wien/05.jpg"
-    ]
+    ],
+"clients": ["Salon Kunst"]
+
   },
   {
     "slug": "fratelli",
@@ -1307,8 +1400,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "büro flatland | fratelli\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKS…",
-    "text": "büro flatland | fratelli\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nKultur 4 Kids\nKunsthausZug\nLand Niederösterreich\nMesseWien\nmumok\nnewsVerlag\nonzoone\nSammlungFalkenberg\nsammlungFriedrichshof\nschlebrügge.editor\nvermessungLoschnigg\nvg Getreideverarbeitung\nwireg\nzahntechnik günther\nÖsterreichischer Volleyball Verband\nall\nprint\nanimation\ngraphics\ncontact\nall\nprint\nanimation\ngraphics\ncontact\nbüro flatland | fratelli\n76\nwp-singular,portfolio_page-template-default,single,single-portfolio_page,postid-76,wp-theme-bridge,wp-child-theme-bridge-child,bridge-core-3.3.3,qode-optimizer-1.2.2,ajax_fade,page_not_loaded,,side_area_uncovered_from_content,qode-child-theme-ver-1.0.0,qode-theme-ver-17.2,qode-theme-bridge,disabled_footer_top,disabled_footer_bottom,qode_header_in_grid,wpb-js-composer js-comp-ver-8.2,vc_responsive\nfratelli\nTags\nfratelli\nCategory\ngraphics\n,\nlogo\nAbout This Project\nentwurf für ein eisgeschäft\nCookie-Zustimmung verwalten\nUm dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Daten wie das Surfverhalten oder eindeutige IDs auf dieser Website verarbeiten. Wenn du deine Zustimmung nicht erteilst oder zurückziehst, können bestimmte Merkmale und Funktionen beeinträchtigt werden.\nFunktional\nFunktional\nImmer aktiv\nDie technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.\nVorlieben\nVorlieben\nDie technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.\nStatistiken\nStatistiken\nDie technische Speicherung oder der Zugriff, der ausschließlich zu statistischen Zwecken erfolgt.\nDie technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.\nMarketing\nMarketing\nDie technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.\nOptionen verwalten\nDienste verwalten\nVerwalten von {vendor_count}-Lieferanten\nLese mehr über d",
+    "excerpt": "fratelli entwürfe für einen Eissalon",
     "cover": "/projekte/fratelli/01-cover.jpg",
     "images": [
       "/projekte/fratelli/01-cover.jpg",
@@ -1321,7 +1413,9 @@ export const projects = [
       "/projekte/fratelli/09.jpg",
       "/projekte/fratelli/10.png",
       "/projekte/fratelli/11.png"
-    ]
+    ],
+"clients": ["Fratelli"]
+
   },
   {
     "slug": "dotkind",
@@ -1333,8 +1427,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "büro flatland | dotkind\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKSW…",
-    "text": "büro flatland | dotkind\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nKultur 4 Kids\nKunsthausZug\nLand Niederösterreich\nMesseWien\nmumok\nnewsVerlag\nonzoone\nSammlungFalkenberg\nsammlungFriedrichshof\nschlebrügge.editor\nvermessungLoschnigg\nvg Getreideverarbeitung\nwireg\nzahntechnik günther\nÖsterreichischer Volleyball Verband\nall\nprint\nanimation\ngraphics\ncontact\nall\nprint\nanimation\ngraphics\ncontact\nbüro flatland | dotkind\n71\nwp-singular,portfolio_page-template-default,single,single-portfolio_page,postid-71,wp-theme-bridge,wp-child-theme-bridge-child,bridge-core-3.3.3,qode-optimizer-1.2.2,ajax_fade,page_not_loaded,,side_area_uncovered_from_content,qode-child-theme-ver-1.0.0,qode-theme-ver-17.2,qode-theme-bridge,disabled_footer_top,disabled_footer_bottom,qode_header_in_grid,wpb-js-composer js-comp-ver-8.2,vc_responsive\ndotkind\nTags\ndotkind\nCategory\ngraphics\n,\nlogo\nAbout This Project\nlogo für ein kindermoden geschäft\nCookie-Zustimmung verwalten\nUm dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Daten wie das Surfverhalten oder eindeutige IDs auf dieser Website verarbeiten. Wenn du deine Zustimmung nicht erteilst oder zurückziehst, können bestimmte Merkmale und Funktionen beeinträchtigt werden.\nFunktional\nFunktional\nImmer aktiv\nDie technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.\nVorlieben\nVorlieben\nDie technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.\nStatistiken\nStatistiken\nDie technische Speicherung oder der Zugriff, der ausschließlich zu statistischen Zwecken erfolgt.\nDie technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.\nMarketing\nMarketing\nDie technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.\nOptionen verwalten\nDienste verwalten\nVerwalten von {vendor_count}-Lieferanten\nLese mehr über",
+    "excerpt": "dotkind, entwürfe für ein Kindermoden geschäft",
     "cover": "/projekte/dotkind/01-cover.png",
     "images": [
       "/projekte/dotkind/01-cover.png",
@@ -1343,7 +1436,9 @@ export const projects = [
       "/projekte/dotkind/05.png",
       "/projekte/dotkind/06.jpg",
       "/projekte/dotkind/07.jpg"
-    ]
+    ],
+"clients": ["Dotkind"]
+
   },
   {
     "slug": "west-kelly",
@@ -1354,7 +1449,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "Franz West Mike Kelly\nTags\nschlebrügge.editor\nCategory\nbooks\nDate\nJanuary 03, 2016\nAbout This Project\nvon jonny hawaii",
+    "excerpt": "Franz West Mike Kelly schlebrügge.editor January 03, 2016 ",
     "text": "Franz West Mike Kelly\nTags\nschlebrügge.editor\nCategory\nbooks\nDate\nJanuary 03, 2016\nAbout This Project\nvon jonny hawaii",
     "cover": "/projekte/west-kelly/01-cover.png",
     "images": [
@@ -1364,7 +1459,9 @@ export const projects = [
       "/projekte/west-kelly/04.jpg",
       "/projekte/west-kelly/05.jpg"
 
-    ]
+    ],
+"clients": ["schlebrügge.editor"]
+
   },
   {
     "slug": "garten-magazin",
@@ -1377,7 +1474,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "GARTEN magazin\nTags\nnewsVerlag\nCategory\nbooks\n,\ngraphics\n,\nmagazine\nAbout This Project\nGarten magazin\nBeilage\nfür NEWS\nWOMAN\nund TV MEDIA",
+    "excerpt": "GARTEN magazin NEWS Verlag, Beilage für NEWS WOMAN und TV MEDIA",
     "text": "GARTEN magazin\nTags\nnewsVerlag\nCategory\nbooks\n,\ngraphics\n,\nmagazine\nAbout This Project\nGarten magazin\nBeilage\nfür NEWS\nWOMAN\nund TV MEDIA",
     "cover": "/projekte/garten-magazin/01-cover.jpg",
     "images": [
@@ -1404,7 +1501,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "FAMILY magazin\nTags\nnewsVerlag\nCategory\nbooks\n,\ngraphics\n,\nmagazine\nAbout This Project\nFAMILY magazin\nBeilage\nfür NEWS\nWOMAN\nund TV MEDIA",
+    "excerpt": "FAMILY magazin NEWS Verlag, Beilage für NEWS WOMAN und TV MEDIA",
     "text": "FAMILY magazin\nTags\nnewsVerlag\nCategory\nbooks\n,\ngraphics\n,\nmagazine\nAbout This Project\nFAMILY magazin\nBeilage\nfür NEWS\nWOMAN\nund TV MEDIA",
     "cover": "/projekte/family-magazin/01-cover.jpg",
     "images": [
@@ -1417,7 +1514,9 @@ export const projects = [
       "/projekte/family-magazin/07.jpg",
       "/projekte/family-magazin/08.jpg"
 
-    ]
+    ],
+"clients": ["NEWS Verlag"]
+
   },
   {
     "slug": "hans-weigand-surfing",
@@ -1428,7 +1527,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "Hans Weigand surfing\nTags\n21erHaus\nCategory\nbooks\nAbout This Project\nHans Weigand „surfing“\nAusstellungskatalog im 21er Haus des Belvederes Wien\nvom 17 Juni bis 13 September\ngrafik: albert mayr",
+    "excerpt": "Hans Weigand surfing 21erHaus Hans Weigand „surfing“ Ausstellungskatalog im 21er Haus des Belvederes Wien vom 17 Juni bis 13 September\ngrafik: albert mayr",
     "text": "Hans Weigand surfing\nTags\n21erHaus\nCategory\nbooks\nAbout This Project\nHans Weigand „surfing“\nAusstellungskatalog im 21er Haus des Belvederes Wien\nvom 17 Juni bis 13 September\ngrafik: albert mayr",
     "cover": "/projekte/hans-weigand-surfing/01-cover.jpg",
     "images": [
@@ -1445,7 +1544,9 @@ export const projects = [
       "/projekte/hans-weigand-surfing/11.jpg",
       "/projekte/hans-weigand-surfing/12.jpg"
 
-    ]
+    ],
+"clients": ["Hans Weigand", "21erHaus"]
+
   },
   {
     "slug": "wiener-aktionismus",
@@ -1456,8 +1557,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "büro flatland | Wiener Aktionismus\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknä…",
-    "text": "büro flatland | Wiener Aktionismus\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nKultur 4 Kids\nKunsthausZug\nLand Niederösterreich\nMesseWien\nmumok\nnewsVerlag\nonzoone\nSammlungFalkenberg\nsammlungFriedrichshof\nschlebrügge.editor\nvermessungLoschnigg\nvg Getreideverarbeitung\nwireg\nzahntechnik günther\nÖsterreichischer Volleyball Verband\nall\nprint\nanimation\ngraphics\ncontact\nall\nprint\nanimation\ngraphics\ncontact\nbüro flatland | Wiener Aktionismus\n141\nwp-singular,portfolio_page-template-default,single,single-portfolio_page,postid-141,wp-theme-bridge,wp-child-theme-bridge-child,bridge-core-3.3.3,qode-optimizer-1.2.2,ajax_fade,page_not_loaded,,side_area_uncovered_from_content,qode-child-theme-ver-1.0.0,qode-theme-ver-17.2,qode-theme-bridge,disabled_footer_top,disabled_footer_bottom,qode_header_in_grid,wpb-js-composer js-comp-ver-8.2,vc_responsive\nWiener Aktionismus\nTags\nmumok\nCategory\nbooks\nAbout This Project\nwiener aktionismus\nCookie-Zustimmung verwalten\nUm dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Daten wie das Surfverhalten oder eindeutige IDs auf dieser Website verarbeiten. Wenn du deine Zustimmung nicht erteilst oder zurückziehst, können bestimmte Merkmale und Funktionen beeinträchtigt werden.\nFunktional\nFunktional\nImmer aktiv\nDie technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.\nVorlieben\nVorlieben\nDie technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.\nStatistiken\nStatistiken\nDie technische Speicherung oder der Zugriff, der ausschließlich zu statistischen Zwecken erfolgt.\nDie technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.\nMarketing\nMarketing\nDie technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.\nOptionen verwalten\nDienste verwalten\nVerwalten von {vendor_count}-Lieferanten\nLese m",
+    "excerpt": "Wiener Aktionismus Kunst und Aufbruch im Wien der 1960er-Jahre Gebundene Ausgabe – 1. Dezember 2011",
     "cover": "/projekte/wiener-aktionismus/01-cover.png",
     "images": [
       "/projekte/wiener-aktionismus/01-cover.png",
@@ -1468,7 +1568,9 @@ export const projects = [
       "/projekte/wiener-aktionismus/07.jpg",
       "/projekte/wiener-aktionismus/08.jpg",
       "/projekte/wiener-aktionismus/09.jpg"
-    ]
+    ],
+"clients": ["mumok"]
+
   },
   {
     "slug": "h4k2",
@@ -1480,13 +1582,14 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "büro flatland | h4k2\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKSW Ka…",
-    "text": "büro flatland | h4k2\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nKultur 4 Kids\nKunsthausZug\nLand Niederösterreich\nMesseWien\nmumok\nnewsVerlag\nonzoone\nSammlungFalkenberg\nsammlungFriedrichshof\nschlebrügge.editor\nvermessungLoschnigg\nvg Getreideverarbeitung\nwireg\nzahntechnik günther\nÖsterreichischer Volleyball Verband\nall\nprint\nanimation\ngraphics\ncontact\nall\nprint\nanimation\ngraphics\ncontact\nbüro flatland | h4k2\n84\nwp-singular,portfolio_page-template-default,single,single-portfolio_page,postid-84,wp-theme-bridge,wp-child-theme-bridge-child,bridge-core-3.3.3,qode-optimizer-1.2.2,ajax_fade,page_not_loaded,,side_area_uncovered_from_content,qode-child-theme-ver-1.0.0,qode-theme-ver-17.2,qode-theme-bridge,disabled_footer_top,disabled_footer_bottom,qode_header_in_grid,wpb-js-composer js-comp-ver-8.2,vc_responsive\nh4k2\nCategory\ngraphics\n,\nlogo\nAbout This Project\ncd entwurf für die band h4k2\nCookie-Zustimmung verwalten\nUm dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Daten wie das Surfverhalten oder eindeutige IDs auf dieser Website verarbeiten. Wenn du deine Zustimmung nicht erteilst oder zurückziehst, können bestimmte Merkmale und Funktionen beeinträchtigt werden.\nFunktional\nFunktional\nImmer aktiv\nDie technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.\nVorlieben\nVorlieben\nDie technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.\nStatistiken\nStatistiken\nDie technische Speicherung oder der Zugriff, der ausschließlich zu statistischen Zwecken erfolgt.\nDie technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.\nMarketing\nMarketing\nDie technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.\nOptionen verwalten\nDienste verwalten\nVerwalten von {vendor_count}-Lieferanten\nLese mehr über diese Zwecke\nAkzeptieren\nA",
+    "excerpt": "h4k2 CD COVER",
     "cover": "/projekte/h4k2/01-cover.jpg",
     "images": [
       "/projekte/h4k2/01-cover.jpg",
       "/projekte/h4k2/03.jpg"
-    ]
+    ],
+"clients": ["h4k2 BAND"]
+
   },
   {
     "slug": "modelling-space",
@@ -1497,8 +1600,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "büro flatland | Modelling Space\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkke…",
-    "text": "büro flatland | Modelling Space\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nKultur 4 Kids\nKunsthausZug\nLand Niederösterreich\nMesseWien\nmumok\nnewsVerlag\nonzoone\nSammlungFalkenberg\nsammlungFriedrichshof\nschlebrügge.editor\nvermessungLoschnigg\nvg Getreideverarbeitung\nwireg\nzahntechnik günther\nÖsterreichischer Volleyball Verband\nall\nprint\nanimation\ngraphics\ncontact\nall\nprint\nanimation\ngraphics\ncontact\nbüro flatland | Modelling Space\n272\nwp-singular,portfolio_page-template-default,single,single-portfolio_page,postid-272,wp-theme-bridge,wp-child-theme-bridge-child,bridge-core-3.3.3,qode-optimizer-1.2.2,ajax_fade,page_not_loaded,,side_area_uncovered_from_content,qode-child-theme-ver-1.0.0,qode-theme-ver-17.2,qode-theme-bridge,disabled_footer_top,disabled_footer_bottom,qode_header_in_grid,wpb-js-composer js-comp-ver-8.2,vc_responsive\nModelling Space\nTags\nschlebrügge.editor\nCategory\nbooks\nAbout This Project\nCookie-Zustimmung verwalten\nUm dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Daten wie das Surfverhalten oder eindeutige IDs auf dieser Website verarbeiten. Wenn du deine Zustimmung nicht erteilst oder zurückziehst, können bestimmte Merkmale und Funktionen beeinträchtigt werden.\nFunktional\nFunktional\nImmer aktiv\nDie technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.\nVorlieben\nVorlieben\nDie technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.\nStatistiken\nStatistiken\nDie technische Speicherung oder der Zugriff, der ausschließlich zu statistischen Zwecken erfolgt.\nDie technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.\nMarketing\nMarketing\nDie technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.\nOptionen verwalten\nDienste verwalten\nVerwalten von {vendor_count}-Lieferanten\nLese mehr über diese ",
+    "excerpt": "MODELLING SPACE: 10th Anniversary Kiesler Foundation Vienna / 10 Jahre Kiesler Stiftung Wien Taschenbuch – Ungekürzte Ausgabe, 21. September 2009",
     "cover": "/projekte/modelling-space/01-cover.jpg",
     "images": [
       "/projekte/modelling-space/01-cover.jpg",
@@ -1508,15 +1610,15 @@ export const projects = [
   },
   {
     "slug": "katalog-brener-schurz",
-    "title": "Katalog Brener Schurz",
+    "title": "Katalog Brener Schurz Ausstellung Friedrichshof",
     "url": "https://mischgo.com/portfolio_page/katalog-brener-schurz/",
     "categories": [
       "books"
     ],
     "year": "",
     "services": [],
-    "excerpt": "Katalog Brener Schurz\nTags\nsammlungFriedrichshof\nCategory\nbooks\nAbout This Project\nKatalog Ausstellung Friedrichshof",
-    "text": "Katalog Brener Schurz\nTags\nsammlungFriedrichshof\nCategory\nbooks\nAbout This Project\nKatalog Ausstellung Friedrichshof",
+    "excerpt": "Katalog Brener Schurz",
+    "text": "Katalog Brener Schurz",
     "cover": "/projekte/katalog-brener-schurz/01-cover.jpg",
     "images": [
       
@@ -1525,7 +1627,9 @@ export const projects = [
       "/projekte/katalog-brener-schurz/04.jpg",
       "/projekte/katalog-brener-schurz/05.jpg"
 
-    ]
+    ], 
+"clients": ["Sammlung Friedrichshof"]
+
   },
   {
     "slug": "wireg",
@@ -1538,8 +1642,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "WIREG\nTags\nwireg\nCategory\ngraphics\n,\nlogo\n,\nweb\nAbout This Project\ngestaltung der gesamten corporate identity\nLOGO firmengebäude, LKW, usw\nfirma für wire-o.bindung und registerstanzen",
-    "text": "WIREG\nTags\nwireg\nCategory\ngraphics\n,\nlogo\n,\nweb\nAbout This Project\ngestaltung der gesamten corporate identity\nLOGO firmengebäude, LKW, usw\nfirma für wire-o.bindung und registerstanzen",
+    "excerpt": "WIREG gestaltung der kompletten CI Logo Fasade LKws briefpapier usw...",
     "cover": "/projekte/wireg/01-cover.jpg",
     "images": [
       
@@ -1557,7 +1660,9 @@ export const projects = [
       "/projekte/wireg/13.jpg",
       "/projekte/wireg/14.jpg"
 
-    ]
+    ],
+"clients": ["Wireg"]
+
   },
   {
     "slug": "leben-magazin",
@@ -1570,8 +1675,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "büro flatland | LEBEN Magazin\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBR…",
-    "text": "büro flatland | LEBEN Magazin\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nKultur 4 Kids\nKunsthausZug\nLand Niederösterreich\nMesseWien\nmumok\nnewsVerlag\nonzoone\nSammlungFalkenberg\nsammlungFriedrichshof\nschlebrügge.editor\nvermessungLoschnigg\nvg Getreideverarbeitung\nwireg\nzahntechnik günther\nÖsterreichischer Volleyball Verband\nall\nprint\nanimation\ngraphics\ncontact\nall\nprint\nanimation\ngraphics\ncontact\nbüro flatland | LEBEN Magazin\n304\nwp-singular,portfolio_page-template-default,single,single-portfolio_page,postid-304,wp-theme-bridge,wp-child-theme-bridge-child,bridge-core-3.3.3,qode-optimizer-1.2.2,ajax_fade,page_not_loaded,,side_area_uncovered_from_content,qode-child-theme-ver-1.0.0,qode-theme-ver-17.2,qode-theme-bridge,disabled_footer_top,disabled_footer_bottom,qode_header_in_grid,wpb-js-composer js-comp-ver-8.2,vc_responsive\nLEBEN Magazin\nTags\nnewsVerlag\nCategory\nbooks\n,\ngraphics\n,\nmagazine\nAbout This Project\nCookie-Zustimmung verwalten\nUm dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Daten wie das Surfverhalten oder eindeutige IDs auf dieser Website verarbeiten. Wenn du deine Zustimmung nicht erteilst oder zurückziehst, können bestimmte Merkmale und Funktionen beeinträchtigt werden.\nFunktional\nFunktional\nImmer aktiv\nDie technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.\nVorlieben\nVorlieben\nDie technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.\nStatistiken\nStatistiken\nDie technische Speicherung oder der Zugriff, der ausschließlich zu statistischen Zwecken erfolgt.\nDie technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.\nMarketing\nMarketing\nDie technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.\nOptionen verwalten\nDienste verwalten\nVerwalten von {vendor_count}-Lieferanten\nLese mehr übe",
+    "excerpt": "LEBEN Magazin für den NEWS VERLAG",
     "cover": "/projekte/leben-magazin/01-cover.jpg",
     "images": [
       "/projekte/leben-magazin/01-cover.jpg",
@@ -1579,7 +1683,9 @@ export const projects = [
       "/projekte/leben-magazin/04.jpg",
       "/projekte/leben-magazin/05.jpg",
       "/projekte/leben-magazin/06.jpg"
-    ]
+    ],
+"clients": ["NEWS Verlag"]
+
   },
   {
     "slug": "voyzz",
@@ -1591,17 +1697,17 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "voyzz\nTags\nonzoone\nCategory\ngraphics\n,\nlogo\nAbout This Project\nlogo entwurf für einen telekom provider",
-    "text": "voyzz\nTags\nonzoone\nCategory\ngraphics\n,\nlogo\nAbout This Project\nlogo entwurf für einen telekom provider",
+    "excerpt": "voyzz LOGO. für eine Telefongesellschaft",
     "cover": "/projekte/voyzz/01-cover.png",
     "images": [
-      
       "/projekte/voyzz/01-cover.png",
       "/projekte/voyzz/03.jpg",
       "/projekte/voyzz/04.png",
       "/projekte/voyzz/05.png"
 
-    ]
+    ],
+"clients": ["onzoone"]
+
   },
   {
     "slug": "viennafair",
@@ -1612,7 +1718,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "viennafair\nTags\nMesseWien\nCategory\nbooks\nAbout This Project\nviennafair katalog\nin den Jahren 2005 bis 2011\nreed messe wien",
+    "excerpt": "Viennafair Katalog, Reed Messe Wien, 2005–2011.",
     "text": "viennafair\nTags\nMesseWien\nCategory\nbooks\nAbout This Project\nviennafair katalog\nin den Jahren 2005 bis 2011\nreed messe wien",
     "cover": "/projekte/viennafair/01-cover.png",
     "images": [
@@ -1629,7 +1735,9 @@ export const projects = [
       "/projekte/viennafair/11.jpg",
       "/projekte/viennafair/12.jpg"
 
-    ]
+    ],
+"clients": ["MesseWien"]
+
   },
   {
     "slug": "nach-kippenberger",
@@ -1640,8 +1748,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "büro flatland | Nach Kippenberger\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäk…",
-    "text": "büro flatland | Nach Kippenberger\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nKultur 4 Kids\nKunsthausZug\nLand Niederösterreich\nMesseWien\nmumok\nnewsVerlag\nonzoone\nSammlungFalkenberg\nsammlungFriedrichshof\nschlebrügge.editor\nvermessungLoschnigg\nvg Getreideverarbeitung\nwireg\nzahntechnik günther\nÖsterreichischer Volleyball Verband\nall\nprint\nanimation\ngraphics\ncontact\nall\nprint\nanimation\ngraphics\ncontact\nbüro flatland | Nach Kippenberger\n338\nwp-singular,portfolio_page-template-default,single,single-portfolio_page,postid-338,wp-theme-bridge,wp-child-theme-bridge-child,bridge-core-3.3.3,qode-optimizer-1.2.2,ajax_fade,page_not_loaded,,side_area_uncovered_from_content,qode-child-theme-ver-1.0.0,qode-theme-ver-17.2,qode-theme-bridge,disabled_footer_top,disabled_footer_bottom,qode_header_in_grid,wpb-js-composer js-comp-ver-8.2,vc_responsive\nNach Kippenberger\nTags\nmumok\nCategory\nbooks\nDate\n31.12.2003\nAbout This Project\nCookie-Zustimmung verwalten\nUm dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Daten wie das Surfverhalten oder eindeutige IDs auf dieser Website verarbeiten. Wenn du deine Zustimmung nicht erteilst oder zurückziehst, können bestimmte Merkmale und Funktionen beeinträchtigt werden.\nFunktional\nFunktional\nImmer aktiv\nDie technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.\nVorlieben\nVorlieben\nDie technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.\nStatistiken\nStatistiken\nDie technische Speicherung oder der Zugriff, der ausschließlich zu statistischen Zwecken erfolgt.\nDie technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.\nMarketing\nMarketing\nDie technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.\nOptionen verwalten\nDienste verwalten\nVerwalten von {vendor_count}-Lieferanten\nLese mehr üb",
+    "excerpt": "Nach Kippenberger  Autor/in Meyer-Hermann, Eva; Neuburger, Susanne Hrsg., Publiziert anlässlich der Ausstellung 'Nach Kippenberger' im Museum Moderner Kunst Stiftung Ludwig Wien",
     "cover": "/projekte/nach-kippenberger/01-cover.jpg",
     "images": [
       "/projekte/nach-kippenberger/01-cover.jpg",
@@ -1650,7 +1757,9 @@ export const projects = [
       "/projekte/nach-kippenberger/06.jpg",
       "/projekte/nach-kippenberger/07.jpg",
       "/projekte/nach-kippenberger/08.jpg"
-    ]
+    ],
+"clients": ["mumok"]
+
   },
   {
     "slug": "otto-muehl-material-struktur",
@@ -1661,8 +1770,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "büro flatland | Otto Muehl Material / Struktur\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp…",
-    "text": "büro flatland | Otto Muehl Material / Struktur\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nKultur 4 Kids\nKunsthausZug\nLand Niederösterreich\nMesseWien\nmumok\nnewsVerlag\nonzoone\nSammlungFalkenberg\nsammlungFriedrichshof\nschlebrügge.editor\nvermessungLoschnigg\nvg Getreideverarbeitung\nwireg\nzahntechnik günther\nÖsterreichischer Volleyball Verband\nall\nprint\nanimation\ngraphics\ncontact\nall\nprint\nanimation\ngraphics\ncontact\nbüro flatland | Otto Muehl Material / Struktur\n278\nwp-singular,portfolio_page-template-default,single,single-portfolio_page,postid-278,wp-theme-bridge,wp-child-theme-bridge-child,bridge-core-3.3.3,qode-optimizer-1.2.2,ajax_fade,page_not_loaded,,side_area_uncovered_from_content,qode-child-theme-ver-1.0.0,qode-theme-ver-17.2,qode-theme-bridge,disabled_footer_top,disabled_footer_bottom,qode_header_in_grid,wpb-js-composer js-comp-ver-8.2,vc_responsive\nOtto Muehl Material / Struktur\nTags\nsammlungFriedrichshof\nCategory\nbooks\nAbout This Project\nCookie-Zustimmung verwalten\nUm dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Daten wie das Surfverhalten oder eindeutige IDs auf dieser Website verarbeiten. Wenn du deine Zustimmung nicht erteilst oder zurückziehst, können bestimmte Merkmale und Funktionen beeinträchtigt werden.\nFunktional\nFunktional\nImmer aktiv\nDie technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.\nVorlieben\nVorlieben\nDie technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.\nStatistiken\nStatistiken\nDie technische Speicherung oder der Zugriff, der ausschließlich zu statistischen Zwecken erfolgt.\nDie technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.\nMarketing\nMarketing\nDie technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.\nOptionen verwalten\nDienste verwalten\nVerwalten von ",
+    "excerpt": "Otto Muehl Material / Struktur",
     "cover": "/projekte/otto-muehl-material-struktur/01-cover.jpg",
     "images": [
       
@@ -1673,7 +1781,9 @@ export const projects = [
       "/projekte/otto-muehl-material-struktur/06.jpg",
       "/projekte/otto-muehl-material-struktur/07.jpg"
 
-    ]
+    ],
+"clients": ["Sammlung Friedrichshof"]
+
   },
   {
     "slug": "staeck-klaus",
@@ -1684,7 +1794,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "Staeck Klaus\nTags\nSammlungFalkenberg\nCategory\nbooks\nAbout This Project\nNichts ist erledigt\nKlaus Staeck\nEine Retrospektive",
+    "excerpt": " Nichts ist erledigt - Klaus Staeck : eine Retrospektive ; Beiträge von Christoph Tannert, Ludwig Seyfarth, Oskar Negt, Harald Falckenberg, Werner Hofmann und Lothar Romain 184 Seiten ",
     "text": "Staeck Klaus\nTags\nSammlungFalkenberg\nCategory\nbooks\nAbout This Project\nNichts ist erledigt\nKlaus Staeck\nEine Retrospektive",
     "cover": "/projekte/staeck-klaus/01-cover.jpg",
     "images": [
@@ -1701,7 +1811,9 @@ export const projects = [
       "/projekte/staeck-klaus/12.jpg",
       "/projekte/staeck-klaus/13.jpg"
 
-    ]
+    ],
+"clients": ["Sammlung Falkenberg"]
+
   },
   {
     "slug": "martin-kippenberger",
@@ -1712,8 +1824,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "büro flatland | Martin Kippenberger\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nkn…",
-    "text": "büro flatland | Martin Kippenberger\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nKultur 4 Kids\nKunsthausZug\nLand Niederösterreich\nMesseWien\nmumok\nnewsVerlag\nonzoone\nSammlungFalkenberg\nsammlungFriedrichshof\nschlebrügge.editor\nvermessungLoschnigg\nvg Getreideverarbeitung\nwireg\nzahntechnik günther\nÖsterreichischer Volleyball Verband\nall\nprint\nanimation\ngraphics\ncontact\nall\nprint\nanimation\ngraphics\ncontact\nbüro flatland | Martin Kippenberger\n201\nwp-singular,portfolio_page-template-default,single,single-portfolio_page,postid-201,wp-theme-bridge,wp-child-theme-bridge-child,bridge-core-3.3.3,qode-optimizer-1.2.2,ajax_fade,page_not_loaded,,side_area_uncovered_from_content,qode-child-theme-ver-1.0.0,qode-theme-ver-17.2,qode-theme-bridge,disabled_footer_top,disabled_footer_bottom,qode_header_in_grid,wpb-js-composer js-comp-ver-8.2,vc_responsive\nMartin Kippenberger\nCategory\nbooks\nAbout This Project\nAusstellungskatalog Galerie Bleich Rossie\nCookie-Zustimmung verwalten\nUm dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Daten wie das Surfverhalten oder eindeutige IDs auf dieser Website verarbeiten. Wenn du deine Zustimmung nicht erteilst oder zurückziehst, können bestimmte Merkmale und Funktionen beeinträchtigt werden.\nFunktional\nFunktional\nImmer aktiv\nDie technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.\nVorlieben\nVorlieben\nDie technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.\nStatistiken\nStatistiken\nDie technische Speicherung oder der Zugriff, der ausschließlich zu statistischen Zwecken erfolgt.\nDie technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.\nMarketing\nMarketing\nDie technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.\nOptionen verwalten\nDienste verwalten\nVerwalten von {vendor_count}-Lie",
+    "excerpt": "Martin Kippenberger",
     "cover": "/projekte/martin-kippenberger/01-cover.jpg",
     "images": [
       "/projekte/martin-kippenberger/01-cover.jpg",
@@ -1722,7 +1833,9 @@ export const projects = [
       "/projekte/martin-kippenberger/07.jpg",
       "/projekte/martin-kippenberger/08.jpg",
       "/projekte/martin-kippenberger/09.jpg"
-    ]
+    ],
+"clients": ["mumok"]
+
   },
   {
     "slug": "der-ficker",
@@ -1733,8 +1846,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "büro flatland | der ficker\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT…",
-    "text": "büro flatland | der ficker\nclients\n21erHaus\nA1\nathletics eyewear\nbella wagner\nbrandsetter\ndie schöhnheitschirurgin\ndi grillo\ndotkind\ndouble surf pool\ndr david dörfler\ndr said Albini\nEOD munitionsbergung\nfamiliii\nfratelli\nhans Weigand\nkneipp Magazin\nknäkkeBROT\nKSW Kammer der Steuerberater und Wirtschaftsprüfer\nKultur 4 Kids\nKunsthausZug\nLand Niederösterreich\nMesseWien\nmumok\nnewsVerlag\nonzoone\nSammlungFalkenberg\nsammlungFriedrichshof\nschlebrügge.editor\nvermessungLoschnigg\nvg Getreideverarbeitung\nwireg\nzahntechnik günther\nÖsterreichischer Volleyball Verband\nall\nprint\nanimation\ngraphics\ncontact\nall\nprint\nanimation\ngraphics\ncontact\nbüro flatland | der ficker\n186\nwp-singular,portfolio_page-template-default,single,single-portfolio_page,postid-186,wp-theme-bridge,wp-child-theme-bridge-child,bridge-core-3.3.3,qode-optimizer-1.2.2,ajax_fade,page_not_loaded,,side_area_uncovered_from_content,qode-child-theme-ver-1.0.0,qode-theme-ver-17.2,qode-theme-bridge,disabled_footer_top,disabled_footer_bottom,qode_header_in_grid,wpb-js-composer js-comp-ver-8.2,vc_responsive\nder ficker\nTags\nschlebrügge.editor\nCategory\nbooks\nAbout This Project\nCookie-Zustimmung verwalten\nUm dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Daten wie das Surfverhalten oder eindeutige IDs auf dieser Website verarbeiten. Wenn du deine Zustimmung nicht erteilst oder zurückziehst, können bestimmte Merkmale und Funktionen beeinträchtigt werden.\nFunktional\nFunktional\nImmer aktiv\nDie technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.\nVorlieben\nVorlieben\nDie technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.\nStatistiken\nStatistiken\nDie technische Speicherung oder der Zugriff, der ausschließlich zu statistischen Zwecken erfolgt.\nDie technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.\nMarketing\nMarketing\nDie technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.\nOptionen verwalten\nDienste verwalten\nVerwalten von {vendor_count}-Lieferanten\nLese mehr über diese Zwecke\nAkzeptie",
+    "excerpt": "Der Ficker erschien anlässlich der Ausstellung in der Galerie Elisabeth & Klaus Thoman, Innsbruck (13. Februar – 23. April 2005). Eine von Franz West initiierte Wiederaufnahme des berühmten Brenner, der von Ludwig von Ficker herausgegebenen Zeitschrift, zu deren Kreis u.a. Georg Trakl und Ludwig Wittgenstein gehörten.",
     "cover": "/projekte/der-ficker/01-cover.jpg",
     "images": [
       "/projekte/der-ficker/01-cover.jpg",
@@ -1746,7 +1858,9 @@ export const projects = [
       "/projekte/der-ficker/09.jpg",
       "/projekte/der-ficker/10.jpg",
       "/projekte/der-ficker/11.jpg"
-    ]
+    ],
+"clients": ["schlebrügge.editor"]
+
   },
   {
     "slug": "vermessung-loschnigg",
@@ -1758,7 +1872,7 @@ export const projects = [
     ],
     "year": "",
     "services": [],
-    "excerpt": "vermessung loschnigg\nTags\nvermessungLoschnigg\nCategory\ngraphics\n,\nlogo\nAbout This Project\nlogo entwurf für ein vermessungsbüro\ndesigned by jonnyhawaii",
+    "excerpt": "Vermessung loschnigg Staatlich befugte und beeidete Ingenieurkonsulenten für Vermessungswesen",
     "text": "vermessung loschnigg\nTags\nvermessungLoschnigg\nCategory\ngraphics\n,\nlogo\nAbout This Project\nlogo entwurf für ein vermessungsbüro\ndesigned by jonnyhawaii",
     "cover": "/projekte/vermessung-loschnigg/01-cover.jpg",
     "images": [
@@ -1769,6 +1883,8 @@ export const projects = [
       "/projekte/vermessung-loschnigg/06.jpg",
       "/projekte/vermessung-loschnigg/07.jpg"
 
-    ]
+    ],
+"clients": ["vermessung-loschnigg"]
+
   }
 ] as const;

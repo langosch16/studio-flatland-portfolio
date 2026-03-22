@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import type { Project } from "@/data/projects";
 
@@ -16,11 +16,8 @@ function norm(str: string): string {
 }
 
 function clientMatchesProject(client: string, p: Project): boolean {
-  const words = norm(client).split(" ").filter((w) => w.length > 1);
-  const haystack = norm(
-    `${p.slug} ${p.title} ${(p.text ?? "").slice(0, 600)} ${(p.excerpt ?? "").slice(0, 400)}`
-  );
-  return words.length > 0 && words.every((w) => haystack.includes(w));
+  if (!p.clients || p.clients.length === 0) return false;
+  return p.clients.some((c) => norm(c) === norm(client));
 }
 
 function mapTheme(p: Project): Exclude<ThemeFilter, "all"> {
@@ -79,10 +76,10 @@ const GAP    = 22;
 const RADIUS = "14px";
 
 // ── YouTube Videos ──────────────────────────────────────────────────────────
-const VIDEOS: { id: string; title: string; short: boolean; insertAfter: number; thumb?: string }[] = [
+const VIDEOS: { id: string; title: string; short: boolean; insertAfter: number; thumb?: string; aspect?: string }[] = [
   { id: "pVCKSqkJJgA", title: "Animation Reel",  short: false, insertAfter: 5, thumb: "/thumbs/thumb1.png" },
   { id: "Ev84gDJE784", title: "Short",            short: true,  insertAfter: 12 },
-  { id: "mOXzKpRWEAQ", title: "Short",            short: true,  insertAfter: 22 },
+  { id: "mOXzKpRWEAQ", title: "Short",            short: true,  insertAfter: 22, aspect: "177.78%" },
   { id: "2koa2D241bQ", title: "Short",            short: true,  insertAfter: 35 },
   { id: "jyaEvAR5gB4", title: "Short",            short: true,  insertAfter: 48 },
   { id: "CGfufsGGl30", title: "Lips",             short: false, insertAfter: 48 },
@@ -95,14 +92,19 @@ function ytThumb(id: string) {
 
 export default function MasonryPortfolio({ projects }: Props) {
   const [filter, setFilter]           = useState<ThemeFilter>("all");
-  const [clientsOpen, setClientsOpen] = useState(false);
-  const [contactOpen, setContactOpen] = useState(false);
+  const [clientsOpen, setClientsOpen]       = useState(false);
+  const [contactOpen, setContactOpen]       = useState(false);
+  const [impressumOpen, setImpressumOpen]   = useState(false);
+  const [datenschutzOpen, setDatenschutzOpen] = useState(false);
+  const [cookieOpen, setCookieOpen]         = useState(false);
   const [expanded, setExpanded]       = useState<string | null>(null);
 
   const [splash, setSplash]               = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeClient, setActiveClient]   = useState<string | null>(null);
   const [playingVideo, setPlayingVideo]   = useState<string | null>(null);
+  const [playingInlineVideo, setPlayingInlineVideo] = useState<string | null>(null);
+  const [numCols, setNumCols] = useState(5);
   const [typed, setTyped]       = useState("");
   const [cursorOn, setCursorOn] = useState(true);
 
@@ -126,6 +128,17 @@ export default function MasonryPortfolio({ projects }: Props) {
   useEffect(() => {
     const iv = setInterval(() => setCursorOn((v) => !v), 500);
     return () => clearInterval(iv);
+  }, []);
+
+  // Responsive column count
+  useEffect(() => {
+    const update = () => {
+      const w = window.innerWidth;
+      setNumCols(w < 640 ? 1 : w < 900 ? 2 : w < 1200 ? 3 : 5);
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
   }, []);
 
   const clientNames = CLIENT_LIST;
@@ -152,10 +165,14 @@ export default function MasonryPortfolio({ projects }: Props) {
     return base;
   }, [projects, filter, activeClient]);
 
+  function closeAllPanels() {
+    setClientsOpen(false); setContactOpen(false);
+    setImpressumOpen(false); setDatenschutzOpen(false); setCookieOpen(false);
+  }
   function handleMenu(f: ThemeFilter | "clients" | "contact") {
-    if (f === "clients") { setClientsOpen((v) => !v); setContactOpen(false); }
-    else if (f === "contact") { setContactOpen((v) => !v); setClientsOpen(false); }
-    else { setFilter(f); setClientsOpen(false); setContactOpen(false); setExpanded(null); }
+    if (f === "clients")  { closeAllPanels(); setClientsOpen((v) => !v); }
+    else if (f === "contact") { closeAllPanels(); setContactOpen((v) => !v); }
+    else { closeAllPanels(); setFilter(f); setExpanded(null); }
   }
 
   return (
@@ -205,255 +222,267 @@ export default function MasonryPortfolio({ projects }: Props) {
         )}
       </AnimatePresence>
 
-      {/* ── Pinterest Masonry — Logo + Menü + Projekte alle in den Columns ── */}
-      <div style={{ columns: "5 200px", columnGap: GAP }}>
+      {/* ── Masonry — separate Spalten-Divs (kein CSS columns reflow) ── */}
+      {(() => {
+        type MixedItem =
+          | { kind: "project"; project: (typeof filtered)[0] }
+          | { kind: "video";   video: (typeof VIDEOS)[0] };
 
-        {/* Logo tile — mit Burger auf Mobile */}
-        <div
-          className="bg-neutral-900 flex flex-col justify-between p-5 select-none"
-          style={{ breakInside: "avoid", marginBottom: GAP, borderRadius: RADIUS, height: 150 }}
-        >
-          <div className="flex items-start justify-between">
-            <span className="text-[7px] uppercase tracking-[0.22em] text-white/30 font-medium">
-              Portfolio
-            </span>
-            {/* Burger — nur auf Mobile sichtbar */}
-            <button
-              className="md:hidden flex flex-col gap-[5px] p-1 -mt-1 -mr-1"
-              onClick={() => setMobileMenuOpen((v) => !v)}
-              aria-label="Menü öffnen"
-            >
-              <span className={`block w-5 h-[2px] bg-white transition-all duration-300 origin-center ${mobileMenuOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
-              <span className={`block w-5 h-[2px] bg-white transition-all duration-300 ${mobileMenuOpen ? "opacity-0" : ""}`} />
-              <span className={`block w-5 h-[2px] bg-white transition-all duration-300 origin-center ${mobileMenuOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
-            </button>
-          </div>
-          <div className="text-white font-black uppercase leading-[0.82] tracking-tight text-2xl">
-            Studio<br />Flat<br />Land
-          </div>
-        </div>
-
-        {/* Menu tiles — auf Mobile ausgeblendet, auf Desktop in den Columns */}
-        {MENU_ITEMS.map(({ label, filter: f }) => {
-          const isActive =
-            f === filter ||
-            (f === "clients" && clientsOpen) ||
-            (f === "contact" && contactOpen);
-          return (
-            <button
-              key={f}
-              onClick={() => handleMenu(f)}
-              className={`hidden md:flex w-full flex-col justify-between p-5 text-left transition-colors duration-200 ${
-                isActive
-                  ? "bg-neutral-900 text-white"
-                  : "bg-neutral-100 text-neutral-900 hover:bg-neutral-200"
-              }`}
-              style={{ breakInside: "avoid", marginBottom: GAP, borderRadius: RADIUS, height: 150 }}
-            >
-              <span className={`text-[7px] uppercase tracking-[0.2em] font-medium ${isActive ? "text-white/35" : "text-neutral-400"}`}>
-                menu
-              </span>
-              <span className="font-bold uppercase leading-none tracking-tight text-2xl">
-                {label}
-              </span>
-            </button>
-          );
-        })}
-
-        {/* Projekte + Videos gemischt — als kombiniertes Array */}
-        {(() => {
-          type MixedItem =
-            | { kind: "project"; project: (typeof filtered)[0] }
-            | { kind: "video";   video: (typeof VIDEOS)[0] };
-
-          const showVideos = filter === "all" || filter === "animation";
-          const mixed: MixedItem[] = [];
-          filtered.forEach((project, idx) => {
-            if (showVideos) VIDEOS.filter((v) => v.insertAfter === idx).forEach((v) =>
-              mixed.push({ kind: "video", video: v })
-            );
-            mixed.push({ kind: "project", project });
-          });
-          // Videos nach dem letzten Projekt
-          if (showVideos) VIDEOS.filter((v) => v.insertAfter >= filtered.length).forEach((v) =>
+        const showVideos = filter === "all" || filter === "animation";
+        const mixed: MixedItem[] = [];
+        filtered.forEach((project, idx) => {
+          if (showVideos) VIDEOS.filter((v) => v.insertAfter === idx).forEach((v) =>
             mixed.push({ kind: "video", video: v })
           );
+          mixed.push({ kind: "project", project });
+        });
+        if (showVideos) VIDEOS.filter((v) => v.insertAfter >= filtered.length).forEach((v) =>
+          mixed.push({ kind: "video", video: v })
+        );
 
-          return mixed.map((item) => {
-            /* ── Video Tile ── */
-            if (item.kind === "video") {
-              const { video } = item;
-              const isPlaying = playingVideo === video.id;
-              const isDimmedV = expanded !== null || (playingVideo !== null && !isPlaying);
-              const aspectPad = video.short ? "177.78%" : "56.25%";
-              return (
-                <motion.div
-                  key={"yt-" + video.id}
-                  animate={{ opacity: isDimmedV ? 0.15 : 1 }}
-                  transition={{ duration: 0.3 }}
-                  className="relative group"
-                  style={{ breakInside: "avoid", marginBottom: GAP, borderRadius: RADIUS, overflow: "hidden", background: "#111" }}
-                >
-                  <div style={{ position: "relative", paddingTop: aspectPad }}>
-                    {isPlaying ? (
-                      <iframe
-                        src={`https://www.youtube.com/embed/${video.id}?autoplay=1&rel=0`}
-                        allow="autoplay; encrypted-media"
-                        allowFullScreen
-                        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
+        // ── Elemente aufbauen: headerItems (col 0) + projectItems (alle cols) ──
+        const headerItems: React.ReactElement[] = [];
+        const projectItems: React.ReactElement[] = [];
+        const elements: React.ReactElement[] = []; // wird nicht mehr genutzt
+
+        // Logo tile
+        headerItems.push(
+          <div
+            key="logo"
+            className="bg-neutral-900 flex flex-col justify-between p-5 select-none"
+            style={{ borderRadius: RADIUS, height: 150 }}
+          >
+            <div className="flex items-start justify-between">
+              <span className="text-[7px] uppercase tracking-[0.22em] text-white/30 font-medium">Portfolio</span>
+              <button
+                className="md:hidden flex flex-col gap-[5px] p-1 -mt-1 -mr-1"
+                onClick={() => setMobileMenuOpen((v) => !v)}
+                aria-label="Menü öffnen"
+              >
+                <span className={`block w-5 h-[2px] bg-white transition-all duration-300 origin-center ${mobileMenuOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
+                <span className={`block w-5 h-[2px] bg-white transition-all duration-300 ${mobileMenuOpen ? "opacity-0" : ""}`} />
+                <span className={`block w-5 h-[2px] bg-white transition-all duration-300 origin-center ${mobileMenuOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
+              </button>
+            </div>
+            <div className="text-white font-black uppercase leading-[0.82] tracking-tight text-2xl">
+              Studio<br />Flat<br />Land
+            </div>
+          </div>
+        );
+
+        // Menu tiles
+        MENU_ITEMS.forEach(({ label, filter: f }) => {
+          const isActive = f === filter || (f === "clients" && clientsOpen) || (f === "contact" && contactOpen);
+          headerItems.push(
+            <button
+              key={"menu-" + f}
+              onClick={() => handleMenu(f)}
+              className={`hidden md:flex w-full flex-col justify-between p-5 text-left transition-colors duration-200 ${
+                isActive ? "bg-neutral-900 text-white" : "bg-neutral-100 text-neutral-900 hover:bg-neutral-200"
+              }`}
+              style={{ borderRadius: RADIUS, height: 150 }}
+            >
+              <span className={`text-[7px] uppercase tracking-[0.2em] font-medium ${isActive ? "text-white/35" : "text-neutral-400"}`}>menu</span>
+              <span className="font-bold uppercase leading-none tracking-tight text-2xl">{label}</span>
+            </button>
+          );
+        });
+
+        // Mixed items
+        mixed.forEach((item) => {
+          if (item.kind === "video") {
+            const { video } = item;
+            const isPlaying = playingVideo === video.id;
+            const isDimmedV = expanded !== null || (playingVideo !== null && !isPlaying);
+            const aspectPad = video.aspect ?? (video.short ? "100%" : "56.25%");
+            projectItems.push(
+              <motion.div
+                key={"yt-" + video.id}
+                animate={{ opacity: isDimmedV ? 0.15 : 1 }}
+                transition={{ duration: 0.3 }}
+                className="relative group"
+                style={{ borderRadius: RADIUS, overflow: "hidden", background: "#111" }}
+              >
+                <div style={{ position: "relative", paddingTop: aspectPad }}>
+                  {isPlaying ? (
+                    <iframe
+                      src={`https://www.youtube.com/embed/${video.id}?autoplay=1&rel=0`}
+                      allow="autoplay; encrypted-media"
+                      allowFullScreen
+                      style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
+                    />
+                  ) : (
+                    <>
+                      <img
+                        src={video.thumb ?? ytThumb(video.id)}
+                        alt={video.title}
+                        onError={(e) => {
+                          const el = e.target as HTMLImageElement;
+                          if (el.src.includes("maxresdefault")) el.src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
+                          else if (el.src.includes("hqdefault")) el.src = `https://img.youtube.com/vi/${video.id}/0.jpg`;
+                        }}
+                        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                        draggable={false}
                       />
-                    ) : (
-                      <>
-                        <img
-                          src={video.thumb ?? ytThumb(video.id)}
-                          alt={video.title}
-                          onError={(e) => {
-                            const el = e.target as HTMLImageElement;
-                            if (el.src.includes("maxresdefault")) {
-                              el.src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
-                            } else if (el.src.includes("hqdefault")) {
-                              el.src = `https://img.youtube.com/vi/${video.id}/0.jpg`;
-                            }
-                          }}
-                          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
-                          draggable={false}
-                        />
-                        <div
-                          className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center cursor-pointer"
-                          onClick={() => { setPlayingVideo(video.id); setExpanded(null); }}
-                        >
-                          <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-200">
-                            <div className="w-0 h-0 ml-1" style={{ borderTop: "10px solid transparent", borderBottom: "10px solid transparent", borderLeft: "18px solid #111" }} />
-                          </div>
+                      <div
+                        className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center cursor-pointer"
+                        onClick={() => { setPlayingVideo(video.id); setExpanded(null); }}
+                      >
+                        <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-200">
+                          <div className="w-0 h-0 ml-1" style={{ borderTop: "10px solid transparent", borderBottom: "10px solid transparent", borderLeft: "18px solid #111" }} />
                         </div>
-                        <div className="absolute top-2 right-2 bg-black/50 text-white/80 text-[9px] font-medium uppercase tracking-widest px-2 py-0.5 rounded-full backdrop-blur-sm">
-                          ▶ Video
-                        </div>
-                      </>
-                    )}
+                      </div>
+                      <div className="absolute top-2 right-2 bg-black/50 text-white/80 text-[9px] font-medium uppercase tracking-widest px-2 py-0.5 rounded-full backdrop-blur-sm">
+                        ▶ Video
+                      </div>
+                    </>
+                  )}
+                </div>
+                {isPlaying && (
+                  <div className="flex items-center justify-end px-3 py-2 bg-neutral-950">
+                    <button onClick={() => setPlayingVideo(null)} className="text-white/40 hover:text-white text-base leading-none">×</button>
                   </div>
-                  {isPlaying && (
-                    <div className="flex items-center justify-end px-3 py-2 bg-neutral-950">
-                      <button onClick={() => setPlayingVideo(null)} className="text-white/40 hover:text-white text-base leading-none">×</button>
+                )}
+              </motion.div>
+            );
+          } else {
+            const { project } = item;
+            const extraImages = (project.images || []).filter((img) => img !== project.cover).slice(0, 20);
+            const hasExtras = extraImages.length > 0;
+            const isExpanded = expanded === project.slug;
+            const isDimmed = expanded !== null && !isExpanded;
+            projectItems.push(
+              <motion.div
+                key={project.slug}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: isDimmed ? 0.15 : 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="relative group cursor-pointer bg-neutral-100"
+                style={{ borderRadius: RADIUS }}
+                onClick={() => hasExtras && setExpanded(isExpanded ? null : project.slug)}
+              >
+                <div className="relative overflow-hidden" style={{ borderRadius: RADIUS }}>
+                  <img
+                    src={project.cover}
+                    alt={project.title}
+                    className="w-full h-auto block transition-transform duration-500 group-hover:scale-[1.04]"
+                    loading="lazy"
+                    draggable={false}
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 pointer-events-none" />
+                  <div className="absolute inset-0 p-3 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <p className="text-white text-[14px] font-semibold leading-tight drop-shadow">{project.title}</p>
+                  </div>
+                  {hasExtras && (
+                    <div className={`absolute top-2 right-2 w-6 h-6 rounded-full flex items-center justify-center text-[12px] font-bold shadow transition-colors duration-200 ${
+                      isExpanded ? "bg-neutral-900 text-white" : "bg-white/85 text-neutral-800 backdrop-blur-sm"
+                    }`}>
+                      {isExpanded ? "×" : "+"}
                     </div>
                   )}
-                </motion.div>
-              );
-            }
-
-            /* ── Projekt Tile ── */
-            const { project } = item;
-          const extraImages = (project.images || [])
-            .filter((img) => img !== project.cover)
-            .slice(0, 20);
-          const hasExtras  = extraImages.length > 0;
-          const isExpanded = expanded === project.slug;
-
-          const isDimmed = expanded !== null && !isExpanded;
-
-          return (
-            <motion.div
-              key={project.slug}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: isDimmed ? 0.15 : 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="relative group cursor-pointer bg-neutral-100"
-              style={{
-                breakInside: "avoid",
-                marginBottom: GAP,
-                borderRadius: RADIUS,
-                overflow: "hidden",
-              }}
-              onClick={() => hasExtras && setExpanded(isExpanded ? null : project.slug)}
-            >
-              {/* Cover — natural height */}
-              <div className="relative overflow-hidden" style={{ borderRadius: RADIUS }}>
-                <img
-                  src={project.cover}
-                  alt={project.title}
-                  className="w-full h-auto block transition-transform duration-500 group-hover:scale-[1.04]"
-                  loading="lazy"
-                  draggable={false}
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 pointer-events-none" />
-                <div className="absolute inset-0 p-3 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <p className="text-white text-[11px] font-semibold leading-tight drop-shadow">
-                    {project.title}
-                  </p>
                 </div>
-                {hasExtras && (
-                  <div className={`absolute top-2 right-2 w-6 h-6 rounded-full flex items-center justify-center text-[12px] font-bold shadow transition-colors duration-200 ${
-                    isExpanded ? "bg-neutral-900 text-white" : "bg-white/85 text-neutral-800 backdrop-blur-sm"
-                  }`}>
-                    {isExpanded ? "×" : "+"}
-                  </div>
-                )}
-              </div>
-              {/* Expanded detail images */}
-              <AnimatePresence initial={false}>
-                {isExpanded && hasExtras && (
-                  <motion.div
-                    key="extras"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                    className="overflow-hidden flex flex-col"
-                    style={{ gap: GAP, paddingTop: GAP }}
-                  >
-                    {extraImages.map((img, i) => (
-                      <motion.div
-                        key={img}
-                        initial={{ opacity: 0, y: 8 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: i * 0.05, duration: 0.22 }}
-                        className="overflow-hidden"
-                        style={{ borderRadius: RADIUS }}
-                      >
-                        {img.startsWith("youtube:") ? (
-                          <div style={{ position: "relative", paddingTop: "56.25%", borderRadius: RADIUS, overflow: "hidden" }}>
-                            <iframe
-                              src={`https://www.youtube.com/embed/${img.replace("youtube:", "")}?rel=0`}
-                              title={project.title}
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowFullScreen
-                              style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
-                            />
-                          </div>
-                        ) : img.endsWith(".mp4") ? (
-                          <video
-                            src={img}
-                            controls
-                            playsInline
-                            className="w-full h-auto block"
-                            style={{ borderRadius: RADIUS }}
-                          />
-                        ) : (
-                          <img
-                            src={img}
-                            alt={`${project.title} ${i + 1}`}
-                            className="w-full h-auto block"
-                            loading="lazy"
-                            draggable={false}
-                          />
-                        )}
-                      </motion.div>
-                    ))}
-                    <button
-                      onClick={(e) => { e.stopPropagation(); setExpanded(null); }}
-                      className="text-[9px] uppercase tracking-widest text-neutral-400 hover:text-neutral-700 py-2 text-center transition-colors"
+                <AnimatePresence initial={false}>
+                  {isExpanded && hasExtras && (
+                    <motion.div
+                      key="extras"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                      className="flex flex-col"
+                      style={{ gap: GAP, paddingTop: GAP }}
+                      onClick={(e) => e.stopPropagation()}
                     >
-                      ↑ Schließen
-                    </button>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          );
-          }); // end mixed.map
-        })()}
-      </div>
+                      {project.excerpt && project.excerpt.trim().length > 0 && (
+                        <p className="text-neutral-600 text-[12px] leading-relaxed px-1">
+                          {project.excerpt.trim()}
+                        </p>
+                      )}
+                      {extraImages.map((img, i) => {
+                        const nextIsMp4 = extraImages[i + 1]?.endsWith(".mp4");
+                        const isThumbForVideo = !img.endsWith(".mp4") && !img.startsWith("youtube:") && nextIsMp4;
+                        const isVideoAfterThumb = img.endsWith(".mp4") && i > 0 && !extraImages[i - 1].endsWith(".mp4") && !extraImages[i - 1].startsWith("youtube:");
+                        if (isVideoAfterThumb) return null;
+                        return (
+                          <motion.div
+                            key={img}
+                            initial={{ opacity: 0, y: 8 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: i * 0.05, duration: 0.22 }}
+                            className="overflow-hidden"
+                            style={{ borderRadius: RADIUS }}
+                          >
+                            {img.startsWith("youtube:") ? (
+                              <div style={{ position: "relative", paddingTop: "56.25%", borderRadius: RADIUS, overflow: "hidden" }}>
+                                <iframe
+                                  src={`https://www.youtube.com/embed/${img.replace("youtube:", "")}?rel=0`}
+                                  title={project.title}
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowFullScreen
+                                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
+                                />
+                              </div>
+                            ) : isThumbForVideo ? (
+                              <div className="relative cursor-pointer" onClick={(e) => { e.stopPropagation(); setPlayingInlineVideo(extraImages[i + 1]); }}>
+                                {playingInlineVideo === extraImages[i + 1] ? (
+                                  <video src={extraImages[i + 1]} controls autoPlay playsInline className="w-full block" style={{ borderRadius: RADIUS, backgroundColor: "#000" }} />
+                                ) : (
+                                  <>
+                                    <img src={img} alt={`${project.title} video`} className="w-full h-auto block" draggable={false} />
+                                    <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                                      <div className="w-14 h-14 rounded-full bg-black/60 flex items-center justify-center backdrop-blur-sm">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="white"><polygon points="6,3 17,10 6,17" /></svg>
+                                      </div>
+                                    </div>
+                                  </>
+                                )}
+                              </div>
+                            ) : img.endsWith(".mp4") ? (
+                              <video src={img} controls playsInline preload="metadata" className="w-full block" style={{ borderRadius: RADIUS, backgroundColor: "#000" }} />
+                            ) : (
+                              <img src={img} alt={`${project.title} ${i + 1}`} className="w-full h-auto block" loading="lazy" draggable={false} />
+                            )}
+                          </motion.div>
+                        );
+                      })}
+                      <button
+                        onClick={(e) => { e.stopPropagation(); setExpanded(null); }}
+                        className="text-[9px] uppercase tracking-widest text-neutral-400 hover:text-neutral-700 py-2 text-center transition-colors"
+                      >
+                        ↑ Schließen
+                      </button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            );
+          }
+        });
+
+        // ── Spalten aufbauen: Header fix in col 0, Projekte in alle cols ──
+        // Col 0 bekommt erst später Projekte um die Menü-Höhe auszugleichen
+        const cols: React.ReactElement[][] = Array.from({ length: numCols }, () => []);
+        headerItems.forEach((el) => cols[0].push(el));
+        const skipCol0 = numCols > 1 ? headerItems.length : 0;
+        projectItems.forEach((el, i) => {
+          if (i < skipCol0 && numCols > 1) {
+            cols[(i % (numCols - 1)) + 1].push(el);
+          } else {
+            cols[(i - skipCol0) % numCols].push(el);
+          }
+        });
+
+        return (
+          <div style={{ display: "flex", gap: GAP, alignItems: "flex-start" }}>
+            {cols.map((colItems, ci) => (
+              <div key={ci} style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column", gap: GAP }}>
+                {colItems}
+              </div>
+            ))}
+          </div>
+        );
+      })()}
 
       {/* ── Mobile Menü Panel ── */}
       <AnimatePresence>
@@ -553,16 +582,205 @@ export default function MasonryPortfolio({ projects }: Props) {
             key="contact"
             initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 340, damping: 36 }}
-            className="fixed right-0 top-0 z-50 h-full w-80 bg-white shadow-[-32px_0_80px_rgba(0,0,0,0.12)] border-l border-neutral-100"
+            className="fixed right-0 top-0 z-50 h-full w-96 bg-white shadow-[-32px_0_80px_rgba(0,0,0,0.12)] border-l border-neutral-100 flex flex-col"
           >
-            <div className="flex items-center justify-between px-6 py-5 border-b border-neutral-100">
+            {/* Header */}
+            <div className="flex items-center justify-between px-6 py-5 border-b border-neutral-100 shrink-0">
               <span className="text-sm font-semibold tracking-widest uppercase">Contact</span>
               <button onClick={() => setContactOpen(false)} className="text-neutral-400 hover:text-neutral-900 text-xl">×</button>
             </div>
-            <div className="px-6 py-5 text-[13px] leading-relaxed text-neutral-600 space-y-3">
-              <p className="text-neutral-900 font-semibold text-base">Studio Flatland</p>
-              <p>Graphic Design · Editorial · Identity</p>
-              <p className="text-neutral-400 italic text-[12px]">E-Mail und weitere Kontaktdaten hier ergänzen.</p>
+
+            {/* Scrollable content */}
+            <div className="overflow-y-auto flex-1 px-6 py-5 flex flex-col gap-6">
+
+              {/* Adresse */}
+              <div className="text-[13px] leading-relaxed text-neutral-600">
+                <p className="text-neutral-900 font-bold text-base mb-1">Büro Flatland</p>
+                <p>Arnethgasse 32/7</p>
+                <p>1160 Wien, Austria</p>
+                <a href="mailto:migo@mischgo.com" className="text-neutral-400 hover:text-neutral-900 transition-colors mt-1 block">
+                  migo@mischgo.com
+                </a>
+              </div>
+
+              {/* Kontaktformular */}
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const fd = new FormData(e.target as HTMLFormElement);
+                  const name = fd.get("name") as string;
+                  const email = fd.get("email") as string;
+                  const msg = fd.get("message") as string;
+                  window.location.href = `mailto:migo@mischgo.com?subject=${encodeURIComponent(`Kontakt von ${name}`)}&body=${encodeURIComponent(`Name: ${name}\nE-Mail: ${email}\n\n${msg}`)}`;
+                }}
+                className="flex flex-col gap-3"
+              >
+                <input
+                  name="name"
+                  type="text"
+                  required
+                  placeholder="Name"
+                  className="w-full border border-neutral-200 rounded-lg px-3 py-2 text-[13px] outline-none focus:border-neutral-900 transition-colors"
+                />
+                <input
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="E-Mail"
+                  className="w-full border border-neutral-200 rounded-lg px-3 py-2 text-[13px] outline-none focus:border-neutral-900 transition-colors"
+                />
+                <textarea
+                  name="message"
+                  required
+                  placeholder="Nachricht"
+                  rows={5}
+                  className="w-full border border-neutral-200 rounded-lg px-3 py-2 text-[13px] outline-none focus:border-neutral-900 transition-colors resize-none"
+                />
+                <button
+                  type="submit"
+                  className="bg-neutral-900 text-white text-[12px] font-semibold uppercase tracking-widest py-3 rounded-lg hover:bg-neutral-700 transition-colors"
+                >
+                  Senden
+                </button>
+              </form>
+
+              {/* Footer Links */}
+              <div className="flex flex-col gap-1 text-[11px] text-neutral-400 pt-4 border-t border-neutral-100">
+                <button onClick={() => { setContactOpen(false); setCookieOpen(true); }} className="text-left hover:text-neutral-900 transition-colors">Cookie Richtlinien EU</button>
+                <button onClick={() => { setContactOpen(false); setImpressumOpen(true); }} className="text-left hover:text-neutral-900 transition-colors">Impressum</button>
+                <button onClick={() => { setContactOpen(false); setDatenschutzOpen(true); }} className="text-left hover:text-neutral-900 transition-colors">Datenschutzerklärung</button>
+              </div>
+            </div>
+          </motion.aside>
+        )}
+      </AnimatePresence>
+
+      {/* ── Impressum Panel ── */}
+      <AnimatePresence>
+        {impressumOpen && (
+          <motion.aside key="impressum" initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }}
+            transition={{ type: "spring", stiffness: 340, damping: 36 }}
+            className="fixed right-0 top-0 z-50 h-full w-96 bg-white shadow-[-32px_0_80px_rgba(0,0,0,0.12)] border-l border-neutral-100 flex flex-col"
+          >
+            <div className="flex items-center justify-between px-6 py-5 border-b border-neutral-100 shrink-0">
+              <div className="flex items-center gap-3">
+                <button onClick={() => { setImpressumOpen(false); setContactOpen(true); }} className="text-neutral-400 hover:text-neutral-900 text-sm transition-colors">← Kontakt</button>
+                <span className="text-sm font-semibold tracking-widest uppercase">Impressum</span>
+              </div>
+              <button onClick={() => setImpressumOpen(false)} className="text-neutral-400 hover:text-neutral-900 text-xl">×</button>
+            </div>
+            <div className="overflow-y-auto flex-1 px-6 py-5 text-[13px] leading-relaxed text-neutral-600 space-y-4">
+              <div>
+                <p className="font-bold text-neutral-900 mb-1">Büro Flatland</p>
+                <p>Arnethgasse 32/7</p>
+                <p>1160 Wien, Austria</p>
+              </div>
+              <div>
+                <p className="font-semibold text-neutral-900 mb-1">Kontakt</p>
+                <a href="mailto:migo@mischgo.com" className="hover:text-neutral-900 transition-colors">migo@mischgo.com</a>
+              </div>
+              <div>
+                <p className="font-semibold text-neutral-900 mb-1">Unternehmensgegenstand</p>
+                <p>Grafik Design, Editorial Design, Corporate Identity</p>
+              </div>
+              <div>
+                <p className="font-semibold text-neutral-900 mb-1">Inhaberin</p>
+                <p>Michael Abraham</p>
+              </div>
+              <div>
+                <p className="font-semibold text-neutral-900 mb-1">Berufsrecht</p>
+                <p>Gewerbliche Tätigkeit gemäß Gewerbeordnung (GewO). Zuständige Behörde: Magistratisches Bezirksamt Wien.</p>
+              </div>
+              <div className="text-neutral-400 text-[12px] pt-2 border-t border-neutral-100">
+                <p>Alle Inhalte dieser Website sind urheberrechtlich geschützt. Nachdruck oder Verwendung nur mit ausdrücklicher Genehmigung.</p>
+                <p className="mt-1">Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links.</p>
+              </div>
+            </div>
+          </motion.aside>
+        )}
+      </AnimatePresence>
+
+      {/* ── Datenschutz Panel ── */}
+      <AnimatePresence>
+        {datenschutzOpen && (
+          <motion.aside key="datenschutz" initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }}
+            transition={{ type: "spring", stiffness: 340, damping: 36 }}
+            className="fixed right-0 top-0 z-50 h-full w-96 bg-white shadow-[-32px_0_80px_rgba(0,0,0,0.12)] border-l border-neutral-100 flex flex-col"
+          >
+            <div className="flex items-center justify-between px-6 py-5 border-b border-neutral-100 shrink-0">
+              <div className="flex items-center gap-3">
+                <button onClick={() => { setDatenschutzOpen(false); setContactOpen(true); }} className="text-neutral-400 hover:text-neutral-900 text-sm transition-colors">← Kontakt</button>
+                <span className="text-sm font-semibold tracking-widest uppercase">Datenschutz</span>
+              </div>
+              <button onClick={() => setDatenschutzOpen(false)} className="text-neutral-400 hover:text-neutral-900 text-xl">×</button>
+            </div>
+            <div className="overflow-y-auto flex-1 px-6 py-5 text-[13px] leading-relaxed text-neutral-600 space-y-4">
+              <div>
+                <p className="font-bold text-neutral-900 mb-1">Datenschutzerklärung</p>
+                <p>Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2003).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-neutral-900 mb-1">Verantwortlicher</p>
+                <p>Büro Flatland, Arnethgasse 32/7, 1160 Wien</p>
+                <a href="mailto:migo@mischgo.com" className="hover:text-neutral-900 transition-colors">migo@mischgo.com</a>
+              </div>
+              <div>
+                <p className="font-semibold text-neutral-900 mb-1">Datenerfassung</p>
+                <p>Diese Website erhebt nur jene personenbezogenen Daten, die Sie uns freiwillig über das Kontaktformular mitteilen (Name, E-Mail-Adresse, Nachricht). Diese Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-neutral-900 mb-1">Ihre Rechte</p>
+                <p>Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch zu. Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, können Sie sich bei der Aufsichtsbehörde beschweren.</p>
+                <p className="mt-2">Österreichische Datenschutzbehörde: <span className="text-neutral-900">dsb.gv.at</span></p>
+              </div>
+              <div>
+                <p className="font-semibold text-neutral-900 mb-1">Hosting</p>
+                <p>Diese Website wird über Vercel Inc. gehostet. Vercel kann dabei technische Daten (IP-Adresse, Zugriffszeitpunkt) in Server-Logs speichern. Weitere Informationen: vercel.com/legal/privacy-policy</p>
+              </div>
+            </div>
+          </motion.aside>
+        )}
+      </AnimatePresence>
+
+      {/* ── Cookie Panel ── */}
+      <AnimatePresence>
+        {cookieOpen && (
+          <motion.aside key="cookie" initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }}
+            transition={{ type: "spring", stiffness: 340, damping: 36 }}
+            className="fixed right-0 top-0 z-50 h-full w-96 bg-white shadow-[-32px_0_80px_rgba(0,0,0,0.12)] border-l border-neutral-100 flex flex-col"
+          >
+            <div className="flex items-center justify-between px-6 py-5 border-b border-neutral-100 shrink-0">
+              <div className="flex items-center gap-3">
+                <button onClick={() => { setCookieOpen(false); setContactOpen(true); }} className="text-neutral-400 hover:text-neutral-900 text-sm transition-colors">← Kontakt</button>
+                <span className="text-sm font-semibold tracking-widest uppercase">Cookie</span>
+              </div>
+              <button onClick={() => setCookieOpen(false)} className="text-neutral-400 hover:text-neutral-900 text-xl">×</button>
+            </div>
+            <div className="overflow-y-auto flex-1 px-6 py-5 text-[13px] leading-relaxed text-neutral-600 space-y-4">
+              <div>
+                <p className="font-bold text-neutral-900 mb-1">Cookie Richtlinien (EU)</p>
+                <p>Diese Website verwendet Cookies gemäß der EU-Datenschutzgrundverordnung (DSGVO) und der ePrivacy-Richtlinie.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-neutral-900 mb-1">Was sind Cookies?</p>
+                <p>Cookies sind kleine Textdateien, die beim Besuch einer Website auf Ihrem Endgerät gespeichert werden. Sie ermöglichen es, bestimmte Einstellungen und Daten zwischen Seitenaufrufen zu speichern.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-neutral-900 mb-1">Welche Cookies verwenden wir?</p>
+                <p>Diese Website verwendet ausschließlich technisch notwendige Cookies, die für den einwandfreien Betrieb erforderlich sind. Es werden keine Analyse-, Tracking- oder Marketing-Cookies eingesetzt.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-neutral-900 mb-1">Drittanbieter</p>
+                <p>Eingebettete YouTube-Videos können beim Abspielen Cookies von Google LLC setzen. Dies unterliegt den Datenschutzbestimmungen von Google (policies.google.com/privacy).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-neutral-900 mb-1">Cookies ablehnen</p>
+                <p>Sie können Cookies in Ihrem Browser jederzeit deaktivieren. Bitte beachten Sie, dass dadurch die Funktionalität der Website eingeschränkt sein kann.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-neutral-900 mb-1">Kontakt</p>
+                <a href="mailto:migo@mischgo.com" className="hover:text-neutral-900 transition-colors">migo@mischgo.com</a>
+              </div>
             </div>
           </motion.aside>
         )}
