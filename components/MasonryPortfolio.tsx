@@ -448,7 +448,7 @@ export default function MasonryPortfolio({ projects }: Props) {
                       })}
                       <button
                         onClick={(e) => { e.stopPropagation(); setExpanded(null); }}
-                        className="text-[9px] uppercase tracking-widest text-neutral-400 hover:text-neutral-700 py-2 text-center transition-colors"
+                        className="text-[9px] uppercase tracking-widest bg-neutral-900 text-white hover:bg-black py-2 text-center transition-colors w-full rounded-xl"
                       >
                         ↑ Schließen
                       </button>
