@@ -105,6 +105,7 @@ export default function MasonryPortfolio({ projects }: Props) {
   const [playingVideo, setPlayingVideo]   = useState<string | null>(null);
   const [playingInlineVideo, setPlayingInlineVideo] = useState<string | null>(null);
   const [numCols, setNumCols] = useState(5);
+  const [showScrollTop, setShowScrollTop] = useState(false);
   const [typed, setTyped]       = useState("");
   const [cursorOn, setCursorOn] = useState(true);
 
@@ -139,6 +140,13 @@ export default function MasonryPortfolio({ projects }: Props) {
     update();
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
+  }, []);
+
+  // Scroll-to-top visibility
+  useEffect(() => {
+    const onScroll = () => setShowScrollTop(window.scrollY > 400);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const clientNames = CLIENT_LIST;
@@ -783,6 +791,22 @@ export default function MasonryPortfolio({ projects }: Props) {
               </div>
             </div>
           </motion.aside>
+        )}
+      </AnimatePresence>
+      {/* ── Back to Top Button — nur Mobile ── */}
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 16 }}
+            transition={{ duration: 0.2 }}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="md:hidden fixed bottom-6 right-6 z-50 bg-neutral-900 text-white text-[11px] font-semibold uppercase tracking-widest px-4 py-3 shadow-xl"
+            style={{ borderRadius: RADIUS }}
+          >
+            ↑ Top
+          </motion.button>
         )}
       </AnimatePresence>
     </div>
