@@ -231,6 +231,24 @@ export const projects = [
 
   },
   {
+    "slug": "ksw-lesezeichen",
+    "title": "Lesezeichen KSW",
+    "url": "",
+    "categories": ["print", "graphics"],
+    "year": "",
+    "services": [],
+    "excerpt": "Lesezeichen für die KSW Kammer der Steuerberater und Wirtschaftsprüfer",
+    "text": "",
+    "cover": "/projekte/ksw-lesezeichen/01-cover.png",
+    "images": [
+      "/projekte/ksw-lesezeichen/01-cover.png",
+      "/projekte/ksw-lesezeichen/02.png",
+      "/projekte/ksw-lesezeichen/03.png"
+    ],
+"clients": ["KSW Kammer der Steuerberater und Wirtschaftsprüfer"]
+
+  },
+  {
     "slug": "rollup-ksw-3",
     "title": "Rollup KSW",
     "url": "",
