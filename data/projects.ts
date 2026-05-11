@@ -29,20 +29,6 @@ export const projects = [
 
   },
   {
-    "slug": "athletics2",
-    "title": "Athletics Eyewear",
-    "url": "",
-    "categories": ["graphics", "video"],
-    "year": "",
-    "services": [],
-    "excerpt": "",
-    "text": "",
-    "cover": "/projekte/athletics2/01-cover.gif",
-    "images": ["/projekte/athletics2/01-cover.gif"],
-"clients": ["Athletics Eyewear"],
-
-  },
-  {
     "slug": "gruenderbonus-asw",
     "title": "Gründerbonus Folder für ASW",
     "url": "",
@@ -76,6 +62,20 @@ export const projects = [
       "/projekte/weihnachtskarte-wireg/02.png"
     ],
 "clients": ["Wireg"],
+  },
+  {
+    "slug": "athletics2",
+    "title": "Athletics Eyewear",
+    "url": "",
+    "categories": ["graphics", "video"],
+    "year": "",
+    "services": [],
+    "excerpt": "",
+    "text": "",
+    "cover": "/projekte/athletics2/01-cover.gif",
+    "images": ["/projekte/athletics2/01-cover.gif"],
+"clients": ["Athletics Eyewear"],
+
   },
 
 
@@ -318,12 +318,10 @@ export const projects = [
       "/projekte/logo-flatland/04.png",
       "/projekte/logo-flatland/05.png",
       "/projekte/logo-flatland/06.png",
-      "/projekte/logo-flatland/07.png",
       "/projekte/logo-flatland/08.png",
       "/projekte/logo-flatland/09.png",
       "/projekte/logo-flatland/10.png",
       "/projekte/logo-flatland/11.png",
-      "/projekte/logo-flatland/12.png",
       "/projekte/logo-flatland/13.png"
     ],
 "clients": ["büro flaland"]
@@ -422,7 +420,7 @@ export const projects = [
   },
   {
     "slug": "athelthics-eyewear-ski-googles",
-    "title": "athelthics eyewear ski googles",
+    "title": "Athletics Eyewear Ski Goggles",
     "url": "https://mischgo.com/portfolio_page/athelthics-eyewear-ski-googles/",
     "categories": [
       "video"
@@ -430,6 +428,7 @@ export const projects = [
     "year": "",
     "services": [],
     "excerpt": "Story-Format Videos für Instagram — Athletics Eyewear Ski Goggles Promotion.",
+    "cover": "/projekte/athelthics-eyewear-ski-googles/01-cover.gif",
     "images": [
       "/projekte/athelthics-eyewear-ski-googles/01-cover.gif"
     ],
@@ -717,12 +716,7 @@ export const projects = [
       "/projekte/social-media/04.jpg",
       "/projekte/social-media/05.jpg",
       "/projekte/social-media/06.jpg",
-      "/projekte/social-media/07.jpg",
-      "/projekte/social-media/08.jpg",
-      "/projekte/social-media/09.jpg",
-      "/projekte/social-media/10.jpg",
-      "/projekte/social-media/11.jpg",
-      "/projekte/social-media/12.jpg"
+      "/projekte/social-media/07.jpg"
 
     ],
 "clients": ["Die Schönheitschirurgin Apfolterer"]
@@ -976,7 +970,6 @@ export const projects = [
       "/projekte/social-media-sabine-apfolterer/07.gif",
       "/projekte/social-media-sabine-apfolterer/08.gif",
       "/projekte/social-media-sabine-apfolterer/09.gif",
-      "/projekte/social-media-sabine-apfolterer/10.gif",
       "/projekte/social-media-sabine-apfolterer/11.gif"
     ],
 "clients": ["Die Schönheitschirurgin Apfolterer"]
@@ -1150,21 +1143,9 @@ export const projects = [
       "/projekte/eod-munitionsbergung/06.png",
       "/projekte/eod-munitionsbergung/07.png",
       "/projekte/eod-munitionsbergung/08.png",
-      "/projekte/eod-munitionsbergung/09.png",
       "/projekte/eod-munitionsbergung/10.png",
-      "/projekte/eod-munitionsbergung/11.png",
       "/projekte/eod-munitionsbergung/12.png",
-      "/projekte/eod-munitionsbergung/13.png",
-      "/projekte/eod-munitionsbergung/14.png",
-      "/projekte/eod-munitionsbergung/15.png",
-      "/projekte/eod-munitionsbergung/16.png",
-      "/projekte/eod-munitionsbergung/17.png",
-      "/projekte/eod-munitionsbergung/18.png",
-      "/projekte/eod-munitionsbergung/19.png",
-      "/projekte/eod-munitionsbergung/20.png",
-      "/projekte/eod-munitionsbergung/21.jpg",
-      "/projekte/eod-munitionsbergung/22.jpg",
-      "/projekte/eod-munitionsbergung/23.jpg"
+      "/projekte/eod-munitionsbergung/14.png"
 
     ],
 "clients": ["EOD Munitionsbergung"]
