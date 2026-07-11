@@ -15,6 +15,28 @@ export type Project = {
 
 export const projects = [
   {
+    "slug": "asw-kursprogramm",
+    "title": "ASW Kursprogramm Ausbildung 2026/27",
+    "url": "",
+    "categories": ["print", "magazine", "graphics"],
+    "year": "2026",
+    "services": ["Editorial Design", "Grafik & Layout", "Typografie", "Infografik"],
+    "excerpt": "48-seitiger Kurskatalog der Akademie der Steuerberater:innen und Wirtschaftsprüfer:innen — Editorial Design, Karrierepfad-Infografik und farbcodiertes Diplom-System.",
+    "text": "",
+    "cover": "/projekte/asw-kursprogramm/01-cover.png",
+    "images": [
+      "/projekte/asw-kursprogramm/01-cover.png",
+      "/projekte/asw-kursprogramm/02.png",
+      "/projekte/asw-kursprogramm/03.png",
+      "/projekte/asw-kursprogramm/04.png",
+      "/projekte/asw-kursprogramm/05.png",
+      "/projekte/asw-kursprogramm/06.png",
+      "/projekte/asw-kursprogramm/07.png",
+      "/projekte/asw-kursprogramm/08.png"
+    ],
+    "clients": ["Akademie der Steuerberater und Wirtschaftsprüfer"],
+  },
+  {
     "slug": "athletics1",
     "title": "Athletics Eyewear",
     "url": "",
