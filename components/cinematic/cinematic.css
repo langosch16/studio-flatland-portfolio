@@ -10,7 +10,7 @@
 .cin header {position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:22px clamp(18px,4vw,44px);mix-blend-mode:difference}
 .cin .logo {font-weight:800;letter-spacing:-.02em;font-size:15px;text-transform:uppercase;line-height:.95}
 .cin .menu-btn {font-family:var(--mono);font-size:12px;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;background:none;border:none;color:var(--ink)}
-.cin /* HERO — char/word reveal */
+.cin  
   .hero {min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(18px,4vw,44px)}
 .cin .hero h1 {font-weight:800;text-transform:uppercase;letter-spacing:-.03em;line-height:.82;font-size:clamp(3.2rem,15vw,13rem)}
 .cin .line {display:block;overflow:hidden}
@@ -25,7 +25,7 @@
 .cin .hero.in .scrollcue {opacity:1}
 .cin .scrollcue::after {content:"";display:block;width:1px;height:34px;background:var(--muted);margin-top:10px;animation:cin-cue 1.8s ease-in-out infinite}
 @keyframes cin-cue{0%,100%{transform:scaleY(.3);transform-origin:top;opacity:.4}50%{transform:scaleY(1);opacity:1}}
-.cin /* BREAK + per-chapter curtain direction */
+.cin  
   .break {min-height:100vh;display:flex;align-items:center;overflow:hidden;position:relative}
 .cin .curtain {position:absolute;inset:0;background:var(--cc);transition:clip-path 1.1s cubic-bezier(.76,0,.24,1)}
 .cin .break.dir-up .curtain {clip-path:inset(100% 0 0 0)}
@@ -42,7 +42,7 @@
 .cin .break .tag {margin-top:24px;font-family:var(--mono);font-size:13px;letter-spacing:.05em;opacity:0;transition:opacity .7s ease .85s}
 .cin .break.in .tag {opacity:.9}
 .cin .break .count {position:absolute;right:0;bottom:8%;font-weight:800;font-size:clamp(4rem,20vw,16rem);line-height:.8;opacity:.12;letter-spacing:-.04em;z-index:1}
-.cin /* PLATE base + shared typo */
+.cin  
   .plate {min-height:100vh;position:relative;overflow:hidden}
 .cin .plate .k {font-family:var(--mono);font-size:12px;letter-spacing:.15em;text-transform:uppercase;opacity:0;transform:translateY(14px);transition:all .7s ease .3s}
 .cin .plate.in .k {opacity:1;transform:none}
@@ -52,13 +52,13 @@
 .cin .plate h3 .l {display:block;overflow:hidden}
 .cin .plate h3 .l i {display:block;font-style:normal;transform:translateY(110%);transition:transform .95s cubic-bezier(.16,1,.3,1) .4s}
 .cin .plate.in h3 .l i {transform:translateY(0)}
-.cin /* word-stagger title (fullbleed/video) */
+.cin  
   .tw .w {display:inline-block;overflow:hidden;vertical-align:top}
 .cin .tw .w i {display:inline-block;font-style:normal;transform:translateY(115%);transition:transform .9s cubic-bezier(.16,1,.3,1)}
 .cin .plate.in .tw .w i {transform:translateY(0)}
 .cin .plate .pp {color:var(--muted);max-width:44ch;line-height:1.5;font-size:14px}
 .cin .plate .view {display:inline-flex;gap:9px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border-bottom:1px solid currentColor;padding-bottom:5px;margin-top:16px;width:fit-content}
-.cin /* FULLBLEED + VIDEO — image unveiled by mask */
+.cin  
   .t-fullbleed, .cin .t-video {display:flex;align-items:flex-end}
 .cin .t-fullbleed .media, .cin .t-video .media {position:absolute;inset:0;cursor:pointer;overflow:hidden}
 .cin .t-fullbleed .media img, .cin .t-video .media img {width:100%;height:100%;object-fit:cover;
@@ -68,7 +68,7 @@
 .cin .t-fullbleed .fb, .cin .t-video .fb {position:relative;z-index:2;padding:0 clamp(18px,4vw,44px) clamp(40px,8vh,80px);width:100%}
 .cin .t-fullbleed h3, .cin .t-video h3 {font-size:clamp(2.6rem,10vw,8rem);margin:10px 0 16px}
 .cin .t-video .vtag {position:absolute;top:100px;left:clamp(18px,4vw,44px);z-index:3;font-family:var(--mono);font-size:12px;letter-spacing:.15em;text-transform:uppercase;background:rgba(0,0,0,.4);backdrop-filter:blur(6px);padding:8px 14px;border-radius:100px}
-.cin /* SPLIT — color panel slides in, .cin image zooms */
+.cin  
   .t-split {display:grid;grid-template-columns:1fr}
 @media(min-width:900px) {
   .cin .t-split {grid-template-columns:1fr 1fr}
@@ -82,7 +82,7 @@
 .cin .t-split .sp-img {position:relative;overflow:hidden;min-height:50vh;cursor:pointer}
 .cin .t-split .sp-img img {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 1.4s cubic-bezier(.16,1,.3,1)}
 .cin .t-split.in .sp-img img {transform:scale(1)}
-.cin /* EDITORIAL — image rises, .cin number fades up */
+.cin  
   .t-editorial {display:flex;align-items:center;padding:96px clamp(18px,4vw,44px)}
 .cin .t-editorial .ednum {position:absolute;top:8%;right:2%;font-weight:800;font-size:clamp(8rem,34vw,30rem);line-height:.7;letter-spacing:-.05em;color:var(--cc);opacity:0;transform:translateY(50px);transition:opacity 1.1s ease,transform 1.1s cubic-bezier(.16,1,.3,1);z-index:0;pointer-events:none}
 .cin .t-editorial.in .ednum {opacity:.16;transform:none}
@@ -95,7 +95,7 @@
 .cin .t-editorial.in .ed-img {opacity:1;transform:none}
 .cin .t-editorial .ed-img img {width:100%;display:block}
 .cin .t-editorial h3 {font-size:clamp(2.4rem,6.5vw,5.5rem);margin:14px 0 18px}
-.cin /* CENTERED — scale */
+.cin  
   .t-centered {display:flex;flex-direction:column;justify-content:center;padding:96px clamp(18px,4vw,44px) 80px}
 .cin .t-centered .stage {position:relative;flex:1;display:flex;align-items:center;justify-content:center;min-height:0}
 .cin .t-centered .cimg {max-width:min(1000px,90vw);max-height:70vh;border-radius:3px;cursor:pointer;box-shadow:0 40px 120px rgba(0,0,0,.6);opacity:0;transform:scale(1.06);transition:opacity 1.1s ease,transform 1.3s cubic-bezier(.16,1,.3,1)}
@@ -103,7 +103,7 @@
 .cin .t-centered .cmeta {position:absolute;left:0;bottom:-6px;mix-blend-mode:difference;pointer-events:none}
 .cin .t-centered h3 {font-size:clamp(2rem,7vw,5rem)}
 .cin .t-centered .cfoot {display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-top:26px}
-.cin /* ARCHIVE */
+.cin  
   .arch {padding:clamp(70px,14vh,150px) 0}
 .cin .arch .head {display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid var(--line);padding-top:22px;margin-bottom:34px;flex-wrap:wrap;gap:14px}
 .cin .arch h2 {font-weight:800;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(1.6rem,4vw,3rem);line-height:.95}
@@ -156,5 +156,5 @@
   .cin {scroll-behavior:auto}
 }
 
-/* a11y: keyboard focus visibility */
+ 
 .cin .menu-btn:focus-visible,.cin .close:focus-visible,.cin .mclose:focus-visible,.cin .view:focus-visible,.cin .menu a:focus-visible,.cin .tile:focus-visible,.cin .foot0 span:focus-visible{outline:2px solid currentColor;outline-offset:3px}

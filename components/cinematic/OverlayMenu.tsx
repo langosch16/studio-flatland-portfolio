@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 
 type Panel = "menu" | "impressum" | "datenschutz" | "kontakt";
@@ -8,6 +8,14 @@ export default function OverlayMenu({ open, onClose }: { open: boolean; onClose:
   const [panel, setPanel] = useState<Panel>("menu");
   const go = (id: string) => { onClose(); setPanel("menu"); document.getElementById(id)?.scrollIntoView(); };
   const close = () => { onClose(); setPanel("menu"); };
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") close(); };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => { document.removeEventListener("keydown", onKey); document.body.style.overflow = ""; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
 
   const panelWrap: CSSProperties = { maxWidth: 620, maxHeight: "80vh", overflowY: "auto", lineHeight: 1.6, fontSize: 15, fontFamily: "var(--mono)" };
   const backBtn: CSSProperties = { fontFamily: "var(--mono)", fontSize: 12, letterSpacing: ".12em", textTransform: "uppercase", cursor: "pointer", background: "none", border: "none", color: "inherit", marginBottom: 24, display: "block" };
@@ -24,7 +32,7 @@ export default function OverlayMenu({ open, onClose }: { open: boolean; onClose:
           <a onClick={() => setPanel("kontakt")}>Kontakt</a>
           <a onClick={() => setPanel("impressum")}>Impressum</a>
           <a onClick={() => setPanel("datenschutz")}>Datenschutz</a>
-          <div className="contact">Arnethgasse 32/7 · 1160 Wien · langosch@gmx.at</div>
+          <div className="contact">Arnethgasse 32/7 · 1160 Wien · migo@mischgo.com</div>
         </>
       )}
       {panel === "kontakt" && (
