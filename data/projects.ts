@@ -21,6 +21,8 @@ export type Project = {
 export const projects = [
   {
     "slug": "asw-kursprogramm",
+    "featured": true,
+    "treatment": "split",
     "title": "ASW Kursprogramm Ausbildung 2026/27",
     "url": "",
     "categories": ["print", "magazine", "graphics"],
@@ -76,6 +78,8 @@ export const projects = [
 
   {
     "slug": "weihnachtskarte-wireg",
+    "featured": true,
+    "treatment": "centered",
     "title": "Weihnachtskarte Wireg",
     "url": "",
     "categories": ["print", "graphics"],
@@ -108,6 +112,8 @@ export const projects = [
 
   {
     "slug": "silivasstueberl",
+    "featured": true,
+    "treatment": "editorial",
     "title": "Silvias Stüberl",
     "url": "",
     "categories": ["print", "graphics"],
@@ -147,6 +153,8 @@ export const projects = [
   },
   {
     "slug": "eod-plakat",
+    "featured": true,
+    "treatment": "split",
     "title": "EOD Plakat",
     "url": "",
     "categories": ["print", "graphics"],
@@ -202,6 +210,8 @@ export const projects = [
   },
   {
     "slug": "vienna-vikings",
+    "featured": true,
+    "treatment": "fullbleed",
     "title": "Vienna Vikings",
     "url": "",
     "categories": ["print", "graphics"],
@@ -314,6 +324,8 @@ export const projects = [
   },
   {
     "slug": "wasserfall",
+    "featured": true,
+    "treatment": "video",
     "title": "Wasserfall",
     "url": "",
     "categories": ["video", "animation"],
@@ -355,6 +367,8 @@ export const projects = [
   },
   {
     "slug": "volleyballanimation",
+    "featured": true,
+    "treatment": "fullbleed",
     "title": "Volleyball Animation",
     "url": "",
     "categories": ["video", "animation"],
@@ -516,6 +530,8 @@ export const projects = [
   },
   {
     "slug": "digital-campus-a1",
+    "featured": true,
+    "treatment": "centered",
     "title": "digital campus A1",
     "url": "https://mischgo.com/portfolio_page/digital-campus-a1/",
     "categories": [
@@ -542,6 +558,8 @@ export const projects = [
   },
   {
     "slug": "kultur-4-kids",
+    "featured": true,
+    "treatment": "split",
     "title": "kultur 4 kids",
     "url": "https://mischgo.com/portfolio_page/kultur-4-kids/",
     "categories": [
@@ -690,6 +708,8 @@ export const projects = [
   },
   {
     "slug": "kneipp-bewegt-magazin-entwurf",
+    "featured": true,
+    "treatment": "editorial",
     "title": "kneipp bewegt Magazin Entwurf",
     "url": "https://mischgo.com/portfolio_page/kneipp-bewegt-magazin-entwurf/",
     "categories": [
@@ -803,6 +823,8 @@ export const projects = [
   },
   {
     "slug": "animierter-apfel",
+    "featured": true,
+    "treatment": "editorial",
     "title": "animierter Apfel",
     "url": "https://mischgo.com/portfolio_page/animierter-apfel/",
     "categories": [
@@ -1200,6 +1222,8 @@ export const projects = [
   },
   {
     "slug": "hans-weigand-panorama",
+    "featured": true,
+    "treatment": "fullbleed",
     "title": "Hans Weigand Panorama",
     "url": "https://mischgo.com/portfolio_page/hans-weigand-panorama/",
     "categories": [

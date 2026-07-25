@@ -1,16 +1,7 @@
+import CinematicPortfolio from "@/components/cinematic/CinematicPortfolio";
+import { projects } from "@/data/projects";
+import type { Project } from "@/data/projects";
+
 export default function StudioPage() {
-  return (
-    <main
-      style={{
-        minHeight: "100vh",
-        background: "#0b0b0d",
-        color: "#f4f1ea",
-        display: "grid",
-        placeItems: "center",
-        fontFamily: "Helvetica Neue, Arial, sans-serif",
-      }}
-    >
-      Studio — Cinematic (WIP)
-    </main>
-  );
+  return <CinematicPortfolio projects={projects as unknown as Project[]} />;
 }
