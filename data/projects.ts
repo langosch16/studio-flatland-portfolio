@@ -1,3 +1,5 @@
+export type Treatment = "fullbleed" | "video" | "split" | "editorial" | "centered";
+
 export type Project = {
   slug: string;
   title: string;
@@ -10,6 +12,9 @@ export type Project = {
   cover: string;
   images: string[];
   clients?: string[];
+  featured?: boolean;      // shown as a full-screen plate in the cinematic scroll
+  treatment?: Treatment;   // how a featured project is presented; default derived
+  video?: string;          // optional mp4 path for the video plate (falls back to cover)
 };
 
 
