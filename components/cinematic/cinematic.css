@@ -155,3 +155,6 @@
   .cin .ednum {opacity:.16!important}
   .cin {scroll-behavior:auto}
 }
+
+/* a11y: keyboard focus visibility */
+.cin .menu-btn:focus-visible,.cin .close:focus-visible,.cin .mclose:focus-visible,.cin .view:focus-visible,.cin .menu a:focus-visible,.cin .tile:focus-visible,.cin .foot0 span:focus-visible{outline:2px solid currentColor;outline-offset:3px}

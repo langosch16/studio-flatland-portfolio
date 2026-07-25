@@ -12,7 +12,7 @@ export default function VideoPlate({ project, chapter, index, onOpen }: PlatePro
         {project.video ? (
           <video src={project.video} muted loop playsInline autoPlay preload="metadata" />
         ) : (
-          <img src={project.cover} alt={project.title} />
+          <img src={project.cover} alt={project.title}  loading="lazy" decoding="async" />
         )}
       </div>
       <div className="scrim" />

@@ -326,6 +326,7 @@ export const projects = [
     "slug": "wasserfall",
     "featured": true,
     "treatment": "video",
+    "video": "/projekte/wasserfall/loop.mp4",
     "title": "Wasserfall",
     "url": "",
     "categories": ["video", "animation"],

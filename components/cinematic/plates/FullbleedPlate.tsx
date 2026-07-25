@@ -9,7 +9,7 @@ export default function FullbleedPlate({ project, chapter, index, onOpen }: Plat
   return (
     <div ref={ref} className="plate t-fullbleed" style={{ "--cc": chapter.color } as CSSProperties}>
       <div className="media" onClick={() => onOpen(project)}>
-        <img src={project.cover} alt={project.title} />
+        <img src={project.cover} alt={project.title}  loading="lazy" decoding="async" />
       </div>
       <div className="scrim" />
       <div className="fb">

@@ -16,7 +16,7 @@ export default function EditorialPlate({ project, chapter, index, onOpen }: Plat
       <div className="ednum">{num}</div>
       <div className="ed-grid">
         <div className="ed-img" onClick={() => onOpen(project)}>
-          <img src={project.cover} alt={project.title} />
+          <img src={project.cover} alt={project.title}  loading="lazy" decoding="async" />
         </div>
         <div>
           <div className="k">{chapter.name} — {num}</div>

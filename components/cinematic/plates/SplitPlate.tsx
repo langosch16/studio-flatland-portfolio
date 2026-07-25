@@ -20,7 +20,7 @@ export default function SplitPlate({ project, chapter, index, onOpen }: PlatePro
         <span className="view" onClick={() => onOpen(project)}>Projekt ansehen →</span>
       </div>
       <div className="sp-img" onClick={() => onOpen(project)}>
-        <img src={project.cover} alt={project.title} />
+        <img src={project.cover} alt={project.title}  loading="lazy" decoding="async" />
       </div>
     </div>
   );
