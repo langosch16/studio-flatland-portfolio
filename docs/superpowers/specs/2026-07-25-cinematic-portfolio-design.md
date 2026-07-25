@@ -1,7 +1,9 @@
 # Studio Flatland — Cinematic Scroll Portfolio
 
 **Datum:** 2026-07-25
-**Status:** Design abgestimmt, bereit für Implementierungsplan
+**Status:** Design abgestimmt. Durch Prototyp-Iteration weiterentwickelt — **maßgeblich ist jetzt der Implementierungsplan** `docs/superpowers/plans/2026-07-25-cinematic-portfolio-implementation.md` und die Referenz `docs/superpowers/reference/cinematic-prototype-v4.html`.
+
+> **Nachträgliche Änderungen ggü. diesem Spec:** (1) Kunden-Liste bleibt DOCH (eigene Sektion vor dem Kontakt). (2) Struktur ist „je Kapitel ein paar Projekte ganzseitig (5 Treatments) → kuratiertes Archiv am Ende", statt Featured + volles Grid. (3) Ganzseitiger Video-Moment im Animation-Kapitel. (4) Neue Version läuft auf Route `/studio` (Startseite `/` bleibt das alte Grid), Bau auf Branch `feature/cinematic`.
 **Inspiration:** good.at (immersiver WebGL-Slider mit Curtain-Übergängen) — übertragen auf ein Portfolio mit vielen Projekten.
 
 ## Ziel
