@@ -15,6 +15,7 @@ export type Project = {
   featured?: boolean;      // shown as a full-screen plate in the cinematic scroll
   treatment?: Treatment;   // how a featured project is presented; default derived
   video?: string;          // optional mp4 path for the video plate (falls back to cover)
+  youtube?: string;        // optional YouTube id/url; adds a play button + fullscreen player
 };
 
 
@@ -323,6 +324,7 @@ export const projects = [
     "featured": true,
     "treatment": "video",
     "video": "/projekte/wasserfall/loop.mp4",
+    "youtube": "pVCKSqkJJgA",
     "title": "Wasserfall",
     "url": "",
     "categories": ["video", "animation"],

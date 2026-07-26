@@ -182,3 +182,15 @@
 .cin .t-logowall .lw-cell img{width:100%;height:auto;object-fit:contain;display:block}
 .cin .t-logowall .lw-cell:focus-visible{outline:2px solid #141414;outline-offset:-3px}
 @media (prefers-reduced-motion: reduce){.cin .t-logowall .lw-cell,.cin .t-logowall .lw-head .k{opacity:1!important;transform:none!important}}
+
+/* video plate: youtube play button + fullscreen lightbox */
+.cin .t-video .vplay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:4;width:clamp(64px,7vw,92px);height:clamp(64px,7vw,92px);border-radius:50%;border:0;background:rgba(244,241,234,.92);cursor:pointer;display:grid;place-items:center;transition:transform .3s cubic-bezier(.16,1,.3,1),background .3s;box-shadow:0 18px 50px rgba(0,0,0,.4)}
+.cin .t-video .vplay:hover{transform:translate(-50%,-50%) scale(1.08);background:#fff}
+.cin .t-video .vplay:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.cin .t-video .vplay .vplay-ico{width:0;height:0;margin-left:6px;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:23px solid #141414}
+.cin .yt-light{position:fixed;inset:0;z-index:95;background:rgba(6,6,8,.97);display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,64px);animation:cin-ytfade .3s ease}
+@keyframes cin-ytfade{from{opacity:0}to{opacity:1}}
+.cin .yt-close{position:absolute;top:22px;right:clamp(18px,4vw,44px);font-family:var(--mono);font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink);background:none;border:0;cursor:pointer;z-index:2}
+.cin .yt-frame{width:min(1500px,100%);aspect-ratio:16/9;background:#000;box-shadow:0 40px 120px rgba(0,0,0,.6)}
+.cin .yt-frame iframe{width:100%;height:100%;border:0;display:block}
+@media (prefers-reduced-motion: reduce){.cin .yt-light{animation:none}}
