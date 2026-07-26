@@ -7,7 +7,7 @@ import { buildChapters } from "./buildChapters";
 import Hero from "./Hero";
 import ChapterBreak from "./ChapterBreak";
 import ProjectPlate from "./plates";
-import AmbientInterstitial from "./AmbientInterstitial";
+import ReelsSection from "./ReelsSection";
 import Archive from "./Archive";
 import Clients from "./Clients";
 import ProjectOverlay from "./ProjectOverlay";
@@ -58,13 +58,7 @@ export default function CinematicPortfolio({ projects }: { projects: Project[] }
                 />
               ))}
             </section>
-            {ci === 1 && (
-              <AmbientInterstitial
-                youtube="jyaEvAR5gB4"
-                statement="Alles in Bewegung."
-                sub="Motion & Animation — ein Ausschnitt aus laufenden Arbeiten."
-              />
-            )}
+            {ci === 1 && <ReelsSection />}
           </Fragment>
         ))}
         <Archive chapters={chapters} onOpen={(p) => open(p, "#2438e0")} />
