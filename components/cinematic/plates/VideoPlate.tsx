@@ -14,7 +14,10 @@ export default function VideoPlate({ project, chapter, index, onOpen }: PlatePro
   const ref = useReveal<HTMLDivElement>();
   const [playing, setPlaying] = useState(false);
   const k = `${chapter.name} — ${String(index + 1).padStart(2, "0")}`;
+  const title = project.caseTitle ?? project.title;
   const yt = project.youtube ? ytId(project.youtube) : null;
+  const playable = !!(yt || project.video);
+  const poster = yt ? `https://img.youtube.com/vi/${yt}/maxresdefault.jpg` : project.cover;
 
   useEffect(() => {
     if (!playing) return;
@@ -24,28 +27,24 @@ export default function VideoPlate({ project, chapter, index, onOpen }: PlatePro
     return () => { document.removeEventListener("keydown", onKey); document.body.style.overflow = ""; };
   }, [playing]);
 
-  const activate = () => (yt ? setPlaying(true) : onOpen(project));
+  const activate = () => (playable ? setPlaying(true) : onOpen(project));
 
   return (
     <div ref={ref} className="plate t-video" style={{ "--cc": chapter.color } as CSSProperties}>
       <div className="media" onClick={activate}>
-        {project.video ? (
-          <video src={project.video} muted loop playsInline autoPlay preload="metadata" />
-        ) : (
-          <img src={yt ? `https://img.youtube.com/vi/${yt}/maxresdefault.jpg` : project.cover} alt={project.title} loading="lazy" decoding="async" />
-        )}
+        <img src={poster} alt={title} loading="lazy" decoding="async" />
       </div>
       <div className="scrim" />
-      {yt && (
+      {playable && (
         <button className="vplay" onClick={activate} aria-label="Video abspielen">
           <span className="vplay-ico" />
         </button>
       )}
-      <span className="vtag">▶ {yt ? "Showreel" : "Bewegtbild — Loop"}</span>
+      <span className="vtag">▶ {yt ? "Showreel" : "Video"}</span>
       <div className="fb">
         <div className="k">{k}</div>
         <h3 className="tw">
-          {project.title.split(" ").map((w, i) => (
+          {title.split(" ").map((w, i) => (
             <span key={i} className="w">
               <i style={{ transitionDelay: `${(0.35 + i * 0.09).toFixed(2)}s` }}>{w}</i>
             </span>
@@ -53,21 +52,25 @@ export default function VideoPlate({ project, chapter, index, onOpen }: PlatePro
         </h3>
         {project.excerpt && <p className="pp">{project.excerpt}</p>}
         <span className="view" onClick={(e) => { e.stopPropagation(); activate(); }}>
-          {yt ? "Video ansehen →" : "Projekt ansehen →"}
+          {playable ? "Video ansehen →" : "Projekt ansehen →"}
         </span>
       </div>
 
-      {yt && playing && (
+      {playing && (
         <div className="yt-light" onClick={() => setPlaying(false)}>
           <button className="yt-close" onClick={() => setPlaying(false)}>Schließen ✕</button>
-          <div className="yt-frame" onClick={(e) => e.stopPropagation()}>
-            <iframe
-              src={`https://www.youtube-nocookie.com/embed/${yt}?autoplay=1&rel=0&modestbranding=1`}
-              title={project.title}
-              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
+          {yt ? (
+            <div className="yt-frame" onClick={(e) => e.stopPropagation()}>
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${yt}?autoplay=1&rel=0&modestbranding=1&playsinline=1`}
+                title={title}
+                allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          ) : (
+            <video className="reel-media" src={project.video} controls autoPlay playsInline onClick={(e) => e.stopPropagation()} />
+          )}
         </div>
       )}
     </div>

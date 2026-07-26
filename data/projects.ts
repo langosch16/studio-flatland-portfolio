@@ -19,6 +19,7 @@ export type Project = {
   caseTitle?: string;      // client/case name shown on the plate instead of the project title
   slim?: boolean;          // shorter plate (~62vh) instead of the full 100vh
   hidden?: boolean;        // exclude from the cinematic scroll entirely (folded into another case)
+  forceChapter?: "animation" | "graphics" | "print"; // override the auto medium bucket
 };
 
 
@@ -547,6 +548,33 @@ export const projects = [
 
   },
   {
+    "slug": "dr-david-doerfler",
+    "featured": true,
+    "treatment": "video",
+    "forceChapter": "graphics",
+    "caseTitle": "Dr. David Dörfler",
+    "video": "/projekte/dr-david-doerfler/loop.mp4",
+    "title": "dr david dörfler",
+    "url": "https://mischgo.com/portfolio_page/dr-david-doerfler/",
+    "categories": [
+      "graphics",
+      "logo",
+      "video",
+      "web"
+    ],
+    "year": "",
+    "services": [],
+    "excerpt": " Dr. David Dörfler | Lungenfacharzt, Homepage und Drucksorten",
+    "text": "dr david dörfler\nTags\ndr david dörfler\nCategory\ngraphics\n,\nlogo\n,\nvideo\n,\nweb\nAbout This Project\nDr. David Dörfler | Lungenfacharzt",
+    "cover": "/projekte/dr-david-doerfler/01-cover.png",
+    "images": [
+      "/projekte/dr-david-doerfler/03.png",
+      "/projekte/dr-david-doerfler/04.jpg"
+    ],
+"clients": ["Dr. David Dörfler"]
+
+  },
+  {
     "slug": "digital-campus-a1",
     "title": "digital campus A1",
     "url": "https://mischgo.com/portfolio_page/digital-campus-a1/",
@@ -990,29 +1018,7 @@ export const projects = [
 "clients": ["Di Grillo"]
 
   },
-  {
-    "slug": "dr-david-doerfler",
-    "title": "dr david dörfler",
-    "url": "https://mischgo.com/portfolio_page/dr-david-doerfler/",
-    "categories": [
-      "graphics",
-      "logo",
-      "video",
-      "web"
-    ],
-    "year": "",
-    "services": [],
-    "excerpt": " Dr. David Dörfler | Lungenfacharzt, Homepage und Drucksorten",
-    "text": "dr david dörfler\nTags\ndr david dörfler\nCategory\ngraphics\n,\nlogo\n,\nvideo\n,\nweb\nAbout This Project\nDr. David Dörfler | Lungenfacharzt",
-    "cover": "/projekte/dr-david-doerfler/01-cover.png",
-    "images": [
-      "/projekte/dr-david-doerfler/03.png",
-      "/projekte/dr-david-doerfler/04.jpg",
-      "/projekte/dr-david-doerfler/DrDD_FINAL2.mp4"
-    ],
-"clients": ["Dr. David Dörfler"]
-
-  },
+  
   {
     "slug": "social-media-sabine-apfolterer",
     "title": "dr. sabine apfolterer",
