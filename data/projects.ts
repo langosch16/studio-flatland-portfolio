@@ -1367,9 +1367,6 @@ export const projects = [
     "cover": "/projekte/diverse-logo-entwuerfe/01-cover.jpg",
     "images": [
       "/projekte/diverse-logo-entwuerfe/01-cover.jpg",
-      "/projekte/diverse-logo-entwuerfe/19.png",
-      "/projekte/diverse-logo-entwuerfe/20.png",
-      "/projekte/diverse-logo-entwuerfe/21.png",
       "/projekte/diverse-logo-entwuerfe/23.png",
       "/projekte/diverse-logo-entwuerfe/25.png",
       "/projekte/diverse-logo-entwuerfe/03.jpg",
@@ -1378,6 +1375,7 @@ export const projects = [
       "/projekte/diverse-logo-entwuerfe/31.png",
       "/projekte/diverse-logo-entwuerfe/32.png",
       "/projekte/diverse-logo-entwuerfe/35.png",
+      "/projekte/diverse-logo-entwuerfe/19.png",
       "/projekte/diverse-logo-entwuerfe/36.png",
       "/projekte/diverse-logo-entwuerfe/05.jpg",
       "/projekte/diverse-logo-entwuerfe/37.png",
@@ -1386,13 +1384,15 @@ export const projects = [
       "/projekte/diverse-logo-entwuerfe/46.png",
       "/projekte/diverse-logo-entwuerfe/54.png",
       "/projekte/diverse-logo-entwuerfe/56.png",
+      "/projekte/diverse-logo-entwuerfe/20.png",
       "/projekte/diverse-logo-entwuerfe/15.jpg",
       "/projekte/diverse-logo-entwuerfe/58.png",
       "/projekte/logo-skillsprout/01-cover.png",
       "/projekte/wireg/04.png",
       "/projekte/siliasstueberl/01-cover.png",
       "/projekte/zahntechnik-guenther/01-cover.png",
-      "/projekte/diverse-logo-entwuerfe/17.jpg"
+      "/projekte/diverse-logo-entwuerfe/17.jpg",
+      "/projekte/diverse-logo-entwuerfe/21.png"
     ],
 "clients": ["Nbüro flatland"]
 
