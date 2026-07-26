@@ -46,8 +46,6 @@ export const projects = [
   },
   {
     "slug": "athletics1",
-    "featured": true,
-    "treatment": "fullbleed",
     "title": "Athletics Eyewear",
     "url": "",
     "categories": ["graphics", "video"],
@@ -321,8 +319,6 @@ export const projects = [
   },
   {
     "slug": "wasserfall",
-    "featured": true,
-    "treatment": "video",
     "video": "/projekte/wasserfall/loop.mp4",
     "title": "Wasserfall",
     "url": "",

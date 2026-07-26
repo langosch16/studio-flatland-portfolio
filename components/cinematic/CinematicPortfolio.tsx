@@ -58,7 +58,7 @@ export default function CinematicPortfolio({ projects }: { projects: Project[] }
                 />
               ))}
             </section>
-            {ci === 1 && <ReelsSection />}
+            {ci === 0 && <ReelsSection />}
           </Fragment>
         ))}
         <Archive chapters={chapters} onOpen={(p) => open(p, "#2438e0")} />
