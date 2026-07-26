@@ -870,6 +870,8 @@ export const projects = [
   },
   {
     "slug": "auslage-beauty",
+    "featured": true,
+    "treatment": "fullbleed",
     "title": "AUSLAGE BEAUTY",
     "url": "https://mischgo.com/portfolio_page/auslage-beauty/",
     "categories": [

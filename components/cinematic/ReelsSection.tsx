@@ -5,23 +5,13 @@ import { useReveal } from "./useReveal";
 type Reel = { kind: "yt"; id: string } | { kind: "video"; src: string };
 type Active = { kind: "yt"; id: string } | { kind: "video"; src: string } | null;
 
-// Portrait 9:16 reels — YouTube shorts + self-hosted portrait loops.
+// One curated strip — the best portrait reels (YouTube shorts are placeholders; swap for real links).
 const PORTRAIT: Reel[] = [
   { kind: "yt", id: "Ev84gDJE784" },
   { kind: "yt", id: "mOXzKpRWEAQ" },
   { kind: "yt", id: "2koa2D241bQ" },
-  { kind: "yt", id: "jyaEvAR5gB4" },
   { kind: "video", src: "/projekte/wasserfall/loop.mp4" },
   { kind: "video", src: "/projekte/instagram-schoehnheitschirurgie-post/loop.mp4" },
-];
-
-// Square 1:1 animation loops.
-const SQUARE: Reel[] = [
-  { kind: "video", src: "/projekte/double-surf-pool/loop.mp4" },
-  { kind: "video", src: "/projekte/grafik-inserts-animationen/loop.mp4" },
-  { kind: "video", src: "/projekte/animierter-apfel/loop.mp4" },
-  { kind: "video", src: "/projekte/volleyballanimation/loop.mp4" },
-  { kind: "video", src: "/projekte/social-media-sabine-apfolterer/loop.mp4" },
 ];
 
 function Tile({ reel, i, shape, onOpen }: { reel: Reel; i: number; shape: "portrait" | "square"; onOpen: (a: Active) => void }) {
@@ -66,9 +56,6 @@ export default function ReelsSection() {
 
       <div className="reels-row reels-row-portrait">
         {PORTRAIT.map((r, i) => <Tile key={i} reel={r} i={i} shape="portrait" onOpen={setActive} />)}
-      </div>
-      <div className="reels-row reels-row-sq">
-        {SQUARE.map((r, i) => <Tile key={i} reel={r} i={i} shape="square" onOpen={setActive} />)}
       </div>
 
       {active && (
