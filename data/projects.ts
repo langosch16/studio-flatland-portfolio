@@ -18,6 +18,7 @@ export type Project = {
   youtube?: string;        // optional YouTube id/url; adds a play button + fullscreen player
   caseTitle?: string;      // client/case name shown on the plate instead of the project title
   slim?: boolean;          // shorter plate (~62vh) instead of the full 100vh
+  hidden?: boolean;        // exclude from the cinematic scroll entirely (folded into another case)
 };
 
 
@@ -154,6 +155,7 @@ export const projects = [
     "slug": "eod-plakat",
     "featured": true,
     "treatment": "fullbleed",
+    "caseTitle": "EOD Munitionsbergung",
     "title": "EOD Plakat",
     "url": "",
     "categories": ["print", "graphics"],
@@ -168,7 +170,20 @@ export const projects = [
       "/projekte/eod-plakat/03.png",
       "/projekte/eod-plakat/04.png",
       "/projekte/eod-plakat/05.jpg",
-      "/projekte/eod-plakat/06.jpg"
+      "/projekte/eod-plakat/06.jpg",
+      "/projekte/auto-eod/01-cover.jpg",
+      "/projekte/auto-eod/03.jpg",
+      "/projekte/auto-eod/04.jpg",
+      "/projekte/eod-munitionsbergung/01-cover.png",
+      "/projekte/eod-munitionsbergung/03.jpg",
+      "/projekte/eod-munitionsbergung/04.png",
+      "/projekte/eod-munitionsbergung/05.png",
+      "/projekte/eod-munitionsbergung/06.png",
+      "/projekte/eod-munitionsbergung/07.png",
+      "/projekte/eod-munitionsbergung/08.png",
+      "/projekte/eod-munitionsbergung/10.png",
+      "/projekte/eod-munitionsbergung/12.png",
+      "/projekte/eod-munitionsbergung/14.png"
     ],
 "clients": ["EOD Munitionsbergung"]
 
@@ -657,6 +672,7 @@ export const projects = [
   },
   {
     "slug": "auto-eod",
+    "hidden": true,
     "title": "auto EOD",
     "url": "https://mischgo.com/portfolio_page/auto-eod/",
     "categories": [
@@ -1175,6 +1191,7 @@ export const projects = [
   },
   {
     "slug": "eod-munitionsbergung",
+    "hidden": true,
     "title": "EOD MUNITIONSBERGUNG",
     "url": "https://mischgo.com/portfolio_page/eod-munitionsbergung/",
     "categories": [

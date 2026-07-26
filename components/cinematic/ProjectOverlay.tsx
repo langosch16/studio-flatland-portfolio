@@ -24,7 +24,7 @@ export default function ProjectOverlay({ project, color, onClose }: { project: P
         {project && (
           <>
             <div className="k">{project.services?.length ? project.services.join(" · ") : project.categories.join(" · ")}</div>
-            <h3>{project.title}</h3>
+            <h3>{project.caseTitle ?? project.title}</h3>
             {project.excerpt && <p>{project.excerpt}</p>}
             {project.images.map((src) => (
               <img key={src} src={src} alt={project.title} loading="lazy" />

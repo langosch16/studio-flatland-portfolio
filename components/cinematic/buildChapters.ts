@@ -24,7 +24,10 @@ const DEFAULT_TREATMENT: Record<ChapterKey, Project["treatment"]> = {
 
 export function buildChapters(projects: Project[]): Chapter[] {
   const bucket: Record<ChapterKey, Project[]> = { animation: [], graphics: [], print: [] };
-  for (const p of projects) bucket[mapTheme(p)].push(p);
+  for (const p of projects) {
+    if (p.hidden) continue;
+    bucket[mapTheme(p)].push(p);
+  }
 
   return ORDER.map((key) => {
     const all = bucket[key];
