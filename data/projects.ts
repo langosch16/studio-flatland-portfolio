@@ -324,7 +324,6 @@ export const projects = [
     "featured": true,
     "treatment": "video",
     "video": "/projekte/wasserfall/loop.mp4",
-    "youtube": "pVCKSqkJJgA",
     "title": "Wasserfall",
     "url": "",
     "categories": ["video", "animation"],
@@ -461,7 +460,8 @@ export const projects = [
   {
     "slug": "athelthics-eyewear-ski-googles",
     "featured": true,
-    "treatment": "split",
+    "treatment": "video",
+    "youtube": "h_i8XMTw84I",
     "title": "Athletics Eyewear Ski Goggles",
     "url": "https://mischgo.com/portfolio_page/athelthics-eyewear-ski-googles/",
     "categories": [
