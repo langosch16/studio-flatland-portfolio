@@ -23,6 +23,7 @@ export default function LogoWallPlate({ project, chapter, index, onOpen }: Plate
             onClick={() => onOpen(project)}
             aria-label={`${project.title} — Logo ${i + 1} ansehen`}
           >
+            <span className="lw-idx">{i + 1}</span>
             <img src={src} alt="" loading="lazy" decoding="async" />
           </button>
         ))}
