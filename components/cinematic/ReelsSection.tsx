@@ -64,7 +64,7 @@ export default function ReelsSection() {
         <span className="reels-sub">Hochformat &amp; Social-Loops</span>
       </div>
 
-      <div className="reels-row">
+      <div className="reels-row reels-row-portrait">
         {PORTRAIT.map((r, i) => <Tile key={i} reel={r} i={i} shape="portrait" onOpen={setActive} />)}
       </div>
       <div className="reels-row reels-row-sq">
