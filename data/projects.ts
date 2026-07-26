@@ -45,6 +45,8 @@ export const projects = [
   },
   {
     "slug": "athletics1",
+    "featured": true,
+    "treatment": "fullbleed",
     "title": "Athletics Eyewear",
     "url": "",
     "categories": ["graphics", "video"],
@@ -78,8 +80,6 @@ export const projects = [
 
   {
     "slug": "weihnachtskarte-wireg",
-    "featured": true,
-    "treatment": "centered",
     "title": "Weihnachtskarte Wireg",
     "url": "",
     "categories": ["print", "graphics"],
@@ -112,8 +112,6 @@ export const projects = [
 
   {
     "slug": "silivasstueberl",
-    "featured": true,
-    "treatment": "editorial",
     "title": "Silvias Stüberl",
     "url": "",
     "categories": ["print", "graphics"],
@@ -154,7 +152,7 @@ export const projects = [
   {
     "slug": "eod-plakat",
     "featured": true,
-    "treatment": "split",
+    "treatment": "fullbleed",
     "title": "EOD Plakat",
     "url": "",
     "categories": ["print", "graphics"],
@@ -210,8 +208,6 @@ export const projects = [
   },
   {
     "slug": "vienna-vikings",
-    "featured": true,
-    "treatment": "fullbleed",
     "title": "Vienna Vikings",
     "url": "",
     "categories": ["print", "graphics"],
@@ -368,8 +364,6 @@ export const projects = [
   },
   {
     "slug": "volleyballanimation",
-    "featured": true,
-    "treatment": "fullbleed",
     "title": "Volleyball Animation",
     "url": "",
     "categories": ["video", "animation"],
@@ -415,6 +409,8 @@ export const projects = [
   },
   {
     "slug": "folder-kammer-fuer-steuerberater-und-wirtschaftspruefer",
+    "featured": true,
+    "treatment": "editorial",
     "title": "folder kammer für steuerberater und wirtschaftsprüfer",
     "url": "https://mischgo.com/portfolio_page/folder-kammer-fuer-steuerberater-und-wirtschaftspruefer/",
     "categories": [
@@ -462,6 +458,8 @@ export const projects = [
   },
   {
     "slug": "athelthics-eyewear-ski-googles",
+    "featured": true,
+    "treatment": "split",
     "title": "Athletics Eyewear Ski Goggles",
     "url": "https://mischgo.com/portfolio_page/athelthics-eyewear-ski-googles/",
     "categories": [
@@ -478,6 +476,8 @@ export const projects = [
   },
   {
     "slug": "infografik",
+    "featured": true,
+    "treatment": "centered",
     "title": "infografik",
     "url": "https://mischgo.com/portfolio_page/infografik/",
     "categories": [
@@ -503,6 +503,8 @@ export const projects = [
   },
   {
     "slug": "zahntechnik-guenther",
+    "featured": true,
+    "treatment": "split",
     "title": "zahntechnik günther",
     "url": "https://mischgo.com/portfolio_page/zahntechnik-guenther/",
     "categories": [
@@ -531,8 +533,6 @@ export const projects = [
   },
   {
     "slug": "digital-campus-a1",
-    "featured": true,
-    "treatment": "centered",
     "title": "digital campus A1",
     "url": "https://mischgo.com/portfolio_page/digital-campus-a1/",
     "categories": [
@@ -559,8 +559,6 @@ export const projects = [
   },
   {
     "slug": "kultur-4-kids",
-    "featured": true,
-    "treatment": "split",
     "title": "kultur 4 kids",
     "url": "https://mischgo.com/portfolio_page/kultur-4-kids/",
     "categories": [
@@ -587,6 +585,8 @@ export const projects = [
   },
   {
     "slug": "update",
+    "featured": true,
+    "treatment": "editorial",
     "title": "update",
     "url": "https://mischgo.com/portfolio_page/update/",
     "categories": [
@@ -709,8 +709,6 @@ export const projects = [
   },
   {
     "slug": "kneipp-bewegt-magazin-entwurf",
-    "featured": true,
-    "treatment": "editorial",
     "title": "kneipp bewegt Magazin Entwurf",
     "url": "https://mischgo.com/portfolio_page/kneipp-bewegt-magazin-entwurf/",
     "categories": [
@@ -824,8 +822,6 @@ export const projects = [
   },
   {
     "slug": "animierter-apfel",
-    "featured": true,
-    "treatment": "editorial",
     "title": "animierter Apfel",
     "url": "https://mischgo.com/portfolio_page/animierter-apfel/",
     "categories": [
@@ -1084,6 +1080,8 @@ export const projects = [
   },
   {
     "slug": "hello-familiii",
+    "featured": true,
+    "treatment": "fullbleed",
     "title": "hello familiii",
     "url": "https://mischgo.com/portfolio_page/hello-familiii/",
     "categories": [
@@ -1223,8 +1221,6 @@ export const projects = [
   },
   {
     "slug": "hans-weigand-panorama",
-    "featured": true,
-    "treatment": "fullbleed",
     "title": "Hans Weigand Panorama",
     "url": "https://mischgo.com/portfolio_page/hans-weigand-panorama/",
     "categories": [
@@ -1356,6 +1352,8 @@ export const projects = [
   },
   {
     "slug": "diverse-logo-entwuerfe",
+    "featured": true,
+    "treatment": "editorial",
     "title": "diverse logo entwürfe",
     "url": "https://mischgo.com/portfolio_page/diverse-logo-entwuerfe/",
     "categories": [
@@ -1601,6 +1599,8 @@ export const projects = [
   },
   {
     "slug": "wiener-aktionismus",
+    "featured": true,
+    "treatment": "centered",
     "title": "Wiener Aktionismus",
     "url": "https://mischgo.com/portfolio_page/wiener-aktionismus/",
     "categories": [
@@ -1684,6 +1684,8 @@ export const projects = [
   },
   {
     "slug": "wireg",
+    "featured": true,
+    "treatment": "fullbleed",
     "title": "WIREG",
     "url": "https://mischgo.com/portfolio_page/wireg/",
     "categories": [
