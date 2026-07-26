@@ -1,12 +1,13 @@
 "use client";
 import "./cinematic.css";
-import { useMemo, useState, useEffect } from "react";
+import { Fragment, useMemo, useState, useEffect } from "react";
 import type { CSSProperties } from "react";
 import type { Project } from "@/data/projects";
 import { buildChapters } from "./buildChapters";
 import Hero from "./Hero";
 import ChapterBreak from "./ChapterBreak";
 import ProjectPlate from "./plates";
+import AmbientInterstitial from "./AmbientInterstitial";
 import Archive from "./Archive";
 import Clients from "./Clients";
 import ProjectOverlay from "./ProjectOverlay";
@@ -43,19 +44,28 @@ export default function CinematicPortfolio({ projects }: { projects: Project[] }
       <Hero />
 
       <main>
-        {chapters.map((ch) => (
-          <section key={ch.key} style={{ "--cc": ch.color } as CSSProperties}>
-            <ChapterBreak ch={ch} />
-            {ch.featured.map((p, i) => (
-              <ProjectPlate
-                key={p.slug}
-                project={p}
-                chapter={ch}
-                index={i}
-                onOpen={(pr) => open(pr, ch.color)}
+        {chapters.map((ch, ci) => (
+          <Fragment key={ch.key}>
+            <section style={{ "--cc": ch.color } as CSSProperties}>
+              <ChapterBreak ch={ch} />
+              {ch.featured.map((p, i) => (
+                <ProjectPlate
+                  key={p.slug}
+                  project={p}
+                  chapter={ch}
+                  index={i}
+                  onOpen={(pr) => open(pr, ch.color)}
+                />
+              ))}
+            </section>
+            {ci === 1 && (
+              <AmbientInterstitial
+                youtube="jyaEvAR5gB4"
+                statement="Alles in Bewegung."
+                sub="Motion & Animation — ein Ausschnitt aus laufenden Arbeiten."
               />
-            ))}
-          </section>
+            )}
+          </Fragment>
         ))}
         <Archive chapters={chapters} onOpen={(p) => open(p, "#2438e0")} />
       </main>

@@ -194,3 +194,19 @@
 .cin .yt-frame{width:min(1500px,100%);aspect-ratio:16/9;background:#000;box-shadow:0 40px 120px rgba(0,0,0,.6)}
 .cin .yt-frame iframe{width:100%;height:100%;border:0;display:block}
 @media (prefers-reduced-motion: reduce){.cin .yt-light{animation:none}}
+
+/* ambient interstitial: muted looping video background, client stays anonymous */
+.cin .ambient{position:relative;min-height:100vh;overflow:hidden;display:flex;align-items:flex-end;background:#000}
+.cin .ambient .av-bg{position:absolute;inset:0;overflow:hidden}
+.cin .ambient .av-frame{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:177.78vh;height:100vh;border:0;pointer-events:none}
+@media(min-aspect-ratio:16/9){.cin .ambient .av-frame{width:100vw;height:56.25vw}}
+.cin .ambient .av-poster{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-width:100%;min-height:100%;object-fit:cover}
+.cin .ambient .av-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,13,.92),rgba(11,11,13,.4) 55%,rgba(11,11,13,.6));pointer-events:none}
+.cin .ambient .av-content{position:relative;z-index:2;padding:0 clamp(18px,4vw,44px) clamp(50px,10vh,110px);width:100%}
+.cin .ambient .av-eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);opacity:0;transform:translateY(12px);transition:all .7s ease .2s}
+.cin .ambient.in .av-eyebrow{opacity:1;transform:none}
+.cin .ambient h2{font-weight:800;text-transform:uppercase;letter-spacing:-.03em;line-height:.9;font-size:clamp(2.4rem,9vw,7rem);margin-top:12px;max-width:16ch;opacity:0;transform:translateY(20px);transition:all .9s cubic-bezier(.16,1,.3,1) .3s}
+.cin .ambient.in h2{opacity:1;transform:none}
+.cin .ambient .av-content p{max-width:44ch;color:rgba(244,241,234,.75);margin-top:16px;line-height:1.5;font-size:15px;opacity:0;transition:opacity .8s ease .55s}
+.cin .ambient.in .av-content p{opacity:1}
+@media (prefers-reduced-motion: reduce){.cin .ambient .av-eyebrow,.cin .ambient h2,.cin .ambient .av-content p{opacity:1!important;transform:none!important}}
