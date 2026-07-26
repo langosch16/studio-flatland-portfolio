@@ -1412,8 +1412,11 @@ export const projects = [
       "/projekte/diverse-logo-entwuerfe/55.png",
       "/projekte/diverse-logo-entwuerfe/56.png",
       "/projekte/diverse-logo-entwuerfe/57.png",
-      "/projekte/diverse-logo-entwuerfe/58.png"
-
+      "/projekte/diverse-logo-entwuerfe/58.png",
+      "/projekte/logo-skillsprout/01-cover.png",
+      "/projekte/wireg/01-cover.jpg",
+      "/projekte/siliasstueberl/01-cover.png",
+      "/projekte/zahntechnik-guenther/01-cover.png"
     ],
 "clients": ["Nbüro flatland"]
 

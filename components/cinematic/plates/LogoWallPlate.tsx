@@ -5,7 +5,7 @@ import type { PlateProps } from "./index";
 export default function LogoWallPlate({ project, chapter, index, onOpen }: PlateProps) {
   const ref = useReveal<HTMLDivElement>();
   const k = `${chapter.name} — ${String(index + 1).padStart(2, "0")}`;
-  const logos = project.images.filter((src) => !src.includes("01-cover"));
+  const logos = project.images.filter((src) => src !== project.cover);
 
   return (
     <div ref={ref} className="plate t-logowall">
