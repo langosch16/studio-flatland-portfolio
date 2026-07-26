@@ -788,6 +788,7 @@ export const projects = [
   },
   {
     "slug": "social-media",
+    "hidden": true,
     "title": "social media Die schöhnheitschirurgin",
     "url": "https://mischgo.com/portfolio_page/social-media/",
     "categories": [
@@ -838,6 +839,7 @@ export const projects = [
   },
   {
     "slug": "preisfolder-beauty",
+    "hidden": true,
     "title": "preisfolder BEAUTY",
     "url": "https://mischgo.com/portfolio_page/preisfolder-beauty/",
     "categories": [
@@ -866,6 +868,7 @@ export const projects = [
   },
   {
     "slug": "animierter-apfel",
+    "hidden": true,
     "title": "animierter Apfel",
     "url": "https://mischgo.com/portfolio_page/animierter-apfel/",
     "categories": [
@@ -939,8 +942,31 @@ export const projects = [
       "/projekte/auslage-beauty/10.jpg",
       "/projekte/auslage-beauty/11.jpg",
       "/projekte/auslage-beauty/12.jpg",
-      "/projekte/auslage-beauty/13.png"
-
+      "/projekte/auslage-beauty/13.png",
+      "/projekte/social-media/01-cover.jpg",
+      "/projekte/social-media/03.jpg",
+      "/projekte/social-media/04.jpg",
+      "/projekte/social-media/05.jpg",
+      "/projekte/social-media/06.jpg",
+      "/projekte/social-media/07.jpg",
+      "/projekte/social-media-sabine-apfolterer/01-cover.mp4",
+      "/projekte/social-media-sabine-apfolterer/03.jpg",
+      "/projekte/social-media-sabine-apfolterer/04.mp4",
+      "/projekte/social-media-sabine-apfolterer/05.mp4",
+      "/projekte/social-media-sabine-apfolterer/06.mp4",
+      "/projekte/social-media-sabine-apfolterer/07.mp4",
+      "/projekte/social-media-sabine-apfolterer/08.mp4",
+      "/projekte/social-media-sabine-apfolterer/09.mp4",
+      "/projekte/social-media-sabine-apfolterer/11.mp4",
+      "/projekte/preisfolder-beauty/01-cover.png",
+      "/projekte/preisfolder-beauty/03.png",
+      "/projekte/preisfolder-beauty/04.png",
+      "/projekte/preisfolder-beauty/05.png",
+      "/projekte/preisfolder-beauty/06.png",
+      "/projekte/preisfolder-beauty/07.png",
+      "/projekte/preisfolder-beauty/08.png",
+      "/projekte/preisfolder-beauty/09.png",
+      "/projekte/animierter-apfel/01-cover.mp4"
     ],
 "clients": ["Die Schönheitschirurgin Apfolterer"]
 
@@ -1021,6 +1047,7 @@ export const projects = [
   
   {
     "slug": "social-media-sabine-apfolterer",
+    "hidden": true,
     "title": "dr. sabine apfolterer",
     "url": "https://mischgo.com/portfolio_page/social-media-sabine-apfolterer/",
     "categories": [

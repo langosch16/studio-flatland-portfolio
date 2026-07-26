@@ -136,7 +136,7 @@
 .cin .ovbody .k {font-family:var(--mono);font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
 .cin .ovbody h3 {font-weight:800;text-transform:uppercase;letter-spacing:-.02em;line-height:.9;font-size:clamp(2rem,6vw,4.5rem);margin:14px 0 22px}
 .cin .ovbody p {color:var(--muted);max-width:60ch;line-height:1.6;margin-bottom:40px}
-.cin .ovbody img {width:100%;border-radius:4px;margin-bottom:16px;display:block}
+.cin .ovbody img,.cin .ovbody video {width:100%;border-radius:4px;margin-bottom:16px;display:block}
 .cin .ovbody .ph {width:100%;aspect-ratio:16/10;border-radius:4px;margin-bottom:16px;border:1px solid var(--line);background:linear-gradient(150deg,color-mix(in srgb,var(--cc) 20%,var(--bg2)),var(--bg2))}
 .cin .menu {position:fixed;inset:0;z-index:90;background:var(--ink);color:var(--bg);clip-path:inset(0 0 100% 0);transition:clip-path .7s cubic-bezier(.76,0,.24,1);display:flex;flex-direction:column;justify-content:center;padding:0 clamp(18px,4vw,44px);pointer-events:none}
 .cin .menu.open {clip-path:inset(0 0 0 0);pointer-events:auto}
