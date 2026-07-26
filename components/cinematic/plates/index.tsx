@@ -5,6 +5,7 @@ import VideoPlate from "./VideoPlate";
 import SplitPlate from "./SplitPlate";
 import EditorialPlate from "./EditorialPlate";
 import CenteredPlate from "./CenteredPlate";
+import LogoWallPlate from "./LogoWallPlate";
 
 export type PlateProps = {
   project: Project;
@@ -19,6 +20,7 @@ export default function ProjectPlate(props: PlateProps) {
     case "video": return <VideoPlate {...props} />;
     case "split": return <SplitPlate {...props} />;
     case "editorial": return <EditorialPlate {...props} />;
+    case "logowall": return <LogoWallPlate {...props} />;
     default: return <CenteredPlate {...props} />;
   }
 }

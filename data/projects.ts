@@ -1,4 +1,4 @@
-export type Treatment = "fullbleed" | "video" | "split" | "editorial" | "centered";
+export type Treatment = "fullbleed" | "video" | "split" | "editorial" | "centered" | "logowall";
 
 export type Project = {
   slug: string;
@@ -1353,7 +1353,7 @@ export const projects = [
   {
     "slug": "diverse-logo-entwuerfe",
     "featured": true,
-    "treatment": "editorial",
+    "treatment": "logowall",
     "title": "diverse logo entwürfe",
     "url": "https://mischgo.com/portfolio_page/diverse-logo-entwuerfe/",
     "categories": [
