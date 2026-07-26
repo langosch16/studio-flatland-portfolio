@@ -16,6 +16,8 @@ export type Project = {
   treatment?: Treatment;   // how a featured project is presented; default derived
   video?: string;          // optional mp4 path for the video plate (falls back to cover)
   youtube?: string;        // optional YouTube id/url; adds a play button + fullscreen player
+  caseTitle?: string;      // client/case name shown on the plate instead of the project title
+  slim?: boolean;          // shorter plate (~62vh) instead of the full 100vh
 };
 
 
@@ -868,6 +870,8 @@ export const projects = [
     "slug": "auslage-beauty",
     "featured": true,
     "treatment": "fullbleed",
+    "caseTitle": "Die Schönheitschirurgin",
+    "slim": true,
     "title": "AUSLAGE BEAUTY",
     "url": "https://mischgo.com/portfolio_page/auslage-beauty/",
     "categories": [
