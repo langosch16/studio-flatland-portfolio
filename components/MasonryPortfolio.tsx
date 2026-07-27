@@ -368,7 +368,7 @@ export default function MasonryPortfolio({ projects }: Props) {
                 transition={{ duration: 0.3 }}
                 className="relative group cursor-pointer bg-neutral-100"
                 style={{ borderRadius: RADIUS }}
-                onClick={() => hasExtras && setExpanded(isExpanded ? null : project.slug)}
+                onClick={() => setExpanded(hasExtras && !isExpanded ? project.slug : null)}
               >
                 <div className="relative overflow-hidden" style={{ borderRadius: RADIUS }}>
                   <img
