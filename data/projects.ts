@@ -50,6 +50,8 @@ export const projects = [
   },
   {
     "slug": "athletics1",
+    "featured": true,
+    "treatment": "split",
     "title": "Athletics Eyewear",
     "url": "",
     "categories": ["graphics", "video"],
@@ -492,8 +494,6 @@ export const projects = [
   },
   {
     "slug": "infografik",
-    "featured": true,
-    "treatment": "centered",
     "title": "infografik",
     "url": "https://mischgo.com/portfolio_page/infografik/",
     "categories": [
@@ -519,8 +519,6 @@ export const projects = [
   },
   {
     "slug": "zahntechnik-guenther",
-    "featured": true,
-    "treatment": "split",
     "title": "zahntechnik günther",
     "url": "https://mischgo.com/portfolio_page/zahntechnik-guenther/",
     "categories": [
@@ -602,6 +600,8 @@ export const projects = [
   },
   {
     "slug": "kultur-4-kids",
+    "featured": true,
+    "treatment": "fullbleed",
     "title": "kultur 4 kids",
     "url": "https://mischgo.com/portfolio_page/kultur-4-kids/",
     "categories": [
