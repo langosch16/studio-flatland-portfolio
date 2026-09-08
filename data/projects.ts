@@ -86,6 +86,52 @@ export const projects = [
 "clients": ["Wireg"],
   },
   {
+    "slug": "hello-familiii",
+    "title": "hello familiii",
+    "url": "https://mischgo.com/portfolio_page/hello-familiii/",
+    "categories": [
+      "books",
+      "graphics",
+      "magazine"
+    ],
+    "year": "",
+    "services": [],
+    "excerpt": " familiii Kindermagazin mit Eltern und Kinderheft erscheint 1 mal im Monat",
+    "text": "hello familiii\nTags\nfamiliii\nCategory\nbooks\n,\ngraphics\n,\nmagazine\nAbout This Project\nKindermagazin mit Eltern und Kinderheft\nerscheint 1 mal im Monat",
+    "cover": "/projekte/hello-familiii/01-cover.jpg",
+    "images": [
+      
+      "/projekte/hello-familiii/01-cover.jpg",
+      "/projekte/hello-familiii/03.jpg",
+      "/projekte/hello-familiii/04.png",
+      "/projekte/hello-familiii/05.jpg",
+      "/projekte/hello-familiii/06.jpg",
+      "/projekte/hello-familiii/07.jpg",
+      "/projekte/hello-familiii/08.jpg",
+      "/projekte/hello-familiii/09.jpg",
+      "/projekte/hello-familiii/10.jpg",
+      "/projekte/hello-familiii/11.jpg",
+      "/projekte/hello-familiii/12.jpg",
+      "/projekte/hello-familiii/13.jpg",
+      "/projekte/hello-familiii/14.jpg",
+      "/projekte/hello-familiii/15.jpg",
+      "/projekte/hello-familiii/16.jpg",
+      "/projekte/hello-familiii/17.jpg",
+      "/projekte/hello-familiii/18.jpg",
+      "/projekte/hello-familiii/19.jpg",
+      "/projekte/hello-familiii/20.jpg",
+      "/projekte/hello-familiii/21.jpg",
+      "/projekte/hello-familiii/22.jpg",
+      "/projekte/hello-familiii/23.jpg",
+      "/projekte/hello-familiii/24.jpg",
+      "/projekte/hello-familiii/25.jpg",
+      "/projekte/hello-familiii/26.jpg"
+
+    ],
+"clients": ["Familiii"]
+
+  },
+  {
     "slug": "athletics2",
     "title": "Athletics Eyewear",
     "url": "",
@@ -119,7 +165,7 @@ export const projects = [
       "/projekte/siliasstueberl/05.png",
       "/projekte/siliasstueberl/06.png"
     ],
-"clients": ["Silvias Stueberl"],
+"clients": ["Silvias Stüberl"],
   },
 
   {
@@ -320,7 +366,7 @@ export const projects = [
     "images": [
       "/projekte/wasserfall/01-cover.gif"
     ],
-"clients": ["büro flaland"]
+"clients": ["büro flatland"]
 
   },
   {
@@ -346,7 +392,7 @@ export const projects = [
       "/projekte/logo-flatland/11.png",
       "/projekte/logo-flatland/13.png"
     ],
-"clients": ["büro flaland"]
+"clients": ["büro flatland"]
   },
   {
     "slug": "volleyballanimation",
@@ -1055,52 +1101,6 @@ export const projects = [
 
   },
   {
-    "slug": "hello-familiii",
-    "title": "hello familiii",
-    "url": "https://mischgo.com/portfolio_page/hello-familiii/",
-    "categories": [
-      "books",
-      "graphics",
-      "magazine"
-    ],
-    "year": "",
-    "services": [],
-    "excerpt": " familiii Kindermagazin mit Eltern und Kinderheft erscheint 1 mal im Monat",
-    "text": "hello familiii\nTags\nfamiliii\nCategory\nbooks\n,\ngraphics\n,\nmagazine\nAbout This Project\nKindermagazin mit Eltern und Kinderheft\nerscheint 1 mal im Monat",
-    "cover": "/projekte/hello-familiii/01-cover.jpg",
-    "images": [
-      
-      "/projekte/hello-familiii/01-cover.jpg",
-      "/projekte/hello-familiii/03.jpg",
-      "/projekte/hello-familiii/04.png",
-      "/projekte/hello-familiii/05.jpg",
-      "/projekte/hello-familiii/06.jpg",
-      "/projekte/hello-familiii/07.jpg",
-      "/projekte/hello-familiii/08.jpg",
-      "/projekte/hello-familiii/09.jpg",
-      "/projekte/hello-familiii/10.jpg",
-      "/projekte/hello-familiii/11.jpg",
-      "/projekte/hello-familiii/12.jpg",
-      "/projekte/hello-familiii/13.jpg",
-      "/projekte/hello-familiii/14.jpg",
-      "/projekte/hello-familiii/15.jpg",
-      "/projekte/hello-familiii/16.jpg",
-      "/projekte/hello-familiii/17.jpg",
-      "/projekte/hello-familiii/18.jpg",
-      "/projekte/hello-familiii/19.jpg",
-      "/projekte/hello-familiii/20.jpg",
-      "/projekte/hello-familiii/21.jpg",
-      "/projekte/hello-familiii/22.jpg",
-      "/projekte/hello-familiii/23.jpg",
-      "/projekte/hello-familiii/24.jpg",
-      "/projekte/hello-familiii/25.jpg",
-      "/projekte/hello-familiii/26.jpg"
-
-    ],
-"clients": ["Familiii"]
-
-  },
-  {
     "slug": "dr-said-albinni",
     "title": "dr. said albinni",
     "url": "https://mischgo.com/portfolio_page/dr-said-albinni/",
@@ -1387,7 +1387,7 @@ export const projects = [
       "/projekte/diverse-logo-entwuerfe/58.png"
 
     ],
-"clients": ["Nbüro flatland"]
+"clients": ["büro flatland"]
 
   },
   {
