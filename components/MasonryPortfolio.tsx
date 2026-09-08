@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import type { Project } from "@/data/projects";
 
-type Props = { projects: Project[] };
+type Props = { projects: Project[]; initialFilter?: ThemeFilter };
 type ThemeFilter = "all" | "print" | "animation" | "graphics";
 
 // ── Auto-matching: normalize strings for fuzzy comparison ──────────────────
@@ -23,7 +23,7 @@ function clientMatchesProject(client: string, p: Project): boolean {
 function mapTheme(p: Project): Exclude<ThemeFilter, "all"> {
   const cats = p.categories.map((c) => c.toLowerCase());
   if (cats.includes("video")) return "animation";
-  if (cats.includes("books") || cats.includes("magazine")) return "print";
+  if (cats.includes("print") || cats.includes("books") || cats.includes("magazine")) return "print";
   return "graphics";
 }
 
@@ -34,7 +34,7 @@ const CLIENT_LIST = [
   "Athletics Eyewear",
   "Bella Wagner",
   "Brandsetter",
-  "Die Schönheitschirurgin",
+  "Die Schönheitschirurgin Apfolterer",
   "Di Grillo",
   "Dotkind",
   "Double Surf Pool",
@@ -46,12 +46,10 @@ const CLIENT_LIST = [
   "Hans Weigand",
   "Kneipp Magazin",
   "KSW Kammer der Steuerberater und Wirtschaftsprüfer",
-  "Kultur 4 Kids",
-  "KunsthausZug",
   "Land Niederösterreich",
   "MesseWien",
   "mumok",
-  "newsVerlag",
+  "NEWS Verlag",
   "onzoone",
   "Sammlung Falkenberg",
   "Sammlung Friedrichshof",
@@ -61,6 +59,13 @@ const CLIENT_LIST = [
   "Wireg",
   "Zahntechnik Günther",
   "Österreichischer Volleyball Verband",
+  "büro flatland",
+  "h4k2 BAND",
+  "Knäkke-Brot",
+  "Salon Kunst",
+  "Silvias Stüberl",
+  "Skillsprout",
+  "Vienna Vikings",
 ].sort((a, b) => a.localeCompare(b, "de"));
 
 const MENU_ITEMS: { label: string; filter: ThemeFilter | "clients" | "contact" }[] = [
@@ -76,13 +81,13 @@ const GAP    = 22;
 const RADIUS = "14px";
 
 // ── YouTube Videos ──────────────────────────────────────────────────────────
-const VIDEOS: { id: string; title: string; short: boolean; insertAfter: number; thumb?: string; aspect?: string }[] = [
+const VIDEOS: { id: string; title: string; short: boolean; insertAfter: number; thumb?: string; aspect?: string; client?: string }[] = [
   { id: "pVCKSqkJJgA", title: "Animation Reel",  short: false, insertAfter: 5, thumb: "/thumbs/thumb1.png" },
   { id: "Ev84gDJE784", title: "Short",            short: true,  insertAfter: 12 },
   { id: "mOXzKpRWEAQ", title: "Short",            short: true,  insertAfter: 22, aspect: "177.78%" },
   { id: "2koa2D241bQ", title: "Short",            short: true,  insertAfter: 35 },
   { id: "jyaEvAR5gB4", title: "Short",            short: true,  insertAfter: 48 },
-  { id: "CGfufsGGl30", title: "Lips",             short: false, insertAfter: 48 },
+  { id: "CGfufsGGl30", title: "Lips",             short: false, insertAfter: 48, client: "Bella Wagner" },
   { id: "h_i8XMTw84I", title: "Short",            short: true,  insertAfter: 55 },
 ];
 
@@ -90,8 +95,8 @@ function ytThumb(id: string) {
   return `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
 }
 
-export default function MasonryPortfolio({ projects }: Props) {
-  const [filter, setFilter]           = useState<ThemeFilter>("all");
+export default function MasonryPortfolio({ projects, initialFilter = "all" }: Props) {
+  const [filter, setFilter]           = useState<ThemeFilter>(initialFilter);
   const [clientsOpen, setClientsOpen]       = useState(false);
   const [contactOpen, setContactOpen]       = useState(false);
   const [impressumOpen, setImpressumOpen]   = useState(false);
@@ -237,14 +242,18 @@ export default function MasonryPortfolio({ projects }: Props) {
           | { kind: "video";   video: (typeof VIDEOS)[0] };
 
         const showVideos = filter === "all" || filter === "animation";
+        // Bei aktivem Kunden nur dessen Videos zeigen, sonst wie bisher.
+        const visibleVideos = activeClient
+          ? VIDEOS.filter((v) => v.client && norm(v.client) === norm(activeClient))
+          : showVideos ? VIDEOS : [];
         const mixed: MixedItem[] = [];
         filtered.forEach((project, idx) => {
-          if (showVideos) VIDEOS.filter((v) => v.insertAfter === idx).forEach((v) =>
+          visibleVideos.filter((v) => v.insertAfter === idx).forEach((v) =>
             mixed.push({ kind: "video", video: v })
           );
           mixed.push({ kind: "project", project });
         });
-        if (showVideos) VIDEOS.filter((v) => v.insertAfter >= filtered.length).forEach((v) =>
+        visibleVideos.filter((v) => v.insertAfter >= filtered.length).forEach((v) =>
           mixed.push({ kind: "video", video: v })
         );
 
