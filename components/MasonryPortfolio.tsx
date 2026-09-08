@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import type { Project } from "@/data/projects";
 
-type Props = { projects: Project[] };
+type Props = { projects: Project[]; initialFilter?: ThemeFilter };
 type ThemeFilter = "all" | "print" | "animation" | "graphics";
 
 // ── Auto-matching: normalize strings for fuzzy comparison ──────────────────
@@ -23,7 +23,7 @@ function clientMatchesProject(client: string, p: Project): boolean {
 function mapTheme(p: Project): Exclude<ThemeFilter, "all"> {
   const cats = p.categories.map((c) => c.toLowerCase());
   if (cats.includes("video")) return "animation";
-  if (cats.includes("books") || cats.includes("magazine")) return "print";
+  if (cats.includes("print") || cats.includes("books") || cats.includes("magazine")) return "print";
   return "graphics";
 }
 
@@ -90,8 +90,8 @@ function ytThumb(id: string) {
   return `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
 }
 
-export default function MasonryPortfolio({ projects }: Props) {
-  const [filter, setFilter]           = useState<ThemeFilter>("all");
+export default function MasonryPortfolio({ projects, initialFilter = "all" }: Props) {
+  const [filter, setFilter]           = useState<ThemeFilter>(initialFilter);
   const [clientsOpen, setClientsOpen]       = useState(false);
   const [contactOpen, setContactOpen]       = useState(false);
   const [impressumOpen, setImpressumOpen]   = useState(false);
