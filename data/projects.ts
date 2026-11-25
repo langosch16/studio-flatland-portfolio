@@ -231,7 +231,7 @@ export const projects = [
 
 
   {
-    "slug": "silivasstueberl",
+    "slug": "silvias-stueberl",
     "title": "Silvias Stüberl",
     "url": "",
     "categories": ["print", "graphics"],
@@ -239,14 +239,14 @@ export const projects = [
     "services": [],
     "excerpt": "Silvias Stüberl, LOGO für ein kleine Restaurant mit guter Küche",
     "text": "",
-    "cover": "/projekte/siliasstueberl/01-cover.png",
+    "cover": "/projekte/silvias-stueberl/01-cover.png",
     "images": [
-      "/projekte/siliasstueberl/01-cover.png",
-      "/projekte/siliasstueberl/02.png",
-      "/projekte/siliasstueberl/03.png",
-      "/projekte/siliasstueberl/04.png",
-      "/projekte/siliasstueberl/05.png",
-      "/projekte/siliasstueberl/06.png"
+      "/projekte/silvias-stueberl/01-cover.png",
+      "/projekte/silvias-stueberl/02.png",
+      "/projekte/silvias-stueberl/03.png",
+      "/projekte/silvias-stueberl/04.png",
+      "/projekte/silvias-stueberl/05.png",
+      "/projekte/silvias-stueberl/06.png"
     ],
 "clients": ["Silvias Stüberl"],
   },
