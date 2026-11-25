@@ -675,6 +675,25 @@ export const projects = [
 
   },
   {
+    "slug": "burgenland-energie",
+    "featured": true,
+    "treatment": "video",
+    "caseTitle": "Burgenland Energie",
+    "video": "/projekte/burgenland-energie/loop.mp4",
+    "title": "Energie. Von hier.",
+    "url": "",
+    "categories": ["video", "animation", "graphics"],
+    "year": "2026",
+    "services": ["Konzept", "Key Visual", "Bewegtbild"],
+    "excerpt": "Konzeptpräsentation für Burgenland Energie — die Umrisslinie des Landes als leuchtende Energielinie, die vom kühlen technischen Key Visual in warme Alltagsszenen übergeht.",
+    "text": "",
+    "cover": "/projekte/burgenland-energie/01-cover.jpg",
+    "images": [
+      "/projekte/burgenland-energie/01-cover.jpg"
+    ],
+    "clients": ["Burgenland Energie"]
+  },
+  {
     "slug": "update",
     "featured": true,
     "treatment": "editorial",
