@@ -43,3 +43,6 @@ CLAUDE.md
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# lokale Rohdaten (nicht deployen)
+/_quellen/
