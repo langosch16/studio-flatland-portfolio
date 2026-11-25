@@ -53,6 +53,73 @@ export const projects = [
     "clients": ["Burgenland Energie"]
   },
   {
+    "slug": "moot-court-ksw",
+    "title": "Moot Court Steuerrecht — Kampagne",
+    "url": "",
+    "categories": ["graphics", "print", "video", "logo"],
+    "year": "2026",
+    "services": [],
+    "excerpt": "Kampagne zum KSW Moot Court Steuerrecht — Logo, Key Visual und eine Reihe von Plakat-Sujets rund um „Ein Fall. Zwei Seiten.\", dazu zwei Story-Spots fürs Hochformat.",
+    "text": "",
+    "cover": "/projekte/moot-court-ksw/01-cover.jpg",
+    "images": [
+      "/projekte/moot-court-ksw/01-cover.jpg",
+      "/projekte/moot-court-ksw/still-typo.jpg",
+      "/projekte/moot-court-ksw/story-typo.mp4",
+      "/projekte/moot-court-ksw/still-paper.jpg",
+      "/projekte/moot-court-ksw/story-paper.mp4",
+      "/projekte/moot-court-ksw/02.jpg",
+      "/projekte/moot-court-ksw/03.jpg",
+      "/projekte/moot-court-ksw/04.jpg",
+      "/projekte/moot-court-ksw/05.jpg",
+      "/projekte/moot-court-ksw/06.jpg",
+      "/projekte/moot-court-ksw/07.jpg",
+      "/projekte/moot-court-ksw/08.jpg",
+      "/projekte/moot-court-ksw/09.jpg",
+      "/projekte/moot-court-ksw/10.jpg",
+      "/projekte/moot-court-ksw/11.jpg",
+      "/projekte/moot-court-ksw/12.jpg",
+      "/projekte/moot-court-ksw/13.jpg"
+    ],
+    "clients": ["KSW Kammer der Steuerberater und Wirtschaftsprüfer"]
+  },
+  {
+    "slug": "heuteraus-stories",
+    "title": "heuteRAUS — Story-Spots",
+    "url": "",
+    "categories": ["video", "animation"],
+    "year": "2026",
+    "services": [],
+    "excerpt": "Story-Spots für heuteRAUS.at — animierte Figuren im herbstlichen Park, Ausspielung im Hochformat für Instagram.",
+    "text": "",
+    "cover": "/projekte/heuteraus-stories/01-cover.jpg",
+    "images": [
+      "/projekte/heuteraus-stories/01-cover.jpg",
+      "/projekte/heuteraus-stories/still-herbst.jpg",
+      "/projekte/heuteraus-stories/story-herbst.mp4",
+      "/projekte/heuteraus-stories/still-papier.jpg",
+      "/projekte/heuteraus-stories/story-papier.mp4"
+    ],
+    "clients": ["heuteRAUS"]
+  },
+  {
+    "slug": "hiller-spot",
+    "title": "Hiller — Imagefilm",
+    "url": "",
+    "categories": ["video", "animation"],
+    "year": "2026",
+    "services": [],
+    "excerpt": "Imagefilm für Hiller — 54 Sekunden zwischen Rauchtypografie, Interieur und Architektur.",
+    "text": "",
+    "cover": "/projekte/hiller-spot/01-cover.jpg",
+    "images": [
+      "/projekte/hiller-spot/01-cover.jpg",
+      "/projekte/hiller-spot/still-spot.jpg",
+      "/projekte/hiller-spot/loop.mp4"
+    ],
+    "clients": ["Hiller"]
+  },
+  {
     "slug": "athletics1",
     "title": "Athletics Eyewear",
     "url": "",
