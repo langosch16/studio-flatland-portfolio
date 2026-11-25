@@ -49,6 +49,104 @@ export const projects = [
     "clients": ["Akademie der Steuerberater und Wirtschaftsprüfer"],
   },
   {
+    "slug": "burgenland-energie",
+    "featured": true,
+    "treatment": "video",
+    "caseTitle": "Burgenland Energie",
+    "video": "/projekte/burgenland-energie/loop.mp4",
+    "title": "Burgenland Energie — Energie. Von hier.",
+    "url": "",
+    "categories": ["video", "animation", "graphics"],
+    "year": "2026",
+    "services": ["Konzept", "Key Visual", "Bewegtbild"],
+    "excerpt": "Konzeptpräsentation für Burgenland Energie — die Umrisslinie des Landes als leuchtende Energielinie, die vom kühlen technischen Key Visual in warme Alltagsszenen übergeht.",
+    "text": "",
+    "cover": "/projekte/burgenland-energie/01-cover.jpg",
+    "images": [
+      "/projekte/burgenland-energie/01-cover.jpg",
+      "/projekte/burgenland-energie/loop.mp4"
+    ],
+    "clients": ["Burgenland Energie"]
+  },
+  {
+    "slug": "moot-court-ksw",
+    "featured": true,
+    "treatment": "split",
+    "forceChapter": "graphics",
+    "caseTitle": "Moot Court Steuerrecht",
+    "title": "Moot Court Steuerrecht — Kampagne",
+    "url": "",
+    "categories": ["graphics", "print", "video", "logo"],
+    "year": "2026",
+    "services": [],
+    "excerpt": "Kampagne zum KSW Moot Court Steuerrecht — Logo, Key Visual und eine Reihe von Plakat-Sujets rund um „Ein Fall. Zwei Seiten.\", dazu zwei Story-Spots fürs Hochformat.",
+    "text": "",
+    "cover": "/projekte/moot-court-ksw/01-cover.jpg",
+    "images": [
+      "/projekte/moot-court-ksw/01-cover.jpg",
+      "/projekte/moot-court-ksw/still-typo.jpg",
+      "/projekte/moot-court-ksw/story-typo.mp4",
+      "/projekte/moot-court-ksw/still-paper.jpg",
+      "/projekte/moot-court-ksw/story-paper.mp4",
+      "/projekte/moot-court-ksw/02.jpg",
+      "/projekte/moot-court-ksw/03.jpg",
+      "/projekte/moot-court-ksw/04.jpg",
+      "/projekte/moot-court-ksw/05.jpg",
+      "/projekte/moot-court-ksw/06.jpg",
+      "/projekte/moot-court-ksw/07.jpg",
+      "/projekte/moot-court-ksw/08.jpg",
+      "/projekte/moot-court-ksw/09.jpg",
+      "/projekte/moot-court-ksw/10.jpg",
+      "/projekte/moot-court-ksw/11.jpg",
+      "/projekte/moot-court-ksw/12.jpg",
+      "/projekte/moot-court-ksw/13.jpg"
+    ],
+    "clients": ["KSW Kammer der Steuerberater und Wirtschaftsprüfer"]
+  },
+  {
+    "slug": "heuteraus-stories",
+    "featured": true,
+    "treatment": "fullbleed",
+    "caseTitle": "heuteRAUS",
+    "title": "heuteRAUS — Story-Spots",
+    "url": "",
+    "categories": ["video", "animation"],
+    "year": "2026",
+    "services": [],
+    "excerpt": "Story-Spots für heuteRAUS.at — animierte Figuren im herbstlichen Park, Ausspielung im Hochformat für Instagram.",
+    "text": "",
+    "cover": "/projekte/heuteraus-stories/01-cover.jpg",
+    "images": [
+      "/projekte/heuteraus-stories/01-cover.jpg",
+      "/projekte/heuteraus-stories/still-herbst.jpg",
+      "/projekte/heuteraus-stories/story-herbst.mp4",
+      "/projekte/heuteraus-stories/still-papier.jpg",
+      "/projekte/heuteraus-stories/story-papier.mp4"
+    ],
+    "clients": ["heuteRAUS"]
+  },
+  {
+    "slug": "hiller-spot",
+    "featured": true,
+    "treatment": "video",
+    "caseTitle": "Hiller",
+    "video": "/projekte/hiller-spot/loop.mp4",
+    "title": "Hiller — Imagefilm",
+    "url": "",
+    "categories": ["video", "animation"],
+    "year": "2026",
+    "services": [],
+    "excerpt": "Imagefilm für Hiller — 54 Sekunden zwischen Rauchtypografie, Interieur und Architektur.",
+    "text": "",
+    "cover": "/projekte/hiller-spot/01-cover.jpg",
+    "images": [
+      "/projekte/hiller-spot/01-cover.jpg",
+      "/projekte/hiller-spot/still-spot.jpg",
+      "/projekte/hiller-spot/loop.mp4"
+    ],
+    "clients": ["Hiller"]
+  },
+  {
     "slug": "athletics1",
     "featured": true,
     "treatment": "split",
@@ -164,7 +262,7 @@ export const projects = [
 
 
   {
-    "slug": "silivasstueberl",
+    "slug": "silvias-stueberl",
     "title": "Silvias Stüberl",
     "url": "",
     "categories": ["print", "graphics"],
@@ -172,14 +270,14 @@ export const projects = [
     "services": [],
     "excerpt": "Silvias Stüberl, LOGO für ein kleine Restaurant mit guter Küche",
     "text": "",
-    "cover": "/projekte/siliasstueberl/01-cover.png",
+    "cover": "/projekte/silvias-stueberl/01-cover.png",
     "images": [
-      "/projekte/siliasstueberl/01-cover.png",
-      "/projekte/siliasstueberl/02.png",
-      "/projekte/siliasstueberl/03.png",
-      "/projekte/siliasstueberl/04.png",
-      "/projekte/siliasstueberl/05.png",
-      "/projekte/siliasstueberl/06.png"
+      "/projekte/silvias-stueberl/01-cover.png",
+      "/projekte/silvias-stueberl/02.png",
+      "/projekte/silvias-stueberl/03.png",
+      "/projekte/silvias-stueberl/04.png",
+      "/projekte/silvias-stueberl/05.png",
+      "/projekte/silvias-stueberl/06.png"
     ],
 "clients": ["Silvias Stüberl"],
   },
@@ -673,25 +771,6 @@ export const projects = [
     ],
 "clients": ["Land Niederösterreich"]
 
-  },
-  {
-    "slug": "burgenland-energie",
-    "featured": true,
-    "treatment": "video",
-    "caseTitle": "Burgenland Energie",
-    "video": "/projekte/burgenland-energie/loop.mp4",
-    "title": "Energie. Von hier.",
-    "url": "",
-    "categories": ["video", "animation", "graphics"],
-    "year": "2026",
-    "services": ["Konzept", "Key Visual", "Bewegtbild"],
-    "excerpt": "Konzeptpräsentation für Burgenland Energie — die Umrisslinie des Landes als leuchtende Energielinie, die vom kühlen technischen Key Visual in warme Alltagsszenen übergeht.",
-    "text": "",
-    "cover": "/projekte/burgenland-energie/01-cover.jpg",
-    "images": [
-      "/projekte/burgenland-energie/01-cover.jpg"
-    ],
-    "clients": ["Burgenland Energie"]
   },
   {
     "slug": "update",
