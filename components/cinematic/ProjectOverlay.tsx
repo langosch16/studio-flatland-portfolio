@@ -26,7 +26,11 @@ export default function ProjectOverlay({ project, color, onClose }: { project: P
             <div className="k">{project.services?.length ? project.services.join(" · ") : project.categories.join(" · ")}</div>
             <h3>{project.caseTitle ?? project.title}</h3>
             {project.excerpt && <p>{project.excerpt}</p>}
-            {project.images.map((src) =>
+            {/* Ein Standbild direkt vor einer .mp4 ist deren Poster — die Masonry-Ansicht
+                braucht es als Klickflaeche, hier spielt das Video ohnehin von selbst. */}
+            {project.images
+              .filter((src, i, all) => !(!src.endsWith(".mp4") && all[i + 1]?.endsWith(".mp4")))
+              .map((src) =>
               src.endsWith(".mp4") ? (
                 <video key={src} src={src} muted loop autoPlay playsInline preload="metadata" />
               ) : (

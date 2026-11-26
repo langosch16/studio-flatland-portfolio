@@ -51,9 +51,8 @@ export const projects = [
   {
     "slug": "burgenland-energie",
     "featured": true,
-    "treatment": "video",
+    "treatment": "fullbleed",
     "caseTitle": "Burgenland Energie",
-    "video": "/projekte/burgenland-energie/loop.mp4",
     "title": "Burgenland Energie — Energie. Von hier.",
     "url": "",
     "categories": ["video", "animation", "graphics"],
