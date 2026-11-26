@@ -70,12 +70,9 @@ export const projects = [
       "/projekte/moot-court-ksw/story-paper.mp4",
       "/projekte/moot-court-ksw/02-sujet.jpg",
       "/projekte/moot-court-ksw/logo-1.jpg",
-      "/projekte/moot-court-ksw/logo-2.jpg",
       "/projekte/moot-court-ksw/logo-3.jpg",
       "/projekte/moot-court-ksw/logo-4.jpg",
-      "/projekte/moot-court-ksw/logo-5.jpg",
       "/projekte/moot-court-ksw/logo-6.jpg",
-      "/projekte/moot-court-ksw/logo-7.jpg",
       "/projekte/moot-court-ksw/logo-8.jpg"
     ],
     "clients": ["KSW Kammer der Steuerberater und Wirtschaftsprüfer"]
