@@ -58,17 +58,13 @@ export const projects = [
     "categories": ["video", "animation", "graphics"],
     "year": "2026",
     "services": ["Konzept", "Key Visual", "Bewegtbild"],
-    "excerpt": "Konzeptpräsentation für Burgenland Energie — die Umrisslinie des Landes als leuchtende Energielinie. Vier Filme führen vom Partikelgitter über die technische Visualisierung in warme Alltagsszenen.",
+    "excerpt": "Konzeptpräsentation für Burgenland Energie — die Umrisslinie des Landes als leuchtende Energielinie. Zwei Filme zeigen das Key Visual als Loop und im Hochformat.",
     "text": "",
     "cover": "/projekte/burgenland-energie/01-cover.jpg",
     "images": [
       "/projekte/burgenland-energie/01-cover.jpg",
       "/projekte/burgenland-energie/still-loop.jpg",
       "/projekte/burgenland-energie/loop.mp4",
-      "/projekte/burgenland-energie/still-gitter.jpg",
-      "/projekte/burgenland-energie/partikel-gitter.mp4",
-      "/projekte/burgenland-energie/still-spirale.jpg",
-      "/projekte/burgenland-energie/partikel-spirale.mp4",
       "/projekte/burgenland-energie/still-umriss.jpg",
       "/projekte/burgenland-energie/umriss-hoch.mp4"
     ],
