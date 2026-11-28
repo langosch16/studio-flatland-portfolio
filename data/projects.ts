@@ -1,3 +1,5 @@
+export type Treatment = "fullbleed" | "video" | "split" | "editorial" | "centered" | "logowall";
+
 export type Project = {
   slug: string;
   title: string;
@@ -10,12 +12,22 @@ export type Project = {
   cover: string;
   images: string[];
   clients?: string[];
+  featured?: boolean;      // shown as a full-screen plate in the cinematic scroll
+  treatment?: Treatment;   // how a featured project is presented; default derived
+  video?: string;          // optional mp4 path for the video plate (falls back to cover)
+  youtube?: string;        // optional YouTube id/url; adds a play button + fullscreen player
+  caseTitle?: string;      // client/case name shown on the plate instead of the project title
+  slim?: boolean;          // shorter plate (~62vh) instead of the full 100vh
+  hidden?: boolean;        // exclude from the cinematic scroll entirely (folded into another case)
+  forceChapter?: "animation" | "graphics" | "print"; // override the auto medium bucket
 };
 
 
 export const projects = [
   {
     "slug": "asw-kursprogramm",
+    "featured": true,
+    "treatment": "split",
     "title": "ASW Kursprogramm Ausbildung 2026/27",
     "url": "",
     "categories": ["print", "magazine", "graphics"],
@@ -38,6 +50,9 @@ export const projects = [
   },
   {
     "slug": "burgenland-energie",
+    "featured": true,
+    "treatment": "fullbleed",
+    "caseTitle": "Burgenland Energie",
     "title": "Burgenland Energie — Energie. Von hier.",
     "url": "",
     "categories": ["video", "animation", "graphics"],
@@ -57,6 +72,10 @@ export const projects = [
   },
   {
     "slug": "moot-court-ksw",
+    "featured": true,
+    "treatment": "split",
+    "forceChapter": "graphics",
+    "caseTitle": "Moot Court Steuerrecht",
     "title": "Moot Court Steuerrecht — Kampagne",
     "url": "",
     "categories": ["graphics", "print", "video", "logo"],
@@ -82,6 +101,9 @@ export const projects = [
   },
   {
     "slug": "heuteraus-stories",
+    "featured": true,
+    "treatment": "fullbleed",
+    "caseTitle": "heuteRAUS",
     "title": "heuteRAUS — Story-Spots",
     "url": "",
     "categories": ["video", "animation"],
@@ -101,6 +123,10 @@ export const projects = [
   },
   {
     "slug": "hiller-spot",
+    "featured": true,
+    "treatment": "video",
+    "caseTitle": "Hiller",
+    "video": "/projekte/hiller-spot/loop.mp4",
     "title": "Hiller — Imagefilm",
     "url": "",
     "categories": ["video", "animation"],
@@ -118,6 +144,8 @@ export const projects = [
   },
   {
     "slug": "athletics1",
+    "featured": true,
+    "treatment": "split",
     "title": "Athletics Eyewear",
     "url": "",
     "categories": ["graphics", "video"],
@@ -167,6 +195,8 @@ export const projects = [
   },
   {
     "slug": "hello-familiii",
+    "featured": true,
+    "treatment": "fullbleed",
     "title": "hello familiii",
     "url": "https://mischgo.com/portfolio_page/hello-familiii/",
     "categories": [
@@ -268,6 +298,9 @@ export const projects = [
   },
   {
     "slug": "eod-plakat",
+    "featured": true,
+    "treatment": "fullbleed",
+    "caseTitle": "EOD Munitionsbergung",
     "title": "EOD Plakat",
     "url": "",
     "categories": ["print", "graphics"],
@@ -282,7 +315,20 @@ export const projects = [
       "/projekte/eod-plakat/03.png",
       "/projekte/eod-plakat/04.png",
       "/projekte/eod-plakat/05.jpg",
-      "/projekte/eod-plakat/06.jpg"
+      "/projekte/eod-plakat/06.jpg",
+      "/projekte/auto-eod/01-cover.jpg",
+      "/projekte/auto-eod/03.jpg",
+      "/projekte/auto-eod/04.jpg",
+      "/projekte/eod-munitionsbergung/01-cover.png",
+      "/projekte/eod-munitionsbergung/03.jpg",
+      "/projekte/eod-munitionsbergung/04.png",
+      "/projekte/eod-munitionsbergung/05.png",
+      "/projekte/eod-munitionsbergung/06.png",
+      "/projekte/eod-munitionsbergung/07.png",
+      "/projekte/eod-munitionsbergung/08.png",
+      "/projekte/eod-munitionsbergung/10.png",
+      "/projekte/eod-munitionsbergung/12.png",
+      "/projekte/eod-munitionsbergung/14.png"
     ],
 "clients": ["EOD Munitionsbergung"]
 
@@ -435,6 +481,7 @@ export const projects = [
   },
   {
     "slug": "wasserfall",
+    "video": "/projekte/wasserfall/loop.mp4",
     "title": "Wasserfall",
     "url": "",
     "categories": ["video", "animation"],
@@ -521,6 +568,8 @@ export const projects = [
   },
   {
     "slug": "folder-kammer-fuer-steuerberater-und-wirtschaftspruefer",
+    "featured": true,
+    "treatment": "editorial",
     "title": "folder kammer für steuerberater und wirtschaftsprüfer",
     "url": "https://mischgo.com/portfolio_page/folder-kammer-fuer-steuerberater-und-wirtschaftspruefer/",
     "categories": [
@@ -568,6 +617,9 @@ export const projects = [
   },
   {
     "slug": "athelthics-eyewear-ski-googles",
+    "featured": true,
+    "treatment": "video",
+    "youtube": "h_i8XMTw84I",
     "title": "Athletics Eyewear Ski Goggles",
     "url": "https://mischgo.com/portfolio_page/athelthics-eyewear-ski-googles/",
     "categories": [
@@ -636,6 +688,33 @@ export const projects = [
 
   },
   {
+    "slug": "dr-david-doerfler",
+    "featured": true,
+    "treatment": "video",
+    "forceChapter": "graphics",
+    "caseTitle": "Dr. David Dörfler",
+    "video": "/projekte/dr-david-doerfler/loop.mp4",
+    "title": "dr david dörfler",
+    "url": "https://mischgo.com/portfolio_page/dr-david-doerfler/",
+    "categories": [
+      "graphics",
+      "logo",
+      "video",
+      "web"
+    ],
+    "year": "",
+    "services": [],
+    "excerpt": " Dr. David Dörfler | Lungenfacharzt, Homepage und Drucksorten",
+    "text": "dr david dörfler\nTags\ndr david dörfler\nCategory\ngraphics\n,\nlogo\n,\nvideo\n,\nweb\nAbout This Project\nDr. David Dörfler | Lungenfacharzt",
+    "cover": "/projekte/dr-david-doerfler/01-cover.png",
+    "images": [
+      "/projekte/dr-david-doerfler/03.png",
+      "/projekte/dr-david-doerfler/04.jpg"
+    ],
+"clients": ["Dr. David Dörfler"]
+
+  },
+  {
     "slug": "digital-campus-a1",
     "title": "digital campus A1",
     "url": "https://mischgo.com/portfolio_page/digital-campus-a1/",
@@ -663,6 +742,8 @@ export const projects = [
   },
   {
     "slug": "kultur-4-kids",
+    "featured": true,
+    "treatment": "fullbleed",
     "title": "kultur 4 kids",
     "url": "https://mischgo.com/portfolio_page/kultur-4-kids/",
     "categories": [
@@ -689,6 +770,8 @@ export const projects = [
   },
   {
     "slug": "update",
+    "featured": true,
+    "treatment": "editorial",
     "title": "update",
     "url": "https://mischgo.com/portfolio_page/update/",
     "categories": [
@@ -759,6 +842,7 @@ export const projects = [
   },
   {
     "slug": "auto-eod",
+    "hidden": true,
     "title": "auto EOD",
     "url": "https://mischgo.com/portfolio_page/auto-eod/",
     "categories": [
@@ -846,6 +930,7 @@ export const projects = [
   },
   {
     "slug": "social-media",
+    "hidden": true,
     "title": "social media Die schöhnheitschirurgin",
     "url": "https://mischgo.com/portfolio_page/social-media/",
     "categories": [
@@ -896,6 +981,7 @@ export const projects = [
   },
   {
     "slug": "preisfolder-beauty",
+    "hidden": true,
     "title": "preisfolder BEAUTY",
     "url": "https://mischgo.com/portfolio_page/preisfolder-beauty/",
     "categories": [
@@ -924,6 +1010,7 @@ export const projects = [
   },
   {
     "slug": "animierter-apfel",
+    "hidden": true,
     "title": "animierter Apfel",
     "url": "https://mischgo.com/portfolio_page/animierter-apfel/",
     "categories": [
@@ -970,6 +1057,10 @@ export const projects = [
   },
   {
     "slug": "auslage-beauty",
+    "featured": true,
+    "treatment": "fullbleed",
+    "caseTitle": "Die Schönheitschirurgin",
+    "slim": true,
     "title": "AUSLAGE BEAUTY",
     "url": "https://mischgo.com/portfolio_page/auslage-beauty/",
     "categories": [
@@ -993,8 +1084,31 @@ export const projects = [
       "/projekte/auslage-beauty/10.jpg",
       "/projekte/auslage-beauty/11.jpg",
       "/projekte/auslage-beauty/12.jpg",
-      "/projekte/auslage-beauty/13.png"
-
+      "/projekte/auslage-beauty/13.png",
+      "/projekte/social-media/01-cover.jpg",
+      "/projekte/social-media/03.jpg",
+      "/projekte/social-media/04.jpg",
+      "/projekte/social-media/05.jpg",
+      "/projekte/social-media/06.jpg",
+      "/projekte/social-media/07.jpg",
+      "/projekte/social-media-sabine-apfolterer/01-cover.mp4",
+      "/projekte/social-media-sabine-apfolterer/03.jpg",
+      "/projekte/social-media-sabine-apfolterer/04.mp4",
+      "/projekte/social-media-sabine-apfolterer/05.mp4",
+      "/projekte/social-media-sabine-apfolterer/06.mp4",
+      "/projekte/social-media-sabine-apfolterer/07.mp4",
+      "/projekte/social-media-sabine-apfolterer/08.mp4",
+      "/projekte/social-media-sabine-apfolterer/09.mp4",
+      "/projekte/social-media-sabine-apfolterer/11.mp4",
+      "/projekte/preisfolder-beauty/01-cover.png",
+      "/projekte/preisfolder-beauty/03.png",
+      "/projekte/preisfolder-beauty/04.png",
+      "/projekte/preisfolder-beauty/05.png",
+      "/projekte/preisfolder-beauty/06.png",
+      "/projekte/preisfolder-beauty/07.png",
+      "/projekte/preisfolder-beauty/08.png",
+      "/projekte/preisfolder-beauty/09.png",
+      "/projekte/animierter-apfel/01-cover.mp4"
     ],
 "clients": ["Die Schönheitschirurgin Apfolterer"]
 
@@ -1072,31 +1186,10 @@ export const projects = [
 "clients": ["Di Grillo"]
 
   },
-  {
-    "slug": "dr-david-doerfler",
-    "title": "dr david dörfler",
-    "url": "https://mischgo.com/portfolio_page/dr-david-doerfler/",
-    "categories": [
-      "graphics",
-      "logo",
-      "video",
-      "web"
-    ],
-    "year": "",
-    "services": [],
-    "excerpt": " Dr. David Dörfler | Lungenfacharzt, Homepage und Drucksorten",
-    "text": "dr david dörfler\nTags\ndr david dörfler\nCategory\ngraphics\n,\nlogo\n,\nvideo\n,\nweb\nAbout This Project\nDr. David Dörfler | Lungenfacharzt",
-    "cover": "/projekte/dr-david-doerfler/01-cover.png",
-    "images": [
-      "/projekte/dr-david-doerfler/03.png",
-      "/projekte/dr-david-doerfler/04.jpg",
-      "/projekte/dr-david-doerfler/DrDD_FINAL2.mp4"
-    ],
-"clients": ["Dr. David Dörfler"]
-
-  },
+  
   {
     "slug": "social-media-sabine-apfolterer",
+    "hidden": true,
     "title": "dr. sabine apfolterer",
     "url": "https://mischgo.com/portfolio_page/social-media-sabine-apfolterer/",
     "categories": [
@@ -1225,6 +1318,7 @@ export const projects = [
   },
   {
     "slug": "eod-munitionsbergung",
+    "hidden": true,
     "title": "EOD MUNITIONSBERGUNG",
     "url": "https://mischgo.com/portfolio_page/eod-munitionsbergung/",
     "categories": [
@@ -1406,6 +1500,8 @@ export const projects = [
   },
   {
     "slug": "diverse-logo-entwuerfe",
+    "featured": true,
+    "treatment": "logowall",
     "title": "diverse logo entwürfe",
     "url": "https://mischgo.com/portfolio_page/diverse-logo-entwuerfe/",
     "categories": [
@@ -1418,54 +1514,33 @@ export const projects = [
     "text": "diverse logo entwürfe\nCategory\ngraphics\n,\nlogo\nAbout This Project\nlogo entwürfe für diverse firmen und personen",
     "cover": "/projekte/diverse-logo-entwuerfe/01-cover.jpg",
     "images": [
-      
       "/projekte/diverse-logo-entwuerfe/01-cover.jpg",
-      "/projekte/diverse-logo-entwuerfe/03.jpg",
-      "/projekte/diverse-logo-entwuerfe/05.jpg",
-      "/projekte/diverse-logo-entwuerfe/06.jpg",
-      "/projekte/diverse-logo-entwuerfe/08.jpg",
-      "/projekte/diverse-logo-entwuerfe/10.jpg",
-      "/projekte/diverse-logo-entwuerfe/11.jpg",
-      "/projekte/diverse-logo-entwuerfe/15.jpg",
-      "/projekte/diverse-logo-entwuerfe/17.jpg",
-      "/projekte/diverse-logo-entwuerfe/19.png",
-      "/projekte/diverse-logo-entwuerfe/20.png",
-      "/projekte/diverse-logo-entwuerfe/21.png",
       "/projekte/diverse-logo-entwuerfe/23.png",
       "/projekte/diverse-logo-entwuerfe/25.png",
+      "/projekte/diverse-logo-entwuerfe/03.jpg",
       "/projekte/diverse-logo-entwuerfe/27.png",
-      "/projekte/diverse-logo-entwuerfe/28.png",
-      "/projekte/diverse-logo-entwuerfe/29.png",
       "/projekte/diverse-logo-entwuerfe/30.png",
       "/projekte/diverse-logo-entwuerfe/31.png",
       "/projekte/diverse-logo-entwuerfe/32.png",
-      "/projekte/diverse-logo-entwuerfe/33.png",
-      "/projekte/diverse-logo-entwuerfe/34.png",
       "/projekte/diverse-logo-entwuerfe/35.png",
+      "/projekte/diverse-logo-entwuerfe/19.png",
       "/projekte/diverse-logo-entwuerfe/36.png",
+      "/projekte/diverse-logo-entwuerfe/05.jpg",
       "/projekte/diverse-logo-entwuerfe/37.png",
-      "/projekte/diverse-logo-entwuerfe/38.png",
-      "/projekte/diverse-logo-entwuerfe/39.png",
-      "/projekte/diverse-logo-entwuerfe/40.png",
-      "/projekte/diverse-logo-entwuerfe/41.png",
-      "/projekte/diverse-logo-entwuerfe/42.png",
       "/projekte/diverse-logo-entwuerfe/43.png",
-      "/projekte/diverse-logo-entwuerfe/44.png",
       "/projekte/diverse-logo-entwuerfe/45.png",
       "/projekte/diverse-logo-entwuerfe/46.png",
-      "/projekte/diverse-logo-entwuerfe/47.png",
-      "/projekte/diverse-logo-entwuerfe/48.png",
-      "/projekte/diverse-logo-entwuerfe/49.png",
-      "/projekte/diverse-logo-entwuerfe/50.png",
-      "/projekte/diverse-logo-entwuerfe/51.png",
-      "/projekte/diverse-logo-entwuerfe/52.png",
-      "/projekte/diverse-logo-entwuerfe/53.png",
       "/projekte/diverse-logo-entwuerfe/54.png",
-      "/projekte/diverse-logo-entwuerfe/55.png",
       "/projekte/diverse-logo-entwuerfe/56.png",
-      "/projekte/diverse-logo-entwuerfe/57.png",
-      "/projekte/diverse-logo-entwuerfe/58.png"
-
+      "/projekte/diverse-logo-entwuerfe/20.png",
+      "/projekte/diverse-logo-entwuerfe/15.jpg",
+      "/projekte/diverse-logo-entwuerfe/58.png",
+      "/projekte/logo-skillsprout/01-cover.png",
+      "/projekte/wireg/04.png",
+      "/projekte/siliasstueberl/01-cover.png",
+      "/projekte/zahntechnik-guenther/01-cover.png",
+      "/projekte/diverse-logo-entwuerfe/17.jpg",
+      "/projekte/diverse-logo-entwuerfe/21.png"
     ],
 "clients": ["büro flatland"]
 
@@ -1651,6 +1726,8 @@ export const projects = [
   },
   {
     "slug": "wiener-aktionismus",
+    "featured": true,
+    "treatment": "centered",
     "title": "Wiener Aktionismus",
     "url": "https://mischgo.com/portfolio_page/wiener-aktionismus/",
     "categories": [
@@ -1734,6 +1811,8 @@ export const projects = [
   },
   {
     "slug": "wireg",
+    "featured": true,
+    "treatment": "fullbleed",
     "title": "WIREG",
     "url": "https://mischgo.com/portfolio_page/wireg/",
     "categories": [
